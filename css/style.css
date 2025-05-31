@@ -1,0 +1,113 @@
+body {
+  font-family: "PT Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #000000;
+  font-size: 2rem;
+  background-color: red;
+}
+
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover{
+    color: #24c7ff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-image: url(../resources/fotos/logo2.jpg);
+    background-size: cover;
+}
+
+h1{
+
+}
+
+.Espacio{
+    display: block;
+}
+
+.barra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.barra_contenido {
+    padding: 1rem;
+    gap: 3rem;
+}
+
+.barra_botones {
+    /*gap: 30rem;*/
+}
+
+@media (min-width: 768px) {
+    .barra_contenido {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+.Contenedor_principal{
+    background-color: white;
+}
+.boton_primario{
+
+}
+
+.boton_secundario{
+
+}
+
+.titulo_quienes{
+    text-align: center;
+}
+.Inicial{
+    text-align: center;
+    padding: 7rem;
+}
+
+.quienes_somos {
+    background-color: aqua;
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .quienes_somos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+}
+
+.footer{
+    display: grid;
+    background-color: #a39a92;
+    grid-template-columns: repeat(3, 1fr);
+    grid: 5rem;
+}
