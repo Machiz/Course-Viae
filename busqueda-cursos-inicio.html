@@ -4,8 +4,199 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <style>
+            .contenedor-header{
+                display:flex;
+                align-items: center; /* Alineación al inicio del contenedor */
+                gap: 14px; /* Espacio entre imagen y texto */
+                padding-left:20px; /* Espacio a la izquierda */
+            }
+
+            .letras-titulo{
+                display:flex;
+                font-family: Arial, sans-serif;
+                margin-left: 10px;
+                flex-direction: column; /* Una palabra sobre otra, forma de columnas */
+                text-align:center; /* Centrado de las letras */
+                font-size: 24px; /* Tamaño de letra */
+                color:#058ED9; /* Color azul */
+                font-weight: bold; /* Negrita */
+            }
+
+            .letras-nav{
+                font-family: Arial;
+                color: white;
+                text-decoration: none; /* Sin subrayado */
+                font-weight:bold; /* Negrita */
+            }
+
+            .usuario-header{
+                position:absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                align-items:center;
+                gap: 10px; /* Espacio entre nombre y foto */
+                font-family: Arial;
+                color: white;
+            }
+
+            .usuario-header img{
+                width: 60px;
+                height: auto;
+                border-radius: 50%;
+                object-fit:cover;
+            }
+
+            .cont-escribir-curso{
+                display:flex;
+                text-align:center;
+                justify-content:center;
+                gap:10px;
+            }
+
+            .container-principal{
+                display: flex;
+                flex-direction: column;
+                padding-left: 20px;
+                background-color:white;
+                border-radius:20px;
+                height: 100vh; /* Altura completa de la ventana */
+            }
+
+            .container-filtros{
+                display: flex;
+                background-color:white;
+                border:#454545;
+                gap: 30px;
+            }
+
+            .boton-filtros{
+                background-color: #89d1f8;
+                color: #454545;
+                border-color: #454545;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .container-cursos{
+                display: flex;
+                flex-wrap: wrap; /* Permite que los cursos se ajusten en varias líneas */
+                gap: 20px; /* Espacio entre los cursos */
+                padding: 20px; /* Espacio interno */
+            }
+
+            .opciones{
+                display: none; /* Oculto por arte de magia */
+                background-color: #89D1F8;
+                border-radius: 5px; /* Bordes redondeados */
+                padding: 10px; /* Espacio interno */
+                margin-top:5px;
+                width:200px;
+            }
+        </style>
     </head>
-    <body style="background: linear-gradient(to bottom, #F4EBD9, #058ED9); height:100vh;">
-        
+    <body style="background: linear-gradient(to right, #F4EBD9, #058ED9); height:100vh;">
+        <header>
+            <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
+            <div class="contenedor-header">
+                <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
+                <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
+                    <span>Course</span>
+                    <span>Vitae</span>
+                </div>
+                <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
+                <img src="./resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;">
+
+                <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                <nav>
+                    <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+                        <li><a href="#" class="letras-nav">Home</a></li>
+                        <li><a href="#" class="letras-nav">Estudiante</a></li>
+                        <li><a href="#" class="letras-nav">Nosotros</a></li>
+                        <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                    </ul>
+                </nav>
+
+                <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
+                <div class="usuario-header">
+                    <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
+                    <img src="./resources/fotos/hesse.jpg" alt = "Usuario">
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            <!--Recuadro donde se puede ingresar nombre de curso a buscar-->
+            <div class = "cont-escribir-curso">
+                <input type="text" id = "curso" style="border-radius:5px; width:20%; height:36px; outline:none; border:none;" placeholder="Buscar curso de capacitación...">
+                <!--Botón Buscar-->
+                <button style="border-radius: 50px; background:#F4EBD9; color:#058ED9; border:none; font-weight:bold; width:90px;">
+                    <ion-icon name="search-outline"></ion-icon>
+                    Buscar
+                </button>
+            </div>
+
+            <br>
+            <!--Div principal-->
+            <div class="container-principal">
+                <h2 style="font-family: Arial; color:#454545;">Cursos de capacitación</h2>
+
+                <!--Pequeño div para los filtros-->
+                <div class="container-filtros">
+                    <div>
+                        <button class="boton-filtros" onclick ="toggleOpciones('duracion')">Duración
+                            <ion-icon name="chevron-down-outline"></ion-icon> <!--Ícono de flecha apuntando al centro de la Tierra-->
+                        </button>
+                        <select id ="duracion" class="opciones">
+                            <option value="Menor a 10 horas">Menor a 10 horas</option>
+                            <option value="Mayor 10 horas">Mayor a 10 horas</option>
+                            <option value="Mayor a 20 horas">Mayor a 20 horas</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button class="boton-filtros" onclick="toggleOpciones('precio')">Precio
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div id ="precio" class="opciones">
+                            <p>Menor a S/ 20</p>
+                            <p>Menor a S/ 30</p>
+                            <p>Menor a S/ 50</p>
+                            <p>Mayor a S/ 50</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="boton-filtros" onclick="toggleOpciones('nivel')">Nivel de experiencia
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div id ="nivel" class="opciones">
+                            <p>Básico</p>
+                            <p>Intermedio</p>
+                            <p>Avanzado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-cursos">
+                     
+                </div>
+            </div>
+        </main>
+
+        <script>
+            function toggleOpciones(id){
+                var opciones = document.getElementById(id);
+                opciones.style.display = opciones.style.display === "none" ? "block" : "none";
+            }
+        </script>
     </body>
+
+    <!--Links de IonIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
