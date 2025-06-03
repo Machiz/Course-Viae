@@ -89,7 +89,7 @@
             }
 
             .opciones{
-                display: none; /* Oculto por arte de magia */
+                display:block; /* Select visible desde el comienzo */
                 background-color: #89D1F8;
                 border-radius: 5px; /* Bordes redondeados */
                 padding: 10px; /* Espacio interno */
@@ -148,10 +148,8 @@
                 <!--Pequeño div para los filtros-->
                 <div class="container-filtros">
                     <div>
-                        <button class="boton-filtros" onclick ="toggleOpciones('duracion')">Duración
-                            <ion-icon name="chevron-down-outline"></ion-icon> <!--Ícono de flecha apuntando al centro de la Tierra-->
-                        </button>
                         <select id ="duracion" class="opciones">
+                            <option value ="" selected disabled>Duración</option>
                             <option value="Menor a 10 horas">Menor a 10 horas</option>
                             <option value="Mayor 10 horas">Mayor a 10 horas</option>
                             <option value="Mayor a 20 horas">Mayor a 20 horas</option>
@@ -159,26 +157,22 @@
                     </div>
 
                     <div>
-                        <button class="boton-filtros" onclick="toggleOpciones('precio')">Precio
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </button>
-                        <div id ="precio" class="opciones">
-                            <p>Menor a S/ 20</p>
-                            <p>Menor a S/ 30</p>
-                            <p>Menor a S/ 50</p>
-                            <p>Mayor a S/ 50</p>
-                        </div>
+                        <select id ="precio" class="opciones">
+                            <option value="" selected disabled>Precio</option>
+                            <option value="Menor a S/ 20">Menor a S/ 20</option>
+                            <option value="Menor a S/ 30">Menor a S/ 30</option>
+                            <option value="Menor a S/ 50">Menor a S/ 50</option>
+                            <option value="Mayor a S/ 50">Mayor a S/ 50</option>
+                        </select>
                     </div>
 
                     <div>
-                        <button class="boton-filtros" onclick="toggleOpciones('nivel')">Nivel de experiencia
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </button>
-                        <div id ="nivel" class="opciones">
-                            <p>Básico</p>
-                            <p>Intermedio</p>
-                            <p>Avanzado</p>
-                        </div>
+                        <select id ="nivel" class="opciones">
+                            <option value="" selected disabled>Nivel de experiencia</option>
+                            <option value="Básico">Básico</option>
+                            <option value="Intermedio">Intermedio</option>
+                            <option value="Avanzado">Avanzado</option>
+                        </select>
                     </div>
                 </div>
 
@@ -188,11 +182,7 @@
             </div>
         </main>
 
-        <script>
-            function toggleOpciones(id){
-                var opciones = document.getElementById(id);
-                opciones.style.display = opciones.style.display === "none" ? "block" : "none";
-            }
+        <script src="./js/cursos.js">
         </script>
     </body>
 
