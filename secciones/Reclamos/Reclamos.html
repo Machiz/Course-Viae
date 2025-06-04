@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reclamos - Course Vitae</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #F4EBD9, #058ED9);
+      padding: 20px;
+    }
+    .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
+}
+
+.logo img {
+  height: auto;
+  width: 54px;
+}
+    .contenedor-reclamos {
+      background-color: white;
+      max-width: 950px;
+      margin: auto;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .titulo-reclamos {
+      background: linear-gradient(to right, #b7d5f3, #0092ff);
+      font-family: 'Arial', sans-serif;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1b1b1b;
+      margin-bottom: 20px;
+    }
+    .numeros {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    /* Se aplica a cada elemento dentro de la clase numeros*/
+    .numeros div { 
+      width: 35px;
+      height: 35px;
+      background-color: #fdcb06;
+      color: white;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .numeros div:hover {
+      background-color: orange; 
+      transform: scale(1.1);
+      transition: all 0.2s ease;
+    }
+    .reclamos-grupo {
+      display: none;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .reclamos-grupo.activo {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    }
+    .reclamo {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      flex: 1;
+    }
+    .reclamo-usuario {
+  background-color: #D9D9D9;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+    }
+
+    .reclamo-usuario-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+    }
+
+    .reclamo-usuario-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+    }
+    .formulario-reclamo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+    }
+    .formulario-reclamo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+    }
+    textarea {
+      width: 280px;
+      height: 120px;
+      border-radius: 6px;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    .botones {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .botones button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .publicar {
+      background-color: #007bff;
+      color: white;
+    }
+    .atras {
+      background-color: #999;
+      color: white;
+    }
+    .publicar:hover {
+      background-color: #0056b3;
+      transition: background-color 0.3s ease;
+    }
+
+    .atras:hover {
+      background-color: #666;
+      transition: background-color 0.3s ease;
+    }
+
+  </style>
+</head>
+<body>
+    <header class="header">
+    <div class="logo">
+  <div class="logo-text">
+    <span>Course</span>
+    <span>Vitae</span>
+  </div>
+  <img src="../../img/logo-principal.png" alt="Logo Course Vitae">
+</div>
+    </header>
+  <div class="contenedor-reclamos">
+    <div class="titulo-reclamos">Reclamos sobre <strong>Course Vitae</strong></div>
+   <!-- Botones de navegación -->
+  <div class="numeros">
+    <div onclick="mostrarGrupo(1)">1</div>
+    <div onclick="mostrarGrupo(2)">2</div>
+    <div onclick="mostrarGrupo(3)">3</div>
+  </div>
+     <!-- GRUPO 1 -->
+  <div class="reclamos-grupo grupo-1 activo">
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo1.png" alt="Foto usuario">
+      <div>
+        <strong>Marcelo Hesse</strong><br>
+        <small>Publicado el 9 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      Tengo un gran reclamo: las clases del Dr. Hernández en el curso Diseño Web son inentendibles y muy rápidas. Poco aprendizaje.
+    </p>
+  </div>
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo2.png" alt="Foto usuario">
+      <div>
+        <strong>Kalet Henry</strong><br>
+        <small>Publicado el 14 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      Las prácticas son buenas, pero la teoría es muy confusa. Mejorar la guía de trabajo.
+    </p>
+  </div>
+
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo3.png" alt="Foto usuario">
+      <div>
+        <strong>J J Aramburú</strong><br>
+        <small>Publicado el 2 de febrero del 2025</small>
+      </div>
+    </div>
+    <p>
+      Divino el diseño… pero el sistema de notas no refleja bien mi esfuerzo. Ajustar eso.
+    </p>
+  </div>
+</div>
+  <!-- GRUPO 2 -->
+  <div class="reclamos-grupo grupo-1">
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo4.webp" alt="Foto usuario">
+      <div>
+        <strong>Claudia Rios</strong><br>
+        <small>Publicado el 12 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      No recibí confirmación de inscripción al curso y nadie responde mis correos.
+    </p>
+  </div>
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo2.png" alt="Foto usuario">
+      <div>
+        <strong>Luis Alberto Gómez</strong><br>
+        <small>Publicado el 10 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      Las prácticas son buenas, pero la teoría es muy confusa. Mejorar la guía de trabajo.
+    </p>
+  </div>
+
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo6.webp" alt="Foto usuario">
+      <div>
+        <strong>Valeria Ortiz</strong><br>
+        <small>Publicado el 8 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      El profesor no responde las dudas en el foro. Me siento desorientada con la teoría.
+    </p>
+  </div>
+</div>
+  <!-- GRUPO 3 -->
+  <div class="reclamos-grupo grupo-1">
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo1.png" alt="Foto usuario">
+      <div>
+        <strong>Diego Fernández</strong><br>
+        <small>Publicado el 7 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      El contenido prometido no coincide con lo que realmente enseñan. Muy básico.
+    </p>
+  </div>
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo6.webp" alt="Foto usuario">
+      <div>
+        <strong>Mariana Castañeda</strong><br>
+        <small>Publicado el 6 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      No puedo acceder al examen final aunque ya completé todos los módulos.
+    </p>
+  </div>
+
+  <div class="reclamo-usuario">
+    <div class="reclamo-usuario-header">
+      <img src="../../../img/imagen-reclamo5.jpeg" alt="Foto usuario">
+      <div>
+        <strong>Bruno Herrera</strong><br>
+        <small>Publicado el 5 de mayo del 2025</small>
+      </div>
+    </div>
+    <p>
+      Divino el diseño… pero el sistema de notas no refleja bien mi esfuerzo. Ajustar eso.
+    </p>
+  </div>
+</div>
+
+   <div class="formulario-reclamo">
+  <label for="reclamo">Escriba su reclamo</label>
+  <textarea id="reclamo" placeholder="Escribe aquí..."></textarea>
+   </div>
+
+    <div class="botones">
+      <button class="atras">Regresar</button>
+      <button id="publicar-btn" class="publicar">Publicar reclamo</button>
+    </div>
+    <div id="mensaje-confirmacion" style="display:none; color: green; margin-top: 10px; font-weight: bold;">
+  Gracias por hacernos saber su reclamo.
+</div>
+  </div>
+  <script>
+  function mostrarGrupo(numero) {
+    const grupos = document.querySelectorAll('.reclamos-grupo');
+    grupos.forEach((grupo, index) => {
+      grupo.style.display = (index === numero - 1) ? 'flex' : 'none';
+    });
+  }
+</script>
+<script>
+  document.getElementById("publicar-btn").addEventListener("click", function () {
+    const textarea = document.getElementById("reclamo");
+    const mensaje = document.getElementById("mensaje-confirmacion");
+
+    if (textarea.value.trim() !== "") {
+      mensaje.style.display = "block";        // Se muestra el mensaje
+      textarea.value = "";                    // Se borra el texto en la caja de texto
+      // El mensaje se oculta luego de 4 segundos
+      setTimeout(() => {
+        mensaje.style.display = "none";
+      }, 4000);
+    } else {
+      alert("Por favor, escriba un reclamo antes de publicar.");
+    }
+  });
+</script>
+</body>
+</html>
