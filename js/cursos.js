@@ -1,10 +1,10 @@
 const cursos = [
-    {nombre: "JavaScript Básico", duracion: "15 horas", precio: 19, nivel: "Básico", codigo: "134562"},
-    {nombre: "Python Intermedio", duracion: "8 horas", precio: 25, nivel: "Intermedio", codigo: "777512"},
-    {nombre: "Diseño Web", duracion: "12 horas", precio: 20, nivel: "Básico", codigo: "123512"},
-    {nombre: "Gestión Empresarial", duracion: "7 horas", precio: 15, nivel: "Básico", codigo: "124512"},
-    {nombre: "Cálculo Avanzado", duracion: "11 horas", precio: 18, nivel: "Avanzado", codigo: "136772"},
-    {nombre: "Python Avanzado", duracion: "18 horas", precio: 26, nivel: "Avanzado", codigo: "125513"},
+    {nombre: "JavaScript Básico", duracion: "15 horas", precio: 19, nivel: "Básico", codigo: "#134562", imagen: "./resources/fotos/javascript-basico.png"},
+    {nombre: "Python Intermedio", duracion: "8 horas", precio: 25, nivel: "Intermedio", codigo: "#777512", imagen: "./resources/fotos/python-intermedio.png"},
+    {nombre: "Diseño Web", duracion: "12 horas", precio: 20, nivel: "Básico", codigo: "#123512", imagen: "./resources/fotos/diseno-web.png"},
+    {nombre: "Gestión Empresarial", duracion: "7 horas", precio: 15, nivel: "Básico", codigo: "#124512", imagen:"./resources/fotos/gestion-empresarial.png"},
+    {nombre: "Cálculo Avanzado", duracion: "11 horas", precio: 18, nivel: "Avanzado", codigo: "#136772", imagen: "./resources/fotos/calculo-avanzado.jpg"},
+    {nombre: "Python Avanzado", duracion: "18 horas", precio: 26, nivel: "Avanzado", codigo: "#125513", imagen: "./resources/fotos/python-avanzado.jpg"},
 ];
 
 // Función para filtrar cursos
@@ -74,7 +74,7 @@ function mostrarCursos(cursos){
 
         // Imagen del curso
         let imgCurso = document.createElement("img");
-        //imgCursoCurso.src = ""
+        imgCurso.src = curso.imagen;
         imgCurso.style.width = "100%";
         imgCurso.style.marginBottom = "10px";
 
