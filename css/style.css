@@ -144,7 +144,8 @@ h1{
 }
 
 .logo-noti img {
-  height: 70px;
+  height: auto;
+  width: 54px;
 }
 
 .usuario-noti {
@@ -154,8 +155,8 @@ h1{
 }
 
 .avatar-noti {
-  width: 35px;
-  height: 35px;
+  width: 60px;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -217,7 +218,8 @@ h1{
 .nombre-usuario {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #FFFFFF;
+  font-family: Arial;
 }
 .nombre-usuario:hover {
   color: #5b6e92; 
