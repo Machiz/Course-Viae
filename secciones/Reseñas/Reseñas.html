@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reseñas - Course Vitae</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #F4EBD9, #058ED9);
+    }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
+}
+
+.logo img {
+  height: auto;
+  width: 54px;
+}
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: Arial;
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.letras-nav {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: Arial;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+   .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #444;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 500;
+  }
+
+  .breadcrumb .divider {
+    margin: 0 5px;
+    color: #999;
+  }
+
+  .breadcrumb .actual {
+    font-weight: 600;
+    color: #111;
+  }
+    .titulo-curso {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .sub-info {
+      font-size: 14px;
+      color: #777;
+      margin-left: 10px;
+    }
+    .reseñar-btn {
+      float: right;
+      padding: 8px 20px;
+      background-color: #058ED9;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .reseñar-btn:hover {
+      background-color: #2563eb;
+    }
+    .reseña {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .reseña img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .reseña .info {
+      flex: 1;
+    }
+    .reseña .info h4 {
+      margin: 0;
+    }
+    .reseña .info p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #444;
+    }
+    .calificacion {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .rellenas {
+      color: #FFA500;
+    }
+    .vacias {
+      color: black;
+    }
+    .completado {
+      font-size: 13px;
+      color: #0a84ff;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+  <div class="logo-text">
+    <span>Course</span>
+    <span>Vitae</span>
+  </div>
+  <img src="../../img/logo-principal.png" alt="Logo Course Vitae">
+</div>
+ <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                <nav>
+                    <ul style="list-style: none; display: flex; gap: 80px; margin-left: 1px; font-size: 18px;">
+                        <li><a href="#" class="letras-nav">Home</a></li>
+                        <li><a href="#" class="letras-nav">Estudiante</a></li>
+                        <li><a href="#" class="letras-nav">Nosotros</a></li>
+                        <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                    </ul>
+                </nav>
+    <div class="usuario-noti">
+      <span class="nombre-usuario">Alessandro Hesse</span>
+      <img src="../../img/hesse.jpg" alt="usuario" class="avatar-noti">
+    </div>
+    </header>
+
+  <div class="container">
+    <nav class="breadcrumb">
+  <a href="cursos.html">Cursos</a> <span>›</span>
+  <span>Reseñas</span>
+</nav>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <div class="titulo-curso">Python intermedio <span class="sub-info">#777512</span></div>
+        <h3>Reseñas</h3>
+      </div>
+      <a href="Formulario-reseña.html">
+      <button class="reseñar-btn">Reseñar Curso</button>
+      </a>
+    </div>
+
+    <div class="reseña">
+      <img src="../../img/usuario-reseña1.png" alt="Diego">
+      <div class="info">
+        <h4>Diego Luna</h4>
+        <p>Terminar este curso me ayudó a impulsar mi CV en el mercado. Todo gracias a la gran cantidad de material informativo con el que cuenta.</p>
+        <div class="calificacion">Calificación:
+  <span class="estrellas">
+    <span class="rellenas">★★★</span><span class="vacias">★★</span>
+  </span>
+  <span class="completado">Completado ✔</span>
+</div>
+      </div>
+    </div>
+
+    <div class="reseña">
+      <img src="../../img/usuario-reseña2.png" alt="Marco">
+      <div class="info">
+        <h4>Marco Torres</h4>
+        <p>Mediante este curso adquirí valiosas herramientas que me ayudaron a mejorar mis conocimientos y así estar preparado para los requisitos de mi campo laboral.</p>
+        <div class="calificacion">Calificación:
+  <span class="estrellas">
+    <span class="rellenas">★★★★</span><span class="vacias">★</span>
+  </span>
+  <span class="completado">Completado ✔</span>
+</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
