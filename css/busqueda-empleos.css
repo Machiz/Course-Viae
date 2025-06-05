@@ -1,0 +1,113 @@
+
+
+.filtros{
+  display: flex;
+}
+.filtro_box{
+  width: 1453px;
+  height: 50px;
+  border: 1px solid rgb(165, 165, 165);
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.filtro_texto{
+    
+    margin-top: -4px;
+    padding: 1px;
+}
+.filtro_button{
+    margin-top: -24px;
+    padding: 1px;
+    border-radius: 20px;
+
+}
+.filtro_button_fill{
+    
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(241, 241, 241);
+}
+
+.oferta_box{
+  width: 600px;
+  height: 150px;
+  border: 1px solid rgb(165, 165, 165);
+  background-color: white;
+  padding-left: 10px;
+  padding-top: -5px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.oferta_box:hover{
+  background-color: rgb(218, 243, 255);
+}
+.oferta_info_box{
+  width: 800px;
+  height: 532px;
+  float:right;
+  border: 1px solid rgb(165, 165, 165);
+  background-color: white;
+  padding: 10px;
+  margin: 25px;
+  margin-top: 0px;
+  border-radius: 10px;
+  text-align: center;
+}
+.upper{
+    margin: 20px;
+    float:right;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-image: linear-gradient(to right, beige, #058ED9);
+}
+
+.imagen_oferta{
+  float:right;
+  width: 20%;
+  height: 20%;
+  padding-right: 40px;
+}
+
+.oferta_float_val{
+  float: right;
+  padding-right: 30px;
+}
+
+.main_imagen_oferta{
+  float: right;
+  width: 17%;
+  height: 10%;
+}
+.left_align_h3{
+  text-align: left;
+  font-size: 150%;
+}
+.left_align_h4{
+  text-align: left;
+  
+}
+.left_align{
+  padding-left: 20px;
+  text-align: left;
+}
+
+.postular_button{
+  background-color: #058ED9;
+  width: 250px;
+  height: 50px;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  transition: color 0.4s ease-in-out;
+
+}
+
+.postular_button:hover{
+  background-color:#025bcf;
+}

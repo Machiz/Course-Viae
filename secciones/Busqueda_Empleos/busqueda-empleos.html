@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/busqueda-empleos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <input type="text" id="buscador" placeholder="Buscar ofertas laborales">
+        
+    </div>
+
+    <div class="filtro_box">
+        <h4 class="filtro_texto">Filtros</h4>
+        <div class="filtros">
+            <div>
+            <form class="filtro_button">
+            <select id="distrito" width=150 style="width: 150px; height: 30px;" class= "filtro_button_fill">
+                <option value='Miraflores'>Miraflores</option>
+                <option value='Surquillo'>Surquillo</option>
+                <option value='San Borja'>San Borja</option>
+                <option value='San Juan de Miraflores'>San Juan de Miraflores</option>
+                <option value='' selected>
+                    Distrito
+                </option>
+            </select>
+            </form>
+        </div>
+        <div>
+            <form class="filtro_button">
+            <select id="salario" width=150 style="width: 150px; height: 30px;" class= "filtro_button_fill">
+                <option value='Menor a s/.700'>Menor a s/.700</option>
+                <option value='Mayor a s/.700'>Mayor a s/.700</option>
+                <option value='Mayor a s/.1300'>Mayor a s/.1300</option>
+                <option value='Mayor a s/.2000'>Mayor a s/.2000</option>
+                <option value='Mayor a s/.3000'>Mayor a s/.3000</option>
+                <option value='' selected>
+                    Salario
+                </option>
+            </select>
+            </form>
+        </div>
+        <div>
+            <form class="filtro_button">
+            <select id="fecha" width=150 style="width: 150px; height: 30px;" class= "filtro_button_fill">
+                <option value='Hace 1 día'>Hace 1 día</option>
+                <option value='Hace 5 días'>Hace 5 días</option>
+                <option value='Hace 1 semana'>Hace 1 semana</option>
+                <option value='Hace 2 semanas'>Hace 2 semanas</option>
+                <option value='Hace 1 mes'>Hace 1 mes</option>
+                <option value='' selected>
+                    Fecha
+                </option>
+            </select>
+            </form>
+        </div>
+        <div>
+            <form class="filtro_button">
+            <select id="jornada" width=150 style="width: 150px; height: 30px;" class= "filtro_button_fill">
+                <option value='Tiempo Parcial'>Tiempo Parcial</option>
+                <option value='Tiempo Completo'>Tiempo Completo</option>
+                <option value='' selected>
+                    Jornada
+                </option>
+            </select>
+            </form>
+        </div>
+        </div>
+
+
+    </div>
+
+    <div class="oferta_info_box" id="main_oferta_box">
+        <h3>Empieza eligiendo una oferta para ver sus detalles</h3>
+    </div>
+
+    <section class="lista-ofertas">
+
+    </section>
+    
+
+
+    <script src="../../js/busqueda-empleos.js"></script>
+</body>
+</html>
