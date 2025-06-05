@@ -164,7 +164,7 @@ h1{
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  max-width: 1026px;
+  max-width: 900px;
   margin: auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -215,6 +215,17 @@ h1{
 .logo-text {
   font-size: 24px;
 }
+.letras-nav {
+  font-size: 18px;
+   font-weight: bold;
+  color: #FFFFFF;
+  font-family: Arial;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
 .nombre-usuario {
   font-size: 18px;
   font-weight: bold;
@@ -222,7 +233,7 @@ h1{
   font-family: Arial;
 }
 .nombre-usuario:hover {
-  color: #5b6e92; 
+  color: #89d1f8; 
   cursor: pointer;
 }
 .notificaciones-container h2 {
@@ -246,3 +257,4 @@ h1{
   flex: 1;
 }
 
+/*Estilos seccion Reseñas*/

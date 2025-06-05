@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reseñar Curso</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #F4EBD9, #058ED9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      max-width: 90%;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .descripcion {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .calificacion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    .calificacion span {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .estrellas {
+      display: flex;
+      gap: 10px;
+    }
+
+    .estrella {
+      font-size: 28px;
+      cursor: pointer;
+      color: #ddd;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .estrella:hover,
+    .estrella.seleccionada {
+      color: #FFA500;
+      transform: scale(1.1);
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      border: 2px solid #3b82f6;
+      border-radius: 12px;
+      padding: 15px;
+      resize: none;
+      font-size: 14px;
+      background: #fefefe;
+      box-sizing: border-box;
+      margin-top: 10px;
+    }
+
+    .acciones {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 25px;
+      padding: 10px 24px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-regresar {
+      background-color: #a39a92;
+      color: white;
+    }
+
+    .btn-regresar:hover {
+      background-color: #666;
+    }
+
+    .btn-publicar {
+      background-color: #058ED9;
+      color: white;
+    }
+
+    .btn-publicar:hover {
+      background-color: #0056b3;
+    }
+    .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 500;
+  }
+
+  .breadcrumb .divider {
+    margin: 0 5px;
+    color: #999;
+  }
+
+  .breadcrumb .actual {
+    font-weight: normal;
+    color: #111; 
+  }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <nav class="breadcrumb">
+  <a href="cursos.html">Cursos</a> <span class="divider">›</span>
+  <a href="reseñas.html">Reseñas</a> <span class="divider">›</span>
+  <span class="actual">Reseñar curso</span>
+</nav>
+    <h2>Reseñar curso</h2>
+    <p class="descripcion">
+      En esta sección, puede dejar constancia de la opinión que se granjeó en torno al curso. Agregue libremente sus razones, emociones o sugerencias.
+    </p>
+
+    <div class="calificacion">
+      <span>Agregar calificación:</span>
+      <div class="estrellas" id="estrellas">
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+      </div>
+    </div>
+
+    <textarea placeholder="Escriba su reseña aquí..."></textarea>
+
+    <div class="acciones">
+      <button class="btn btn-publicar">Publicar reseña</button>
+    </div>
+  </div>
+
+  <script>
+    const estrellas = document.querySelectorAll('.estrella');
+    estrellas.forEach((estrella, index) => {
+      estrella.addEventListener('click', () => {
+        estrellas.forEach((e, i) => {
+          e.classList.toggle('seleccionada', i <= index);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

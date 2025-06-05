@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 20px 40px;
 }
 
 .logo {
@@ -46,13 +46,13 @@
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
     .titulo-reclamos {
-      background: linear-gradient(to right, #b7d5f3, #0092ff);
+      background: linear-gradient(to right, #F4EBD9, #0092ff);
       font-family: 'Arial', sans-serif;
       padding: 10px 20px;
       border-radius: 6px;
       font-size: 22px;
       font-weight: bold;
-      color: #1b1b1b;
+      color: #ffffff;
       margin-bottom: 20px;
     }
     .numeros {
@@ -161,11 +161,42 @@
       background-color: #666;
       transition: background-color 0.3s ease;
     }
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.nombre-usuario {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-family: Arial;
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.letras-nav {
+  font-size: 18px;
+   font-weight: bold;
+  color: #FFFFFF;
+  font-family: Arial;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
-    <header class="header">
+  <header class="header">
     <div class="logo">
   <div class="logo-text">
     <span>Course</span>
@@ -173,6 +204,19 @@
   </div>
   <img src="../../img/logo-principal.png" alt="Logo Course Vitae">
 </div>
+ <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                <nav>
+                    <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
+                        <li><a href="#" class="letras-nav">Home</a></li>
+                        <li><a href="#" class="letras-nav">Estudiante</a></li>
+                        <li><a href="#" class="letras-nav">Nosotros</a></li>
+                        <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                    </ul>
+                </nav>
+    <div class="usuario-noti">
+      <span class="nombre-usuario">Alessandro Hesse</span>
+      <img src="../../img/hesse.jpg" alt="usuario" class="avatar-noti">
+    </div>
     </header>
   <div class="contenedor-reclamos">
     <div class="titulo-reclamos">Reclamos sobre <strong>Course Vitae</strong></div>
