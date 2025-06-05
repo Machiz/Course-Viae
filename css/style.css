@@ -111,9 +111,10 @@ h1{
     grid-template-columns: repeat(3, 1fr);
     grid: 5rem;
 }
+
 /* Estilos sección Notificaciones*/
 .notificaciones-body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: linear-gradient(to right, #F4EBD9, #058ED9);
   margin: 0;
   padding: 0;
@@ -124,7 +125,7 @@ h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 40px; /*primer num=alto, segundo num=ancho*/
 }
 
 .logo-noti {
@@ -164,7 +165,7 @@ h1{
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  max-width: 1026px;
+  max-width: 700px;
   margin: auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -187,7 +188,7 @@ h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-   gap: 10px;
+  gap: 10px;
 }
 
 .oferta:last-child {
@@ -195,12 +196,14 @@ h1{
 }
 
 .btn-noti {
-  background-color: #007bff;
+  background-color: #058ED9;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
   cursor: pointer;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
 .btn-noti:hover {
@@ -217,18 +220,21 @@ h1{
 }
 .nombre-usuario {
   font-size: 18px;
-  font-weight: bold;
   color: #FFFFFF;
-  font-family: Arial;
+  font-family: 'Inter', sans-serif;
 }
 .nombre-usuario:hover {
-  color: #5b6e92; 
+  color: #89d1f8; 
   cursor: pointer;
 }
 .notificaciones-container h2 {
-  font-size: 28px;
+  font-size: 27px;
+  font-weight: 500;
 }
 .oferta span {
+  display: block;
+  line-height: 1.2; /* reduce espacio vertical */
+  margin-bottom: 2px;
   font-size: 16px;  
 }
 .oferta span small { /* texto de fecha y hora*/
@@ -237,11 +243,48 @@ h1{
 }
 .segundo-titulo {
   font-size: 16px;        
-  font-weight: bold;
-  color: #333;            
+  font-weight: 500;
+  color: #058ED9;            
   display: block;
   margin-bottom: 10px;
 }
 .oferta-texto {
   flex: 1;
 }
+.letras-nav {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+ .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #444;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #058ED9;
+    font-weight: normal;
+  }
+  .breadcrumb a:hover {
+  color: #0056b3;
+  cursor: pointer;
+  }
+
+  .breadcrumb .divider {
+    margin: 0 5px;
+    color: #999;
+  }
+
+  .breadcrumb .actual {
+    color: #111;
+    font-weight: normal;
+    pointer-events: none;
+  }
