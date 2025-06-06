@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reclamos - Course Vitae</title>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family:'Inter', sans-serif;
       background: linear-gradient(to right, #F4EBD9, #058ED9);
-      padding: 20px;
     }
     .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 40px;
 }
 
 .logo {
@@ -44,16 +44,15 @@
       padding: 25px 30px;
       border-radius: 10px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
+
     }
     .titulo-reclamos {
-      background: linear-gradient(to right, #F4EBD9, #0092ff);
-      font-family: 'Arial', sans-serif;
-      padding: 10px 20px;
-      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
       font-size: 22px;
-      font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 20px;
+      color: black;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
     }
     .numeros {
       display: flex;
@@ -64,16 +63,16 @@
     .numeros div { 
       width: 35px;
       height: 35px;
-      background-color: #fdcb06;
+      background-color: #007bff;
       color: white;
-      font-weight: bold;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
     .numeros div:hover {
-      background-color: orange; 
+      background-color: #0056b3; 
       transform: scale(1.1);
       transition: all 0.2s ease;
     }
@@ -94,12 +93,17 @@
       flex: 1;
     }
     .reclamo-usuario {
-  background-color: #D9D9D9;
+  background-color: #f0f0f0;
   padding: 15px;
   border-radius: 8px;
   flex: 1;
+  font-size: 14px;
     }
-
+    .reclamo-usuario:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
     .reclamo-usuario-header {
   display: flex;
   align-items: center;
@@ -132,35 +136,62 @@
       border: 1px solid #ccc;
       resize: none;
     }
+    textarea::placeholder {
+  font-family: 'Inter', sans-serif;
+}
+
     .botones {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
     }
     .botones button {
-      padding: 10px 18px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
-      font-weight: bold;
+      padding: 6px 16px;
+      border-radius: 999px;
       cursor: pointer;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
     }
     .publicar {
       background-color: #007bff;
       color: white;
+      
     }
-    .atras {
-      background-color: #999;
-      color: white;
-    }
+    .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #444;
+    font-family: 'Inter';
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #058ED9;
+    font-weight: normal;
+  }
+  .breadcrumb a:hover {
+  color: #0056b3;
+  cursor: pointer;
+  }
+
+  .breadcrumb .divider {
+    margin: 0 5px;
+    color: #999;
+  }
+
+  .breadcrumb .actual {
+    color: #111;
+    font-weight: normal;
+    pointer-events: none;
+  }
+
     .publicar:hover {
       background-color: #0056b3;
       transition: background-color 0.3s ease;
     }
 
-    .atras:hover {
-      background-color: #666;
-      transition: background-color 0.3s ease;
-    }
 .usuario-noti {
   display: flex;
   align-items: center;
@@ -174,9 +205,8 @@
 }
 .nombre-usuario {
   font-size: 18px;
-  font-weight: bold;
   color: #FFFFFF;
-  font-family: Arial;
+  font-family: 'Inter';
 }
 .nombre-usuario:hover {
   color: #89d1f8; 
@@ -184,9 +214,7 @@
 }
 .letras-nav {
   font-size: 18px;
-   font-weight: bold;
   color: #FFFFFF;
-  font-family: Arial;
   text-decoration: none;
 }
 .letras-nav:hover {
@@ -219,7 +247,11 @@
     </div>
     </header>
   <div class="contenedor-reclamos">
-    <div class="titulo-reclamos">Reclamos sobre <strong>Course Vitae</strong></div>
+    <nav class="breadcrumb">
+  <a href="index.html">Inicio</a> <span class="divider">›</span>
+  <span class="actual">Reclamos</span>
+</nav>
+    <div class="titulo-reclamos">Reclamos sobre Course Vitae</div>
    <!-- Botones de navegación -->
   <div class="numeros">
     <div onclick="mostrarGrupo(1)">1</div>
@@ -349,14 +381,13 @@
 
    <div class="formulario-reclamo">
   <label for="reclamo">Escriba su reclamo</label>
-  <textarea id="reclamo" placeholder="Escribe aquí..."></textarea>
+  <textarea id="reclamo" placeholder="Mi reclamo es..."></textarea>
    </div>
 
     <div class="botones">
-      <button class="atras">Regresar</button>
       <button id="publicar-btn" class="publicar">Publicar reclamo</button>
     </div>
-    <div id="mensaje-confirmacion" style="display:none; color: green; margin-top: 10px; font-weight: bold;">
+    <div id="mensaje-confirmacion" style="display:none; color: blue; margin-top: 10px;font-family: 'Inter';">
   Gracias por hacernos saber su reclamo.
 </div>
   </div>
