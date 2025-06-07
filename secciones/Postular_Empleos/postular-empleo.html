@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel ="stylesheet" href="../../css/postular-empleos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body style="background: linear-gradient(to right, #F4EBD9, #058ED9); height:90vh;">
+  <header>
+    <div class="contenedor-header">
+      <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
+      <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
+        <span>Course</span>
+        <span>Vitae</span>
+      </div>
+      <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
+      <img src="../../resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;">
+      <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+
+      <nav>
+        <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+          <li><a href="#" class="letras-nav">Home</a></li>
+          <li><a href="#" class="letras-nav">Estudiante</a></li>
+          <li><a href="#" class="letras-nav">Nosotros</a></li>
+          <li><a href="#" class="letras-nav">Contáctanos</a></li>
+        </ul>
+
+      </nav>
+
+      <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
+      <div class="usuario-header">
+        <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
+        <img src="../../resources/fotos/hesse.jpg" alt = "Usuario">
+      </div>
+    </div>
+   </header>
+   <div class="dark-bg" id="bg"></div>
+   <div class="popup" id="popup1"> 
+        <img class = "popup-img" src="../../resources/fotos/fiesta.png" alt="emoticon de fiesta">
+        <h3> Postulación exitosa! </h3>
+        <p> Explora nuevas oportunidades en nuestra sección de empleos </p>
+        <button type="button" class="regresar-empleos">
+            Regresar a Empleos
+        </button>
+        </div>
+   </div>
+ 
+   <div class="main-box" id="main-box-1">
+        <h4>Regresar</h4>
+        <h2>Estás a pocos pasos de concluir tu postulación</h2>
+
+        <img class="postular-img" src="../../resources/fotos/portal_postular2.png">
+        <p class = "input-h4">Numero telefónico</p>
+        <input class = input-box-1 placeholder="+51 *** *** ***" type="text">
+        <br>
+        <p class = "input-h4">Correo electrónico</p>
+        <input class = input-box-1 placeholder="example@gmail.com" type="text">
+
+        <p class = "input-h4"> Se estará enviando el CV adjunto a su perfil.</p>
+        <button type="button" class="editar-cv">
+            Editar CV
+        </button>
+
+        <div class= "postular-box" id="postular1">
+        <button type="button" class="postular-button">
+            Enviar Postulación
+        </button>
+    </div>
+   </main>
+
+   <script src="../../js/postulacion-empleos.js"></script>
+
+</body>
+
+</html>
