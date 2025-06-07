@@ -1,79 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Vitae - Inicio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Vitae</title>
+` <link rel="stylesheet" href="css/landing_styles.css">
 </head>
-
-
 <body>
-    <nav class="barra">
-        <div class="barra_contenido">
-            <div class="logo"></div>
-            <li>
-                <a href="#Inicio">Inicio</a>
-            </li>
-    
-            <li>
-                <a href="#Nosotros">Inicio</a>
-            </li>
-    
-            <li>
-                <a href="#Contacto">Inicio</a>
-            </li>
-    
-            <li class="barra_botones">
-                <button>Crear cuenta</button>
-            </li>
-    
-            <li class="barra_botones">
-                <button>Iniciar sesion</button>
-            </li>
-        </div>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <div class="logo-icon"><img src="./resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;"></div>
+        <span class="logo-text">Course Vitae</span>
+      </div>
 
-    <div class="Contenedor_principal">
-        <h1 class="Inicial">Preparate para <span class="Espacio">tu entrada</span><span class="Espacio">al campo laboral</span></h1> 
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Estudiante</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contáctanos</a>
+      </nav>
 
-        <button>Crear cuenta</button>
-        <button>Iniciar sesion</button>
+      <div class="header-buttons">
+        <button class="btn btn-dark">Crear Cuenta</button>
+        <button class="btn btn-blue"><a href="Log_in.html" class="footer-link">Iniciar sesión</a></button>
+      </div>
     </div>
+  </header>
 
-    <div class="quienes_somos">
-        <div class="titulo_quienes">
-            <h1>Quienes somos</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1 class="hero-title">Prepárate para tu entrada al campo laboral</h1>
+        <div class="hero-buttons">
+          <button class="btn btn-dark">Crear Cuenta</button>
+          <button class="btn btn-outline">Iniciar sesión</button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="search-box">
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="JOB">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
         </div>
 
-        <div>
-            <p>Somos una start up emergente, que busca formar a estudiantes, ya egresados o en sus últimos ciclos, para que se integren en el mercado laboral brindando cursos y capacitaciones técnicas</p>
+        <div class="illustration">
+          <div class="person person-1"></div>
+          <div class="person person-2"></div>
+          <div class="person person-3"></div>
+          <div class="person person-4"></div>
         </div>
+      </div>
     </div>
-        
+  </section>
 
-        
+  <!-- About Section -->
+  <section class="about">
+    <div class="container about-container">
+      <div>
+        <h2 class="about-title">¿Quiénes somos?</h2>
+      </div>
+      <div>
+        <p class="about-text">
+          Somos una start up emergente, que busca formar a estudiantes, ya egresados o en sus últimos ciclos, para
+          que se integren en el mercado laboral brindando cursos y capacitaciones técnicas
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <div>
-            <h5>Course Vitae</h5>
-            <h5>Contacto</h5>
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="testimonials-title">Experiencias</h2>
 
-            <p>coursevitae-contact@gmail.com</p>
-            <p>999 913 942</p>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-image testimonial-1"></div>
+          <p class="testimonial-text">
+            "Gracias a esta plataforma, logré prepararme antes de egresar y sentirme seguro en mi integración al
+            mundo laboral. Los cursos me dieron las herramientas necesarias para destacarme en entrevistas y en mi
+            primer empleo."
+          </p>
         </div>
-        <div>
 
-            <h5>Enlaces rapidos</h5>
+        <div class="testimonial">
+          <div class="testimonial-image testimonial-2"></div>
+          <p class="testimonial-text">
+            "Como estudiante en los últimos ciclos, tenía muchas dudas sobre cómo empezar mi carrera profesional.
+            Aquí encontré una guía clara y práctica que me permitió dar mis primeros pasos con confianza."
+          </p>
+        </div>
 
-            <a href="">Iniciar sesion</a>
-            <a href="">Crear cuenta</a>
-            <a href="">Inicio</a>
+        <div class="testimonial">
+          <div class="testimonial-image testimonial-3"></div>
+          <p class="testimonial-text">
+            "Una excelente iniciativa para quienes estamos a punto de egresar o recién terminamos nuestros estudios.
+            La capacitación es completa y alineada con lo que realmente busca el mercado laboral."
+          </p>
         </div>
-        <div>
-            <h5>Nuestras redes</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Course vitae</h3>
+        <h4 class="footer-subtitle">Contacto:</h4>
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="contact-text">coursevitae-contact@gmail.com</span>
         </div>
-    </footer>
-    
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="contact-text">999 913 942</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Enlaces rápidos</h3>
+        <div class="footer-links">
+          <a href="Log_in.html" class="footer-link">Iniciar sesión</a>
+          <a href="#" class="footer-link">Crear cuenta</a>
+          <a href="#" class="footer-link">Inicio</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Nuestras redes</h3>
+        <div class="social-icons">
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -38,24 +38,6 @@
       gap: 0.5rem;
     }
 
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      background-color: #3884da;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-icon::after {
-      content: "";
-      width: 16px;
-      height: 16px;
-      background-color: white;
-      border-radius: 50%;
-    }
-
     .logo-text {
       color: #102228;
       font-weight: 600;
@@ -79,11 +61,12 @@
     .header-buttons {
       display: flex;
       gap: 0.75rem;
+      border-radius: 20;
     }
 
     .btn {
       padding: 0.5rem 1rem;
-      border-radius: 4px;
+      border-radius: 20px;
       font-weight: 500;
       cursor: pointer;
       border: 1px solid transparent;
@@ -101,9 +84,9 @@
     }
 
     .btn-blue {
-      background-color: #3884da;
+      background-color: #3884da00;
       color: white;
-      border-color: #3884da;
+      border-color: #483e3f;
     }
 
     .btn-blue:hover {
