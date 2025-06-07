@@ -9,15 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div>
-        <input type="text" id="buscador" placeholder="Buscar ofertas laborales">
-        
-    </div>
+<body style="background: linear-gradient(to right, #F4EBD9, #058ED9); height:100vh;">
+    <header>
+        <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
+        <div class="contenedor-header">
+            <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
+            <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
+                <span>Course</span>
+                <span>Vitae</span>
+            </div>
+            <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
+            <img src="../../resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;">
+
+            <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+            <nav>
+                <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+                    <li><a href="#" class="letras-nav">Home</a></li>
+                    <li><a href="#" class="letras-nav">Estudiante</a></li>
+                    <li><a href="#" class="letras-nav">Nosotros</a></li>
+                    <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                </ul>
+            </nav>
+
+            <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
+            <div class="usuario-header">
+                <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
+                <img src="../../resources/fotos/hesse.jpg" alt = "Usuario">
+            </div>
+
+        </div>
+    </header>
+    
 
     <div class="filtro_box">
         <h4 class="filtro_texto">Filtros</h4>
         <div class="filtros">
+            <div >
+                <input class="filtro_input" type="text" id="buscador" placeholder="Buscar ofertas laborales">
+                
+            </div>
             <div>
             <form class="filtro_button">
             <select id="distrito" width=150 style="width: 150px; height: 30px;" class= "filtro_button_fill">
@@ -77,6 +107,7 @@
 
     <div class="oferta_info_box" id="main_oferta_box">
         <h3>Empieza eligiendo una oferta para ver sus detalles</h3>
+        <img class = "oferta_info_img" src="../../resources/fotos/portal_empleos.png">
     </div>
 
     <section class="lista-ofertas">

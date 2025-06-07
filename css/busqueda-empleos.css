@@ -1,43 +1,62 @@
 
-
 .filtros{
   display: flex;
 }
 .filtro_box{
   width: 1453px;
-  height: 50px;
+  height: 70px;
   border: 1px solid rgb(165, 165, 165);
   background-color: white;
   padding: 10px;
   margin: 20px;
+  margin-top: 5px;
   border-radius: 10px;
 }
 .filtro_texto{
-    
-    margin-top: -4px;
-    padding: 1px;
+  margin-top: -4px;
 }
-.filtro_button{
-    margin-top: -24px;
-    padding: 1px;
-    border-radius: 20px;
+.filtro_input{
+  width: 340px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(165, 165, 165);
+  margin-top: -20px;
+  margin-right: 25px;
+  text-justify: auto;
+  box-sizing:content-box;
 
 }
+.filtro_button{
+  margin-top: -8px;
+  padding-left: -15px;
+}
 .filtro_button_fill{
-    
-    margin: 5px;
-    border-radius: 10px;
-    background-color: rgb(241, 241, 241);
+  margin: 5px;
+  border-radius: 10px;
+  background-color: rgb(241, 241, 241);
+}
+
+.scroll_box {
+  width: 630px;
+  height: 495px;
+  overflow: auto;
+  border: none;
+  padding: -10px;
+  margin: 0px;
+}
+.scroll_content{
+  background-color: aliceblue;
 }
 
 .oferta_box{
-  width: 600px;
+  width: 580px;
   height: 150px;
   border: 1px solid rgb(165, 165, 165);
   background-color: white;
   padding-left: 10px;
-  padding-top: -5px;
-  margin: 20px;
+  padding-top: -40px;
+  margin-left: 15px;
+  margin-top: 15px;
   border-radius: 10px;
 }
 .oferta_box:hover{
@@ -45,7 +64,7 @@
 }
 .oferta_info_box{
   width: 800px;
-  height: 532px;
+  height: 473px;
   float:right;
   border: 1px solid rgb(165, 165, 165);
   background-color: white;
@@ -55,6 +74,15 @@
   border-radius: 10px;
   text-align: center;
 }
+.oferta_box_h3{
+
+  margin-top: 10px;
+}
+.oferta_info_img{
+  width: 500px;
+  height: auto;
+}
+
 .upper{
     margin: 20px;
     float:right;
@@ -68,8 +96,8 @@ body{
 .imagen_oferta{
   float:right;
   width: 20%;
-  height: 20%;
-  padding-right: 40px;
+  height: auto;
+  padding-right: 15px;
 }
 
 .oferta_float_val{
@@ -79,12 +107,13 @@ body{
 
 .main_imagen_oferta{
   float: right;
-  width: 17%;
-  height: 10%;
+  width: 20%;
+  height: auto;
 }
 .left_align_h3{
   text-align: left;
   font-size: 150%;
+  margin-top: 3px;
 }
 .left_align_h4{
   text-align: left;
@@ -110,4 +139,100 @@ body{
 
 .postular_button:hover{
   background-color:#025bcf;
+}
+
+
+
+
+
+.contenedor-header{
+    display:flex;
+    align-items: center; /* Alineación al inicio del contenedor */
+    gap: 14px; /* Espacio entre imagen y texto */
+    padding-left:20px; /* Espacio a la izquierda */
+}
+
+.letras-titulo{
+    display:flex;
+    font-family: Arial, sans-serif;
+    margin-left: 10px;
+    flex-direction: column; /* Una palabra sobre otra, forma de columnas */
+    text-align:center; /* Centrado de las letras */
+    font-size: 24px; /* Tamaño de letra */
+    color:#058ED9; /* Color azul */
+    font-weight: bold; /* Negrita */
+}
+
+.letras-nav{
+    font-family: Arial;
+    color: white;
+    text-decoration: none; /* Sin subrayado */
+    font-weight:bold; /* Negrita */
+}
+
+.usuario-header{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items:center;
+    gap: 10px; /* Espacio entre nombre y foto */
+    font-family: Arial;
+    color: white;
+}
+
+.usuario-header img{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    object-fit:cover;
+}
+
+.cont-escribir-curso{
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.container-principal{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    background-color:white;
+    border-radius:20px;
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.container-filtros{
+    display: flex;
+    background-color:white;
+    border:#454545;
+    gap: 30px;
+}
+
+.boton-filtros{
+    background-color: #89d1f8;
+    color: #454545;
+    border-color: #454545;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container-cursos{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cursos se ajusten en varias líneas */
+    gap: 20px; /* Espacio entre los cursos */
+    padding: 20px; /* Espacio interno */
+}
+
+.opciones{
+    display:block; /* Select visible desde el comienzo */
+    background-color: #89D1F8;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interno */
+    margin-top:5px;
+    width:200px;
 }

@@ -69,25 +69,24 @@ function mostrar_ofertas(filtro = ofertas) {
             contenido_ofertas.innerHTML = '<p class="empty-results-message">No se encontraron ofertas con los filtros especificados.</p>';
             return;
         }
+        var inHTML = "<div class='scroll_box'>";
 
         filtro.forEach(oferta => {
-            const card = document.createElement("div");
-            card.classList.add("fondo-producto");
-
-            card.innerHTML = `
+            inHTML += `
                 <div class="oferta_box" id=${oferta.id}>
                 
                 <p class = "oferta_float_val">${oferta.distrito}</p>
-                <h3>${oferta.nombre}</h3>
+                <h3 class = "oferta_box_h3">${oferta.nombre}</h3>
                 <p>${oferta.empresa}</p>
                 <img src="${oferta.imagen}" alt="${oferta.nombre}" class="imagen_oferta">
                 <p>${oferta.fecha}</p>
 
                 </div>
             `;
-            
-            contenido_ofertas.appendChild(card);
         });
+        inHTML += "</div>";
+        contenido_ofertas.innerHTML += inHTML;
+        console.log(contenido_ofertas.innerHTML);
 }
 
 function determinar_salario(texto, valor){
@@ -132,12 +131,11 @@ function filtrar_ofertas() {
         };
 }
 
-
 function mostrar_info(event){
     var caja = ofertas[event.currentTarget.id - 1]
     main_box.innerHTML = `
         <img src="${caja.imagen}" alt="${caja.nombre}" class="main_imagen_oferta">
-        <div>
+        <div class = "info_content">
             <h3 class = "left_align_h3">${caja.nombre}</h3>
             
             <p class = "left_align">${caja.fecha}</p>
