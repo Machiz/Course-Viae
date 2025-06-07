@@ -3,12 +3,12 @@
   display: flex;
 }
 .filtro_box{
-  width: 1453px;
+  width: 1444px;
   height: 70px;
   border: 1px solid rgb(165, 165, 165);
   background-color: white;
   padding: 10px;
-  margin: 20px;
+  margin: 15px;
   margin-top: 5px;
   border-radius: 10px;
 }
@@ -34,6 +34,10 @@
   margin: 5px;
   border-radius: 10px;
   background-color: rgb(241, 241, 241);
+  transition-duration: 0.3s;
+}
+.filtro_button_fill:hover{
+  background-color: rgb(223, 224, 227);
 }
 
 .scroll_box {
@@ -58,6 +62,7 @@
   margin-left: 15px;
   margin-top: 15px;
   border-radius: 10px;
+  transition-duration: 0.3s;
 }
 .oferta_box:hover{
   background-color: rgb(218, 243, 255);
@@ -133,7 +138,7 @@ body{
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  transition: color 0.4s ease-in-out;
+  transition-duration: 0.3s;
 
 }
 
@@ -235,4 +240,74 @@ body{
     padding: 10px; /* Espacio interno */
     margin-top:5px;
     width:200px;
+}
+
+footer {
+      background-color: #a39a91;
+      padding: 3rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-title {
+  color: #102228;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.footer-subtitle {
+  color: #102228;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  color: #102228;
+}
+
+.contact-text {
+  color: #102228;
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  color: #102228;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #3884da;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #102228;
+  border-radius: 4px;
 }
