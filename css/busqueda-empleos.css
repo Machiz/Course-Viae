@@ -79,6 +79,39 @@
   border-radius: 10px;
   text-align: center;
 }
+.oferta_info_box2{
+  width: 810px;
+  height: 500px;
+  float:right;
+  border: 1px solid rgb(165, 165, 165);
+  background-color: white;
+  padding-left: 10px;
+  margin: 25px;
+  margin-right: -10px;
+  margin-top: -10px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: auto;
+}
+
+.comentario_button{
+  background-color: #058ED9;
+  left: auto;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  transition-duration: 0.3s;
+}
+.comentario_button:hover{
+  background-color:#025bcf;
+}
+
 .oferta_box_h3{
 
   margin-top: 10px;

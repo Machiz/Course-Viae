@@ -133,7 +133,8 @@ function filtrar_ofertas() {
 
 function mostrar_info(event){
     var caja = ofertas[event.currentTarget.id - 1]
-    main_box.innerHTML = `
+    var inHTML = "<div class='oferta_info_box2'>";
+    inHTML += `
         <img src="${caja.imagen}" alt="${caja.nombre}" class="main_imagen_oferta">
         <div class = "info_content">
             <h3 class = "left_align_h3">${caja.nombre}</h3>
@@ -148,11 +149,25 @@ function mostrar_info(event){
             
         </div>
     `;
-    main_box.innerHTML += `<ul>`;
+    inHTML += `<ul>`;
     caja["requisitos"].forEach(ben=>{
-        main_box.innerHTML += `<li class = "left_align"> ${ben}</li>`;
+        inHTML += `<li class = "left_align"> ${ben}</li>`;
     })
-    main_box.innerHTML += `</ul>`;
+    inHTML += `</ul>`;
+    inHTML += `
+        <h4 class = "left_align_h4"> Beneficios </h4>
+        <ul>
+            <li class = "left_align"> Entrar a planilla </li>
+            <li class = "left_align"> Seguro social </li>
+            <li class = "left_align"> Pagos puntuales </li>
+        </ul>
+        <h4 class = "left_align_h4"> Salario </h4>
+        <p class ="left_align"> s/.${caja.salario} al mes</p>
+        <button class = "comentario_button" type="button"> Ver comentarios</button>
+    `;
+
+    inHTML += `</div>`;
+    main_box.innerHTML = inHTML;
 }
 
 buscador.addEventListener('input', filtrar_ofertas);
