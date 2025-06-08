@@ -2,166 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/reseñas.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <title>Reseñas - Course Vitae</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: linear-gradient(to right, #F4EBD9, #058ED9);
-    }
-        .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 24px;
-  font-weight: bold;
-  color: #058ED9;
-  line-height: 1.1;
-  text-align: right; 
-}
-
-.logo img {
-  height: auto;
-  width: 54px;
-}
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .usuario-noti {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.avatar-noti {
-  width: 60px;
-  height: auto;
-  border-radius: 50%;
-}
-.nombre-usuario {
-  font-size: 18px;
-  font-weight: bold;
-  color: #FFFFFF;
-  font-family: Arial;
-}
-.nombre-usuario:hover {
-  color: #89d1f8; 
-  cursor: pointer;
-}
-.letras-nav {
-  font-size: 18px;
-   font-weight: bold;
-  color: #FFFFFF;
-  font-family: Arial;
-  text-decoration: none;
-}
-.letras-nav:hover {
-  color: #89d1f8; 
-  cursor: pointer;
-}
-   .breadcrumb {
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #444;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
-  .breadcrumb a {
-    text-decoration: none;
-    color: #3b82f6;
-    font-weight: 500;
-  }
-
-  .breadcrumb .divider {
-    margin: 0 5px;
-    color: #999;
-  }
-
-  .breadcrumb .actual {
-    font-weight: 600;
-    color: #111;
-  }
-    .titulo-curso {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .sub-info {
-      font-size: 14px;
-      color: #777;
-      margin-left: 10px;
-    }
-    .reseñar-btn {
-      float: right;
-      padding: 8px 20px;
-      background-color: #058ED9;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .reseñar-btn:hover {
-      background-color: #2563eb;
-    }
-    .reseña {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-      display: flex;
-      align-items: flex-start;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
-    .reseña img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 15px;
-    }
-    .reseña .info {
-      flex: 1;
-    }
-    .reseña .info h4 {
-      margin: 0;
-    }
-    .reseña .info p {
-      margin: 5px 0;
-      font-size: 14px;
-      color: #444;
-    }
-    .calificacion {
-      font-size: 14px;
-      margin-top: 10px;
-    }
-    .rellenas {
-      color: #FFA500;
-    }
-    .vacias {
-      color: black;
-    }
-    .completado {
-      font-size: 13px;
-      color: #0a84ff;
-      float: right;
-    }
-  </style>
 </head>
 <body>
   <header class="header">
@@ -189,7 +33,7 @@
 
   <div class="container">
     <nav class="breadcrumb">
-  <a href="cursos.html">Cursos</a> <span>›</span>
+  <a href="cursos.html">Curso</a> <span>›</span>
   <span>Reseñas</span>
 </nav>
     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -229,7 +73,47 @@
 </div>
       </div>
     </div>
-
+    
   </div>
+   <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3 class="footer-title">Course vitae</h3>
+        <h4 class="footer-subtitle">Contacto:</h4>
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="contact-text">coursevitae-contact@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="contact-text">999 913 942</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Enlaces rápidos</h3>
+        <div class="footer-links">
+          <a href="Log_in.html" class="footer-link">Iniciar sesión</a>
+          <a href="#" class="footer-link">Crear cuenta</a>
+          <a href="#" class="footer-link">Inicio</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Nuestras redes</h3>
+        <div class="social-icons">
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

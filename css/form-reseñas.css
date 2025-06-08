@@ -1,0 +1,254 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #F4EBD9, #058ED9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+    }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
+}
+
+.logo img {
+  height: auto;
+  width: 54px;
+}
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.letras-nav {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      max-width: 90%;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .descripcion {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .calificacion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    .calificacion span {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .estrellas {
+      display: flex;
+      gap: 10px;
+    }
+
+    .estrella {
+      font-size: 28px;
+      cursor: pointer;
+      color: #ddd;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .estrella:hover,
+    .estrella.seleccionada {
+      color: #FFA500;
+      transform: scale(1.1);
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      border: 2px solid #3b82f6;
+      border-radius: 12px;
+      padding: 15px;
+      resize: none;
+      font-size: 14px;
+      background: #fefefe;
+      box-sizing: border-box;
+      margin-top: 10px;
+    }
+
+    .acciones {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 25px;
+      padding: 10px 24px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-regresar {
+      background-color: #a39a92;
+      color: white;
+    }
+
+    .btn-regresar:hover {
+      background-color: #666;
+    }
+
+    .btn-publicar {
+      background-color: #058ED9;
+      color: white;
+    }
+
+    .btn-publicar:hover {
+      background-color: #0056b3;
+    }
+    .breadcrumb {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 500;
+  }
+
+  .breadcrumb .divider {
+    margin: 0 5px;
+    color: #999;
+  }
+
+  .breadcrumb .actual {
+    font-weight: normal;
+    color: #111; 
+  }
+  footer {
+      background-color: #a39a91;
+      padding: 3rem 2rem;
+      flex: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .footer-title {
+      color: #102228;
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-subtitle {
+      color: #102228;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-icon {
+      width: 16px;
+      height: 16px;
+      color: #102228;
+    }
+
+    .contact-text {
+      color: #102228;
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-link {
+      color: #102228;
+      font-size: 0.875rem;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover {
+      color: #3884da;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      background-color: #102228;
+      border-radius: 4px;
+    }
