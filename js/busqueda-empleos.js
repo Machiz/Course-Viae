@@ -66,7 +66,12 @@ function mostrar_ofertas(filtro = ofertas) {
         contenido_ofertas.innerHTML = ""; 
         
         if (filtro.length === 0) {
-            contenido_ofertas.innerHTML = '<p class="empty-results-message">No se encontraron ofertas con los filtros especificados.</p>';
+            contenido_ofertas.innerHTML = `
+                <div class = vacio-box>
+                <p class="vacio-text">No se encontraron ofertas con los filtros especificados.</p>
+                <img class = "vacio-img" src= "../../resources/fotos/filtro-aviso.png">
+            `;
+            
             return;
         }
         var inHTML = "<div class='scroll_box'>";

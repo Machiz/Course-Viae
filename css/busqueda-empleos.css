@@ -87,11 +87,32 @@
   background-color: white;
   padding-left: 10px;
   margin: 25px;
-  margin-right: -10px;
-  margin-top: -10px;
+  margin-right: -11px;
+  margin-top: -11px;
   border-radius: 10px;
   text-align: center;
   overflow: auto;
+}
+.vacio-box{
+  margin-top: 50px;
+  margin-left: 160px;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 500px;
+}
+.vacio-text{
+  padding-top: 30px;
+  text-align: center;
+}
+
+.vacio-img{
+  width: 120px;
+  height: auto;
+  text-align: center;
+  margin-left: 90px;
+  margin-top: 25px;
 }
 
 .comentario_button{
