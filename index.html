@@ -1,79 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Vitae - Inicio</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+        <header>
+            <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
+            <div class="contenedor-header">
+                <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
+                <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
+                    <span>Course</span>
+                    <span>Vitae</span>
+                </div>
+                <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
+                <img src="./resources/fotos/vitae 2.png" class = "logo" alt = "Isotipo de Course Vitae">
 
+                <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                <nav>
+                    <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+                        <li><a href="#" class="letras-nav">Home</a></li>
+                        <li><a href="#" class="letras-nav">Estudiante</a></li>
+                        <li><a href="#" class="letras-nav">Nosotros</a></li>
+                        <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                    </ul>
+                </nav>
 
-<body>
-    <nav class="barra">
-        <div class="barra_contenido">
-            <div class="logo"></div>
-            <li>
-                <a href="#Inicio">Inicio</a>
-            </li>
+                <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
+                <div class="usuario-header">
+                    <p class ="nombre_usuario">Alessandro Hesse</p>
+                    <img src="./resources/fotos/hesse.jpg" alt = "Usuario">
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            <button class="salir"> < Regresar </button>
+            <div class="fondo">
+                <img src="resources/fotos/hesse.jpg" class = "foto_editar"alt="">
+            </div>
+            <div class="container-principal">
+                <div class="informacion">
+                    <h3>Informacion personal: </h3>
+                    <div class="informacion_container">
+                        <h3 class="informacion_titular">Nombre de usuario: </h3>
+                        <span><input type="text" class="informacion_text" placeholder="Alessandro Hesse"></span>
+                        <h3 class="informacion_titular">Correo electrónico: </h3>
+                        <span><input type="text" class="informacion_text" placeholder="Rufuseldeponiano@gmail.com"></span>
+                        <h3 class="informacion_titular">Telefono</h3>
+                        <span><input type="text" class="informacion_text" placeholder = "901987176"></span>
+                    </div>
+                </div>
+                <div class="parte1">
+                    <h4>Alessandro Hesse</h4>
+                    <img src="resources/fotos/proxy-image.jpeg" alt="" class = "pais">
+                    <p>Universidad Peruana de Ciencias aplicadas</p>
+                    <h3>Descripcion:</h3>
+                    <div class="descripcion_container">
+                        <p>Me encanta aprender cosas nuevas y me gusta mucho la informatica</p>
+                    </div>
+                </div>
+                <div class="red">
+                    <div class="red_contenedor">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+
+                    <div class="red_contenedor">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+
+                    <div class="red_contenedor">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="centrar">
+                <button>Guardar cambios</button>
+            </div>
+            
+        </main>
+
+        <footer class="footer">
+            <div>
+                <h5>Course Vitae</h5>
+                <h5>Contacto</h5>
     
-            <li>
-                <a href="#Nosotros">Inicio</a>
-            </li>
+                <p>coursevitae-contact@gmail.com</p>
+                <p>999 913 942</p>
+            </div>
+            <div>
     
-            <li>
-                <a href="#Contacto">Inicio</a>
-            </li>
+                <h5>Enlaces rapidos</h5>
     
-            <li class="barra_botones">
-                <button>Crear cuenta</button>
-            </li>
-    
-            <li class="barra_botones">
-                <button>Iniciar sesion</button>
-            </li>
-        </div>
-    </nav>
+                <a href="">Iniciar sesion</a>
+                <a href="">Crear cuenta</a>
+                <a href="">Inicio</a>
+            </div>
+            <div>
+                <h5>Nuestras redes</h5>
+            </div>
+        </footer>
+    </body>
 
-    <div class="Contenedor_principal">
-        <h1 class="Inicial">Preparate para <span class="Espacio">tu entrada</span><span class="Espacio">al campo laboral</span></h1> 
-
-        <button>Crear cuenta</button>
-        <button>Iniciar sesion</button>
-    </div>
-
-    <div class="quienes_somos">
-        <div class="titulo_quienes">
-            <h1>Quienes somos</h1>
-        </div>
-
-        <div>
-            <p>Somos una start up emergente, que busca formar a estudiantes, ya egresados o en sus últimos ciclos, para que se integren en el mercado laboral brindando cursos y capacitaciones técnicas</p>
-        </div>
-    </div>
-        
-
-        
-
-    <footer class="footer">
-        <div>
-            <h5>Course Vitae</h5>
-            <h5>Contacto</h5>
-
-            <p>coursevitae-contact@gmail.com</p>
-            <p>999 913 942</p>
-        </div>
-        <div>
-
-            <h5>Enlaces rapidos</h5>
-
-            <a href="">Iniciar sesion</a>
-            <a href="">Crear cuenta</a>
-            <a href="">Inicio</a>
-        </div>
-        <div>
-            <h5>Nuestras redes</h5>
-        </div>
-    </footer>
-    
-</body>
+    <!--Links de IonIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
