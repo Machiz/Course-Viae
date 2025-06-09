@@ -255,6 +255,7 @@ input{
 .fondo, .container-principal{
     margin-left: 12.5%;
     margin-right: 12.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .fondo {
     display: flex;
