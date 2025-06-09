@@ -4,101 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <style>
-            .contenedor-header{
-                display:flex;
-                align-items: center; /* Alineación al inicio del contenedor */
-                gap: 14px; /* Espacio entre imagen y texto */
-                padding-left:20px; /* Espacio a la izquierda */
-            }
-
-            .letras-titulo{
-                display:flex;
-                font-family: Arial, sans-serif;
-                margin-left: 10px;
-                flex-direction: column; /* Una palabra sobre otra, forma de columnas */
-                text-align:center; /* Centrado de las letras */
-                font-size: 24px; /* Tamaño de letra */
-                color:#058ED9; /* Color azul */
-                font-weight: bold; /* Negrita */
-            }
-
-            .letras-nav{
-                font-family: Arial;
-                color: white;
-                text-decoration: none; /* Sin subrayado */
-                font-weight:bold; /* Negrita */
-            }
-
-            .usuario-header{
-                position:absolute;
-                top: 10px;
-                right: 10px;
-                display: flex;
-                align-items:center;
-                gap: 10px; /* Espacio entre nombre y foto */
-                font-family: Arial;
-                color: white;
-            }
-
-            .usuario-header img{
-                width: 60px;
-                height: auto;
-                border-radius: 50%;
-                object-fit:cover;
-            }
-
-            .cont-escribir-curso{
-                display:flex;
-                text-align:center;
-                justify-content:center;
-                gap:10px;
-            }
-
-            .container-principal{
-                display: flex;
-                flex-direction: column;
-                padding-left: 20px;
-                background-color:white;
-                border-radius:20px;
-                height: 100vh; /* Altura completa de la ventana */
-            }
-
-            .container-filtros{
-                display: flex;
-                background-color:white;
-                border:#454545;
-                gap: 30px;
-            }
-
-            .boton-filtros{
-                background-color: #89d1f8;
-                color: #454545;
-                border-color: #454545;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-
-            .container-cursos{
-                display: flex;
-                flex-wrap: wrap; /* Permite que los cursos se ajusten en varias líneas */
-                gap: 20px; /* Espacio entre los cursos */
-                padding: 20px; /* Espacio interno */
-            }
-
-            .opciones{
-                display:block; /* Select visible desde el comienzo */
-                background-color: #89D1F8;
-                border-radius: 5px; /* Bordes redondeados */
-                padding: 10px; /* Espacio interno */
-                margin-top:5px;
-                width:200px;
-            }
-        </style>
+        <link rel="stylesheet" href="css/style2.css">
     </head>
-    <body style="background: linear-gradient(to right, #F4EBD9, #058ED9); height:100vh;">
         <header>
             <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
             <div class="contenedor-header">
@@ -108,7 +15,7 @@
                     <span>Vitae</span>
                 </div>
                 <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
-                <img src="./resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;">
+                <img src="./resources/fotos/vitae 2.png" class = "logo" alt = "Isotipo de Course Vitae">
 
                 <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
                 <nav>
@@ -122,7 +29,7 @@
 
                 <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
                 <div class="usuario-header">
-                    <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
+                    <p class ="nombre_usuario">Alessandro Hesse</p>
                     <img src="./resources/fotos/hesse.jpg" alt = "Usuario">
                 </div>
 
@@ -130,60 +37,34 @@
         </header>
 
         <main>
-            <!--Recuadro donde se puede ingresar nombre de curso a buscar-->
-            <div class = "cont-escribir-curso">
-                <input type="text" id = "curso" style="border-radius:5px; width:20%; height:36px; outline:none; border:none;" placeholder="Buscar curso de capacitación...">
-                <!--Botón Buscar-->
-                <button style="border-radius: 50px; background:#F4EBD9; color:#058ED9; border:none; font-weight:bold; width:90px;">
-                    <ion-icon name="search-outline"></ion-icon>
-                    Buscar
-                </button>
+            <div class="container-principal">
+                <div class="partes parte1">
+                    <h3>Nombre completo</h3>
+                    <input type="text" placeholder="Nombre completo">
+                    <h3>Titulo profesional</h3>
+                    <input type="text" placeholder="Titulo profesional">
+                    <h3>Experiencia laboral (opcional)</h3>
+                    <input type="text" placeholder="Experiencia laboral">
+                    <h3>Educacion</h3>
+                    <input type="text" placeholder="Educacion">
+                </div>
+                <div class="partes parte2">
+                    <h3>Foto de perfil</h1>
+                    <img src="resources/fotos/hesse.jpg" class = "foto_editar"alt="">
+                    <div>
+                        <button>Editar foto</button>
+                    </div>
+                    
+                    <h3>Descripcion</h1>
+                    <input type="text" placeholder="Descripcion">
+                </div>
             </div>
 
-            <br>
-            <!--Div principal-->
-            <div class="container-principal">
-                <h2 style="font-family: Arial; color:#454545;">Cursos de capacitación</h2>
-
-                <!--Pequeño div para los filtros-->
-                <div class="container-filtros">
-                    <div>
-                        <select id ="duracion" class="opciones">
-                            <option value ="" selected disabled>Duración</option>
-                            <option value="Menor a 10 horas">Menor a 10 horas</option>
-                            <option value="Mayor 10 horas">Mayor a 10 horas</option>
-                            <option value="Mayor a 20 horas">Mayor a 20 horas</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <select id ="precio" class="opciones">
-                            <option value="" selected disabled>Precio</option>
-                            <option value="Menor a S/ 20">Menor a S/ 20</option>
-                            <option value="Menor a S/ 30">Menor a S/ 30</option>
-                            <option value="Menor a S/ 50">Menor a S/ 50</option>
-                            <option value="Mayor a S/ 50">Mayor a S/ 50</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <select id ="nivel" class="opciones">
-                            <option value="" selected disabled>Nivel de experiencia</option>
-                            <option value="Básico">Básico</option>
-                            <option value="Intermedio">Intermedio</option>
-                            <option value="Avanzado">Avanzado</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="container-cursos">
-                     
-                </div>
+            <div class="seccion_boton">
+                <button>Crear CV</button>
             </div>
         </main>
 
-        <script src="./js/cursos.js">
-        </script>
     </body>
 
     <!--Links de IonIcons-->
