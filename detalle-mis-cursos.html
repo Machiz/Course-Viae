@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/cursos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@600&family=Nunito+Sans:opsz,wght@6..12,700&family=Oswald:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosario&display=swap" rel="stylesheet">
+        <style>
+            .contenedor-header {
+                display: flex;
+                align-items: center; /* Alineación al inicio del contenedor */
+                gap: 14px; /* Espacio entre imagen y texto */
+                padding-left: 20px; /* Espacio a la izquierda */
+            }
+
+            .letras-titulo {
+                display: flex;
+                font-family: Arial, sans-serif;
+                margin-left: 10px;
+                flex-direction: column; /* Una palabra sobre otra, forma de columnas */
+                text-align: center; /* Centrado de las letras */
+                font-size: 24px; /* Tamaño de letra */
+                color: #058ED9; /* Color azul */
+                font-weight: bold; /* Negrita */
+            }
+
+            .letras-nav {
+                font-family: Arial;
+                color: white;
+                text-decoration: none; /* Sin subrayado */
+                font-weight: bold; /* Negrita */
+            }
+
+            .letras-nav:hover {
+                color: #89D1F8; /* Color azul claro al pasar el mouse */
+            }
+
+            .usuario-header {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px; /* Espacio entre nombre y foto */
+                font-family: Arial;
+                color: white;
+            }
+
+            .usuario-header img {
+                width: 60px;
+                height: auto;
+                border-radius: 25px;
+                object-fit: cover;
+            }
+
+            .container-info-curso{
+                margin:20px;
+                padding: 50px; 
+                background-color: white; 
+                border-radius: 10px; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+                align-items: center; 
+                gap: 5px;
+            }
+
+            .nombreCurso {
+                font-family: 'Inter', sans-serif;
+                font-size: 24px;
+                font-weight: bold;
+                color: #454545;
+            }
+
+            #codigoCurso{
+                font-family: 'Arial', sans-serif;
+                font-size: 14px;
+                color:white;
+            }
+
+            #descripcionCurso {
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                color: #000000;
+                line-height: 1.5;
+            }
+
+            .instructorCurso {
+                font-family: 'Inter', sans-serif;
+                font-size: 20px;
+                color: #454545;
+                gap:10px;
+                padding-left: 10px; /* Espacio a la izquierda */
+            }   
+
+            #biografiaCurso {
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                color: #000000;
+                line-height: 1.5;
+                margin-top: 10px; /* Espacio entre la biografía y el resto del contenido */
+            }
+
+            footer {
+                background-color: #a39a91;
+                padding: 3rem 2rem;
+            }
+
+            .footer-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .footer-title {
+                color: #102228;
+                font-weight: 600;
+                font-size: 1.125rem;
+                margin-bottom: 1rem;
+            }
+
+            .footer-subtitle {
+                color: #102228;
+                font-weight: 500;
+                margin-bottom: 0.75rem;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .contact-icon {
+                width: 16px;
+                height: 16px;
+                color: #102228;
+            }
+
+            .contact-text {
+                color: #102228;
+                font-size: 0.875rem;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .footer-link {
+                color: #102228;
+                font-size: 0.875rem;
+                transition: color 0.3s;
+            }
+
+            .footer-link:hover {
+                color: #3884da; /* Cambia el color al pasar el mouse */
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .social-icon {
+                width: 32px;
+                height: 32px;
+                background-color: #102228;
+                border-radius: 4px;
+            }
+
+            textarea {
+                width: 80%;
+                height: 100px;
+                margin-top: 10px;
+                padding: 10px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <body style="background: linear-gradient(to right, #F4EBD9, #058ED9); height:100vh;">
+        <header>
+            <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
+            <div class="contenedor-header">
+                <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
+                <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
+                    <span>Course</span>
+                    <span>Vitae</span>
+                </div>
+                <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
+                <img src="./resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;">
+
+                <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                <nav>
+                    <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+                        <li><a href="#" class="letras-nav">Home</a></li>
+                        <li><a href="#" class="letras-nav">Estudiante</a></li>
+                        <li><a href="#" class="letras-nav">Nosotros</a></li>
+                        <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                    </ul>
+                </nav>
+
+                <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
+                <div class="usuario-header">
+                    <!--Campana de notificación-->
+                    <div class="notification-bell">
+                        <ion-icon name="notifications" class="bell-icon"></ion-icon>
+                        <span class="numero-notificaciones">7</span>
+                    </div>
+                    <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
+                    <img src="./resources/fotos/hesse.jpg" alt = "Usuario">
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            <div style="padding:10px;"> <!--Div para el botón Regresar-->
+                <a href="busqueda-cursos-inicio.html"> <!--Volver al futuro-->
+                    <button style="background-color:white; color: #058ED9; border-radius:25px; width:100px; height:40px; border:none;cursor:pointer; font-weight:bold;">
+                        <ion-icon name="chevron-back-outline" style="vertical-align:middle;"></ion-icon>
+                        Regresar
+                    </button>
+                </a>
+            </div>
+
+            <!--Nombre del curso al que se hizo clic en busqueda-cursos-inicio.html-->
+            <div style="display:flex;justify-content:space-between; align-items:center;">
+                <div style = "display:flex; gap:10px;">
+                    <h1 class="nombreCurso"></h1>
+                    <h5 id ="codigoCurso"></h5>
+                </div>
+            </div>
+
+            <!--Imagen del curso-->
+            <div id="contenedorImagenCurso" style="display: flex; justify-content: center; margin-top: 20px;"></div>
+
+            <!--Contenedor de la información general del curso seleccionado-->
+            <div class="container-info-curso">
+                <div style="display:flex; justify-content: space-between; align-items: center; gap: 10px;">
+                    <div style="border: 2px solid #058ED9; padding: 10px; border-radius: 8px; display: flex; align-items:center;font-weight: bold; width:370px;">
+                        <h3 style="font-family: Inter; color:#2B2B2B;">¿De qué va  </h3> <h3 class="nombreCurso" style="font-size:20px; padding-left:10px;"></h3><h3 style="font-family:Inter; color:#2B2B2B;">?</h3>
+                    </div>
+                </div>
+
+
+                <!--Descripción del curso seleccionado, amigos-->
+                <div style="display:grid; align-items:flex-start; justify-content:space-between; gap:10px; margin-top:10px;">
+                    <p id ="descripcionCurso" class="textos"></p>
+                </div>
+
+                <!--Div de la sección de Reseñas y Aquí aprenderás nada-->
+                <div class="fijoDiv">
+                    <!--Botón para inscribirse al curso-->
+                    <button onclick = "toggleBoton()"
+                        style="background-color:#89D1F8; color:white; border-radius:10px; width:150px; height:60px; border:none; cursor:pointer; font-weight:bold;">
+                        <span id="textoBoton">Retirarme del curso</span><br>
+                        <span style="font-size:10px; font-weight:lighter;">(Inicio inmediato)</span>
+                    </button> 
+                    <div style="font-size:14px;">
+                        <span style="text-decoration:underline;" class="fontInter">
+                        Precio curso: S/</span><span id="precioCurso" style="text-decoration:underline;" class="fontInter"></span>
+                    </div>
+
+                    <!--Div blue-->
+                    <div style="background-color:#058ED9; opacity:70%; width:422px; height:auto; border-radius:2%;">
+                        <p style="color:white; padding-left: 10px; font-family:Inter;">Aquí aprenderás: </p>
+
+                        <ul style="list-style-type:disc; margin-top:10px; padding-left: 20px; color:white; font-family:Inter; font-size:14px;">
+                            <li style="margin-bottom:10px;" id ="ap1Curso"></li>
+                            <li style="margin-bottom:10px;" id ="ap2Curso"></li>
+                            <li style="margin-bottom:10px;" id="ap3Curso"></li>
+                            <li style="margin-bottom:10px;" id="ap4Curso"></li>
+                        </ul>
+
+                        <div style="display:flex; padding-left:10px;">
+                            <p style="color:white;" class="fontInter">Duración:</p><p id="duracionCurso" style="padding-right:4px; color:white;" class="fontInter"></p><p style="color:white;" class="fontInter"> aproximadamente</p>
+                        </div>
+
+                        <!--Sección de reseñas del curso-->
+                        <div style="justify-content: center; align-items: center; display:flex; padding-bottom:10px;">
+                            <div style="display:flex; align-items:center; padding-left:20px; background-color:white; border-radius:8px; margin-top:10px; width:200px; height:auto;">
+                                <h3 class="fontInter">Reseñas: </h3>
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--Dos reseñas de ejemplo (mis dedos no dan para más tac tic toc tec tuc)-->
+                        <div class="reseñas">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="./resources/fotos/Diego Luna.png" alt="Reseña 1" style="width:50px;height:auto; border-radius:50%;">
+                                <h4 class="autor-reseña">Diego Luna</h4>
+                            </div>
+                            <div class="texto-reseña" style="display:flex;">
+                                <p>El curso me ayudó a impulsar mi CV en el mercado. Gracias totales.</p>
+                            </div>
+
+                            <div style="display:flex; align-items:center;">
+                                <span style="font-family:Inter;">Calificación:</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star-morenita">★</span>
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <div class="reseñas" style="margin-bottom:10px;">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="./resources/fotos/Marco Torres.jpg" alt="Reseña 2" style="width:50px;height:auto; border-radius:48%;">
+                                <h4 class="autor-reseña">Marco Torres</h4>
+                            </div>
+                            <div class="texto-reseña" style="display:flex;">
+                                <p>Mediante este curso adquirí valiosas herramientas que me prepararon para los requisitos del mercado laboral.</p>
+                            </div>
+
+                            <div style="display:flex; align-items:center;">
+                                <span style="font-family:Inter;">Calificación:</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+
+                        <!--Ver más reseñas-->
+                        <div style="justify-content:center; align-items:center; display:flex;">
+                            <a href="#">
+                                <button style="cursor:pointer; align-items:center; font-weight:bold; border-radius:10px; border:none; margin-bottom:20px; 
+                                margin-top:10px; width:130px;height:40px;" 
+                                class="fontInter">
+                                    Agregar reseña
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div style="border: 2px solid #058ED9; padding: 10px; border-radius: 8px; display: flex; font-weight: bold; width:370px;">
+                    <h3 style="font-family:Inter; color:#2B2B2B;">Conozca a su instructor</h3>
+                </div>
+                <!--Nombre y descripción del instructor del curso, incluyendo su foto-->
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <p style="color:#252525; font-family: Inter; font-weight:bold;">Instructor: </p><h2 class="instructorCurso"></h2>
+                    <h2 id="fotoImgCurso" style="width:20px;height:auto;"></h2>
+                </div>
+
+                <!--Pequeña biografía del instructor-->
+                <p id="biografiaCurso" class="textos"></p>
+
+                <!--Link de Linkedln imaginario del instructor-->
+                <div style="display:flex; align-items:center;">
+                    <img src="./resources/fotos/Linkedln.png" alt="LinkedIn" style="width: 80px; height: auto; cursor: pointer; margin-top: 10px;">
+                    <a href="#" style="font-family:Inter; padding-left:10px;">https://Linkedln_bio_link</a>
+                </div>
+
+                <div style="border: 2px solid #058ED9; padding: 10px; margin-top:17px;border-radius: 8px; display: flex; font-weight: bold; width:370px;">
+                    <h3 style="font-family:Inter; color:#2B2B2B;">Módulos del curso</h3>
+                </div>
+
+                <!--Módulos del curso-->
+                <div style="align-items:center;">
+                    <ul class="decoracion-puntos">
+                        <p class="textos" style="font-family:Inter;color:#2B2B2B; font-weight: bold;">Estructua del curso</p>
+                        <li style="color: #2B2B2B; font-weight: bold; margin-bottom:10px;" id="mod1Curso" class="fontInter"></li>
+                        <li style="color: #2B2B2B; font-weight: bold; margin-bottom:10px;" id="mod2Curso" class="fontInter"></li>
+                        <li style="color: #2B2B2B; font-weight: bold; margin-bottom:10px;" id="mod3Curso" class="fontInter"></li>
+                        <li style="color: #2B2B2B; font-weight: bold; margin-bottom:10px;" id="mod4Curso" class="fontInter"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Div del modal de inscripción al curso-->
+            <!--div id ="ModalButton" class="modal-div">
+                <div class="modal">
+                    <img src="./resources/fotos/Fiesta fiesta.png" alt="Fista Time">
+                    <h3 class="fontInter" style="font-weight:bold;">¡Has sido inscrito de manera exitosa!</h3>
+                    <h5 style="color:#454545;" class="fontInter">Visita la sección de "Mis Cursos" para iniciar tu curso.</h5>
+                    
+                    <div style="display:flex; flex-direction:column; align-items:center;">
+                        <a href="mis-cursos.html">
+                            <button style="background-color:#058ED9; color:white; border-radius:10px; border:none; height:30px; width:100px;">
+                                Mis Cursos
+                            </button>
+                        </a>
+                        <br>
+                        <button style="display:flex; align-items:center; background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; 
+                        height:30px; width:100px; cursor:pointer;" onclick="cerrarModal()">
+                            <ion-icon name="chevron-back-outline" style="margin-right:5px;"></ion-icon>Regresar
+                        </button>
+                    </div>
+                </div>
+            </div-->
+
+            <!--Retiro del curso-->
+            <div id ="ModalRetiro" class="modal-div">
+                <div class="modal">
+                    <h3 class="fontInter">¿Está seguro de retirarse del curso?</h3>
+                    <div style="display:flex; flex-direction:column; align-items:center;">
+                        <button style="background-color:white;color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
+                        cursor:pointer;" onclick = "cerrarModalRetiro()">
+                            Cancelar
+                        </button>
+
+                        <br>
+                        <button style="display:flex; align-items:center;background-color:#058ED9; color:white; border-radius:10px; height:36px; 
+                        width:100px; cursor:pointer; border:none;" onclick="mostrarFormularioRetiro()">
+                            Retirarse del curso
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal para escribir las razones del retiro del curso-->
+            <div id="ModalFormulario" class="modal-div">
+                <div class="modal">
+                    <h3 class="fontInter" style="font-weight:bold;">Cuéntenos su experiencia en este curso:</h3>
+                    <textarea id="razonesTexto" placeholder="Escribe aquí su opinión..." style="color:#454545;"></textarea>
+                    <div style="display:flex; justify-content:space-between;">
+                        <h5 style="color:#058ED9; font-weight:normal; cursor:pointer;" onclick="saltarFormulario()" class="fontInter">Saltar Formulario</h5>
+                        <h5 style="color:#058ED9; font-weight:bold;cursor:pointer;" onclick="enviarFormulario()" class="fontInter">Enviar Formulario</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal de agradecimiento y regreso al detalle-->
+            <div id = "ModalUltimo" class="modal-div">
+                <div class="modal">
+                    <h3 class="fontInter" style="font-weight: bold;">
+                        Valoramos el relato de su experiencia. Trabajaremos para mejorar nuestro servicio.
+                    </h3>
+                    <button style="background-color:#058ED9; color:white; cursor:pointer; height:36px; width:100px; border-radius:10px; border:none;" 
+                    onclick="ultimoFormulario()">
+                        Volver
+                    </button>
+                    <br><br>
+                    <!--Hacia Mis Cursos-->
+                    <a href="mis-cursos.html">
+                        <button style="background-color: white; color:#058ED9; cursor:pointer; height:36px; width:100px; border-radius:10px; border-color:#058ED9;">
+                            Ir a Mis Cursos
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <script src="./js/modals-cursos.js">
+            </script>
+
+            <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
+            <footer>
+                <div class="container footer-grid">
+                    <div>
+                        <h3 class="footer-title">Course vitae</h3>
+                        <h4 class="footer-subtitle">Contacto:</h4>
+                        <div class="contact-item">
+                            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            <span class="contact-text">coursevitae-contact@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="contact-text">999 913 942</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-title">Enlaces rápidos</h3>
+                        <div class="footer-links">
+                            <a href="Log_in.html" class="footer-link">Iniciar sesión</a>
+                            <a href="#" class="footer-link">Crear cuenta</a>
+                            <a href="#" class="footer-link">Inicio</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-title">Nuestras redes</h3>
+                        <div class="social-icons">
+                            <div class="social-icon"></div>
+                            <div class="social-icon"></div>
+                            <div class="social-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </body>
+
+    <script src="./js/cursos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
