@@ -168,11 +168,12 @@ body{
   float: right;
   width: 20%;
   height: auto;
+  margin-top: 5px;
 }
 .left_align_h3{
   text-align: left;
   font-size: 150%;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 .left_align_h4{
   text-align: left;
@@ -193,6 +194,7 @@ body{
   border-radius: 50px;
   border: none;
   transition-duration: 0.3s;
+  margin-top: -10px;
 
 }
 

@@ -7,6 +7,7 @@ var ofertas = [
             distrito: "Surquillo",
             jornada: "Tiempo Completo",
             salario: 1300,
+            candidatos: 20,
             descripcion: "Somos Tottus, trabaja con nosotros como practicante de procesos y proyectos. Estamos presentes en 9 países de América Latina.",
             requisitos: ["Excel Avanzado", "Conocimientos en uso de ChatGPT", "Conocer el área de Procesos"],
             beneficios: ["Entrar a planilla","Seguro social","Pagos puntuales"],
@@ -20,6 +21,7 @@ var ofertas = [
             distrito: "Miraflores",
             jornada: "Tiempo Parcial",
             salario: 650,
+            candidatos: 16,
             descripcion: "Trabaja en la UPC! Buscamos emergentes talentos para esta oportunidad laboral. Ayúdanos a diseñar nuestro próximo gran proyecto web.",
             requisitos: ["Ser mayor de edad.", "Manejar herramientas como Figma.", "Pensamiento creativo."],
             beneficios: ["Entrar a planilla","Seguro social","Pagos puntuales"],
@@ -33,6 +35,7 @@ var ofertas = [
             distrito: "San Borja",
             jornada: "Tiempo Completo",
             salario: 3000,
+            candidatos: 11,
             descripcion: "Trabaja como programador web en el banco internacional de prestigio Interbank, el tercer banco más grande del Perú. Trabaja bajo todos los beneficios de Intercorp.",
             requisitos: ["Conocimientos en bases de datos no relacionales, de preferencia MongoDB.", "Conocer Angular o frameworks similares.", "Conocimientos en HTML, CSS."],
             beneficios: ["Entrar a planilla","Seguro social","Pagos puntuales"],
@@ -46,6 +49,7 @@ var ofertas = [
             distrito: "Surquillo",
             jornada: "Tiempo Parcial",
             salario: 2000,
+            candidatos: 4,
             descripcion: "Trabaja con Facebook y obten todos los beneficios que tenemos! Aprovecha de esta experiencia única y disfruta de nuestros establecimientos ahora en Perú.",
             requisitos: ["Conocimiento de R.", "Experiencia con largos datasets.", "Maneja RStudio."],
             beneficios: ["Entrar a planilla","Seguro social","Pagos puntuales"],
@@ -146,7 +150,8 @@ function mostrar_info(event){
             
             <p class = "left_align">${caja.fecha}</p>
             <p class = "left_align">${caja.distrito}, Lima</p>
-            <br><br>
+            <br>
+            <p class = "center-align">${caja.candidatos} candidatos</p>
             <button type="button" class="postular_button"> Postular </button> 
             <h4 class = "left_align_h4"> Descripción de la oferta </h4>
             <p class = "left_align">${caja.descripcion}</p>
