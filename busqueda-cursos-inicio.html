@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style2.css">
+    </head>
+        <header>
+            <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
+            <div class="contenedor-header">
+                <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
+                <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
+                    <span>Course</span>
+                    <span>Vitae</span>
+                </div>
+                <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
+                <img src="./resources/fotos/vitae 2.png" class = "logo" alt = "Isotipo de Course Vitae">
+
+                <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                <nav>
+                    <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+                        <li><a href="#" class="letras-nav">Home</a></li>
+                        <li><a href="#" class="letras-nav">Estudiante</a></li>
+                        <li><a href="#" class="letras-nav">Nosotros</a></li>
+                        <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                    </ul>
+                </nav>
+
+                <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
+                <div class="usuario-header">
+                    <p class ="nombre_usuario">Alessandro Hesse</p>
+                    <img src="./resources/fotos/hesse.jpg" alt = "Usuario">
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            <div class="container-principal">
+                <div class="partes parte1">
+                    <h3>Nombre completo</h3>
+                    <input type="text" placeholder="Nombre completo">
+                    <h3>Titulo profesional</h3>
+                    <input type="text" placeholder="Titulo profesional">
+                    <h3>Experiencia laboral (opcional)</h3>
+                    <input type="text" placeholder="Experiencia laboral">
+                    <h3>Educacion</h3>
+                    <input type="text" placeholder="Educacion">
+                </div>
+                <div class="partes parte2">
+                    <h3>Foto de perfil</h1>
+                    <img src="resources/fotos/hesse.jpg" class = "foto_editar"alt="">
+                    <div>
+                        <button>Editar foto</button>
+                    </div>
+                    
+                    <h3>Descripcion</h1>
+                    <input type="text" placeholder="Descripcion">
+                </div>
+            </div>
+
+            <div class="seccion_boton">
+                <button>Crear CV</button>
+            </div>
+        </main>
+
+    </body>
+
+    <!--Links de IonIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
