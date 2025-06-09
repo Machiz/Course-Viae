@@ -3,7 +3,7 @@
   display: flex;
 }
 .filtro_box{
-  width: 1444px;
+  width: 1444px; /* 1444  */
   height: 70px;
   border: 1px solid rgb(165, 165, 165);
   background-color: white;
@@ -150,6 +150,7 @@
 body{
     font-family: "Inter", sans-serif;
     background-image: linear-gradient(to right, beige, #058ED9);
+    background-size: cover;
 }
 
 .imagen_oferta{
@@ -366,4 +367,50 @@ footer {
   height: 32px;
   background-color: #102228;
   border-radius: 4px;
+}
+
+
+@media (max-width: 768px){
+  body{
+      font-family: "Inter", sans-serif;
+      background-size:200%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to right, beige, #058ED9);
+      width: 200%;
+  }
+  nav {
+        display: none;
+      }
+  .oferta_info_box{
+    width: 92%;
+  }
+  .oferta_info_box2{
+    width: 102%;
+  }
+  .scroll_box{
+    width: 100%;
+    margin-left: 7%;
+  }
+  .filtros{
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+  }
+  .filtro_button{
+    margin-top: 12px;
+  }
+  .filtro_box{
+    width: 92%; /* 1444  */
+    height: 100%;
+  }
+  
+  .filtro_texto{
+    margin-top: -4px;
+  }
+  .footer-grid {
+        grid-template-columns: 1fr;
+  }
+  footer{
+    width: 90%;
+  }
 }
