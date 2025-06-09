@@ -132,6 +132,11 @@ input{
     width: 20rem;
 }
 
+.desc{
+    height:10rem;
+    width: 20rem;
+}
+
 .input
 .container-filtros{
     display: flex;
