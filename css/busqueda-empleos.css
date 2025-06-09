@@ -376,21 +376,11 @@ footer {
       background-size:200%;
       background-repeat: no-repeat;
       background-image: linear-gradient(to right, beige, #058ED9);
-      width: 200%;
+      width: 90%;
   }
   nav {
         display: none;
       }
-  .oferta_info_box{
-    width: 92%;
-  }
-  .oferta_info_box2{
-    width: 102%;
-  }
-  .scroll_box{
-    width: 100%;
-    margin-left: 7%;
-  }
   .filtros{
     margin-top: 10px;
     display:flex;
@@ -400,17 +390,35 @@ footer {
     margin-top: 12px;
   }
   .filtro_box{
-    width: 92%; /* 1444  */
+    width: 90%; /* 1444  */
     height: 100%;
   }
-  
-  .filtro_texto{
-    margin-top: -4px;
+  .filtro_input{
+    width: 90%;
   }
+
+  .oferta_info_box{
+    width: 100%;
+    margin-right: -7%;
+  }
+  .oferta_info_img{
+    width: 50%;
+  }
+  .oferta_info_box2{
+    width: 104%;
+  }
+  .scroll_box{
+    width: 108%;
+    margin-left: -3%;
+  }
+  .oferta_box{
+    width: 90%;
+  }
+
   .footer-grid {
         grid-template-columns: 1fr;
   }
   footer{
-    width: 90%;
+    width: 86%;
   }
 }
