@@ -1,10 +1,41 @@
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #444;
+    font-family: 'Inter';
+}
 
+.breadcrumb a {
+    text-decoration: none;
+    color: #058ED9;
+    font-weight: normal;
+}
+
+.breadcrumb a:hover {
+  color: #0056b3;
+  cursor: pointer;
+}
+
+.breadcrumb .divider {
+    margin: 0 5px;
+    color: #999;
+}
+
+.breadcrumb .actual {
+    color: #111;
+    font-weight: normal;
+    pointer-events: none;
+}
+.pag_text{
+  margin-bottom: 20px;
+  font-size: large;
+}
 .filtros{
   display: flex;
 }
 .filtro_box{
   width: 1444px; /* 1444  */
-  height: 70px;
+  height: 110px;
   border: 1px solid rgb(165, 165, 165);
   background-color: white;
   padding: 10px;
@@ -60,7 +91,7 @@
   padding-left: 10px;
   padding-top: -40px;
   margin-left: 15px;
-  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: 10px;
   transition-duration: 0.3s;
 }
@@ -75,6 +106,7 @@
   background-color: white;
   padding: 10px;
   margin: 25px;
+  margin-right: 40px;
   margin-top: 0px;
   border-radius: 10px;
   text-align: center;
@@ -134,7 +166,7 @@
 }
 
 .oferta_box_h3{
-
+  font-weight:500;
   margin-top: 10px;
 }
 .oferta_info_img{
@@ -145,12 +177,6 @@
 .upper{
     margin: 20px;
     float:right;
-}
-
-body{
-    font-family: "Inter", sans-serif;
-    background-image: linear-gradient(to right, beige, #058ED9);
-    background-size: cover;
 }
 
 .imagen_oferta{
@@ -174,10 +200,12 @@ body{
 .left_align_h3{
   text-align: left;
   font-size: 150%;
+  font-weight: 500;
   margin-top: 6px;
 }
 .left_align_h4{
   text-align: left;
+  font-weight: 500;
   
 }
 .left_align{
@@ -204,99 +232,69 @@ body{
 }
 
 
-
-
-
-.contenedor-header{
-    display:flex;
-    align-items: center; /* Alineación al inicio del contenedor */
-    gap: 14px; /* Espacio entre imagen y texto */
-    padding-left:20px; /* Espacio a la izquierda */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
 }
 
-.letras-titulo{
-    display:flex;
-    font-family: Arial, sans-serif;
-    margin-left: 10px;
-    flex-direction: column; /* Una palabra sobre otra, forma de columnas */
-    text-align:center; /* Centrado de las letras */
-    font-size: 24px; /* Tamaño de letra */
-    color:#058ED9; /* Color azul */
-    font-weight: bold; /* Negrita */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.letras-nav{
-    font-family: Arial;
-    color: white;
-    text-decoration: none; /* Sin subrayado */
-    font-weight:bold; /* Negrita */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
 }
 
-.usuario-header{
-    position:absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items:center;
-    gap: 10px; /* Espacio entre nombre y foto */
-    font-family: Arial;
-    color: white;
+.logo img {
+  height: auto;
+  width: 54px;
+}
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.usuario-header img{
-    width: 60px;
-    height: auto;
-    border-radius: 50%;
-    object-fit:cover;
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.letras-nav {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
 }
 
-.cont-escribir-curso{
-    display:flex;
-    text-align:center;
-    justify-content:center;
-    gap:10px;
-}
+body {
 
-.container-principal{
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    background-color:white;
-    border-radius:20px;
-    height: 100vh; /* Altura completa de la ventana */
-}
-
-.container-filtros{
-    display: flex;
-    background-color:white;
-    border:#454545;
-    gap: 30px;
-}
-
-.boton-filtros{
-    background-color: #89d1f8;
-    color: #454545;
-    border-color: #454545;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.container-cursos{
-    display: flex;
-    flex-wrap: wrap; /* Permite que los cursos se ajusten en varias líneas */
-    gap: 20px; /* Espacio entre los cursos */
-    padding: 20px; /* Espacio interno */
-}
-
-.opciones{
-    display:block; /* Select visible desde el comienzo */
-    background-color: #89D1F8;
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px; /* Espacio interno */
-    margin-top:5px;
-    width:200px;
+      font-family:'Inter', sans-serif;
+      background: linear-gradient(to right, #F4EBD9, #058ED9);
+      margin: 0;
+      padding: 0;
 }
 
 footer {
