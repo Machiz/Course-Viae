@@ -205,7 +205,9 @@ body {
     top:10%;
 }
 
-
+.warning {
+  border: solid 2px #F00;
+}
 .popup-img{
   width: 90px;
   height: auto;
