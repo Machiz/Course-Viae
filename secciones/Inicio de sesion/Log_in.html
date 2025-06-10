@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Vitae - Iniciar Sesión</title>
-    <link rel="stylesheet" href="/css/Crear_styles.css">
+    <link rel="stylesheet" href="/css/log_in_styles.css">
 </head>
 <body>
-     <header>
+    <header>
       <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
       <div class="contenedor-header">
         <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
@@ -27,20 +27,14 @@
         </nav>
       </div>
     </header>
+
     <main>
         <div class="login-card">
-            <h1 class="login-title">Crear Cuenta</h1>
+            <h1 class="login-title">Iniciar sesión</h1>
+            
+            
+
             <form>
-                <div class="form-group">
-                    <label for="nombre" class="form-label">Nombre*</label>
-                    <input 
-                        type="name" 
-                        id="name" 
-                        class="form-input" 
-                        placeholder="Nombre"
-                        required
-                    >
-                </div>
                 <div class="form-group">
                     <label for="email" class="form-label">Email*</label>
                     <input 
@@ -65,26 +59,8 @@
                         <button type="button" class="password-toggle" onclick="togglePassword()">👁</button>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="password" class="form-label">Confirmar Contraseña*</label>
-                    <div class="password-container">
-                        <input 
-                            type="password" 
-                            id="password" 
-                            class="form-input" 
-                            placeholder="Contraseña"
-                            required
-                        >
-                        <button type="button" class="password-toggle" onclick="togglePassword()">👁</button>
-                    </div>
-                </div>
-                 <div class="privacy-container">
-    <input type="checkbox" id="acceptPrivacy" name="acceptPrivacy" required />
-    <label for="acceptPrivacy">
-      Acepto las <a href="politicas-de-privacidad.html" target="_blank">políticas de privacidad</a>.
-    </label>
-  </div><br>
-                <button type="submit" class="login-btn">Crear Cuenta</button>
+
+                <button type="submit" class="login-btn">Iniciar sesión</button>
             </form>
 
             <div class="social-section">
@@ -96,8 +72,12 @@
             </div>
 
             <div class="password-recovery">
-                <span>¿Ya tienes cuenta?</span>
-                <a href="Log_in.html">Iniciar Sesion</a>
+                <span>¿Olvidaste tu contraseña?</span>
+                <a href="#forgot-password">Cambia tu contraseña</a>
+            </div>
+            <div class="register-prompt">
+                <span>¿No tienes una cuenta?</span>
+                <a href="Crear.html" class="register-btn">Registrate</a>
             </div>
         </div>
     </main>
@@ -226,5 +206,4 @@
 
       </footer>
 </body>
-
 </html>
