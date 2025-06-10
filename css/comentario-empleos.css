@@ -1,0 +1,276 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
+}
+
+.logo img {
+  height: auto;
+  width: 54px;
+}
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.letras-nav {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+
+body {
+
+      font-family:'Inter', sans-serif;
+      background: linear-gradient(to right, #F4EBD9, #058ED9);
+      margin: 0;
+      padding: 0;
+}
+
+.head_box{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-size:larger;
+    border-radius: 10px;
+    color: rgb(30, 30, 30);
+    border: 1px solid rgb(165, 165, 165);
+    
+}
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #444;
+    font-family: 'Inter';
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #058ED9;
+    font-weight: normal;
+}
+
+.breadcrumb a:hover {
+  color: #0056b3;
+  cursor: pointer;
+}
+
+.breadcrumb .divider {
+    margin: 0 5px;
+    color: #999;
+}
+
+.breadcrumb .actual {
+    color: #111;
+    font-weight: normal;
+    pointer-events: none;
+}
+
+.scroll_box {
+  width: 630px;
+  height: 495px;
+  overflow: auto;
+  border: none;
+  padding: -10px;
+  margin-left: 56px;
+  margin-top: 13px;
+}
+
+.checked {
+  color: rgb(255, 189, 23);
+}
+
+.dejar_comentario{
+  width: 720px;
+  height: 473px;
+  float:right;
+  border: 1px solid rgb(165, 165, 165);
+  background-color: white;
+  padding: 10px;
+  margin: auto;
+  margin-top: 13px;
+  margin-right: 68px;
+  border-radius: 10px;
+  text-align: left;
+  padding-top: 0px;
+}
+
+#mensaje_exito{
+    display: none;
+    color:#058ED9; 
+    margin-top: 25px;
+    margin-left: 48px;
+    font-family: 'Inter';
+}
+.comentario_head{
+    font-size: larger;
+    margin-left: 10px;
+}
+.comentario_button{
+    background-color: #058ED9;
+    font-family: "Inter", sans-serif;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    width: 230px;
+    height: 50px;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 240px;
+    transition-duration: 0.3s;
+}
+.comentario_button:hover{
+    background-color: #025bcf;
+}
+.cargo_text{
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+    color: #058ED9;
+}
+.comentario_text{
+    margin:auto;
+    margin-left: 48px;
+    width: 600px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    font-family: "Inter", sans-serif;
+
+}
+.comentario_box{
+    background-color: white;
+    margin: 12px;
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-top: 16px;
+    border-radius: 10px;
+    border: 1px solid rgb(165, 165, 165);
+}
+.imagen_comentario{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+.top_comment{
+    display: flex;
+    padding: 5px;
+    padding-right: 20px;
+}
+.bottom_comment{
+    display: flex;
+    text-align: center;
+}
+.comentario_cal{
+    margin-top: -1px;
+    padding-top: -20px;
+}
+.comentario_stars{
+    padding-left: 20px;
+}
+.comentario_float_val{
+    padding-left: 15px;
+}
+footer {
+      background-color: #a39a91;
+      padding: 3rem 2rem;
+}
+
+.footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+}
+.footer-title {
+      color: #102228;
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+}
+.footer-subtitle {
+      color: #102228;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+}
+.contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+}
+.contact-icon {
+      width: 16px;
+      height: 16px;
+      color: #102228;
+}
+.contact-text {
+      color: #102228;
+      font-size: 0.875rem;
+}
+footer{
+    margin-top: 48px;
+}
+.footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+}
+.footer-link {
+      color: #102228;
+      font-size: 0.875rem;
+      transition: color 0.3s;
+}
+.footer-link:hover {
+      color: #3884da;
+}
+.social-icons {
+      display: flex;
+      gap: 1rem;
+}
+.social-icon {
+      width: 32px;
+      height: 32px;
+      background-color: #102228;
+      border-radius: 4px;
+}
