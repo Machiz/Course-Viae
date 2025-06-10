@@ -2,7 +2,15 @@
     background: linear-gradient(to right, #F4EBD9, #058ED9); 
     height:100vh;
 }
-
+.container-info-curso{
+    margin:20px;
+    padding: 50px; 
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    align-items: center; 
+    gap: 5px;
+}
 .contenedor-header{
     display:flex;
     align-items: center; /* Alineación al inicio del contenedor */
@@ -99,7 +107,6 @@
     flex-direction: column;
     align-items:center;
     gap: 20px;
-    z-index: 999; /* Para que se mantenga al frente */
 }
 
 .opciones{
@@ -203,4 +210,58 @@ ul.decoracion-puntos li::before {
 /* Para que la campana tenga un efecto al hacer hover */
 .notification-bell:hover .bell-icon {
     color: #89D1F8;
+}
+
+.textos{
+    max-width:650px;
+    word-wrap:break-word;
+}
+
+.fontInter{
+    font-family: 'Inter', sans-serif;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star{
+    color: #FFD700; /* Color dorado para las estrellas */
+    font-size: 20px; /* Tamaño de las estrellas */
+}
+
+.star-morenita{
+    color: #454545; /* Color marrón para las estrellas */
+    font-size: 20px; /* Tamaño de las estrellas */
+}
+
+.reseñas {
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px;
+    margin-left:10px;
+    padding-right:10px;
+    margin-bottom:6px;
+    width:380px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.texto-reseña{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin: 8px 0;
+}
+
+.autor-reseña{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B2B2B;
+    margin: 0;
 }
