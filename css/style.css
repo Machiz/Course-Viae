@@ -111,3 +111,150 @@ h1{
     grid-template-columns: repeat(3, 1fr);
     grid: 5rem;
 }
+/* Estilos sección Notificaciones*/
+.notificaciones-body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #F4EBD9, #058ED9);
+  margin: 0;
+  padding: 0;
+}
+
+
+.notificaciones-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
+}
+
+.logo-noti img {
+  height: auto;
+  width: 54px;
+}
+
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.notificaciones-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.back-noti {
+  color: #007bff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.noti {
+  margin-bottom: 20px;
+}
+
+.oferta {
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   gap: 10px;
+}
+
+.oferta:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.btn-noti {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-noti:hover {
+  background-color: #0056b3;
+}
+
+.close-noti {
+  color: #999;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.logo-text {
+  font-size: 24px;
+}
+.letras-nav {
+  font-size: 18px;
+   font-weight: bold;
+  color: #FFFFFF;
+  font-family: Arial;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.nombre-usuario {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-family: Arial;
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.notificaciones-container h2 {
+  font-size: 28px;
+}
+.oferta span {
+  font-size: 16px;  
+}
+.oferta span small { /* texto de fecha y hora*/
+  font-size: 12px;
+  color: #666;
+}
+.segundo-titulo {
+  font-size: 16px;        
+  font-weight: bold;
+  color: #333;            
+  display: block;
+  margin-bottom: 10px;
+}
+.oferta-texto {
+  flex: 1;
+}
+
+/*Estilos seccion Reseñas*/
