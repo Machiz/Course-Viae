@@ -152,7 +152,7 @@ function mostrar_info(event){
             <p class = "left_align">${caja.distrito}, Lima</p>
             <br>
             <p class = "center-align">${caja.candidatos} candidatos</p>
-            <button type="button" class="postular_button"> Postular </button> 
+            <a href="../Postular_Empleos/postular-empleo.html"> <button type="button" class="postular_button"> Postular </button> </a> 
             <h4 class = "left_align_h4"> Descripción de la oferta </h4>
             <p class = "left_align">${caja.descripcion}</p>
             <h4 class = "left_align_h4"> Requisitos </h4>
@@ -173,7 +173,7 @@ function mostrar_info(event){
         </ul>
         <h4 class = "left_align_h4"> Salario </h4>
         <p class ="left_align"> s/.${caja.salario} al mes</p>
-        <button class = "comentario_button" type="button"> Ver comentarios</button>
+        <a href="../Comentario_Empleos/comentario-empleos.html"> <button class = "comentario_button" type="button"> Ver comentarios</button> </a> 
     `;
 
     inHTML += `</div>`;

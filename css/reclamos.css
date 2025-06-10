@@ -218,71 +218,104 @@ textarea::placeholder {
 }
   footer {
 
-        background-color: #a39a91;
-        padding: 3rem 2rem;
-      }
+  background-color: #a39a91;
+  padding: 3rem 2rem;
+}
 
-      .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-      }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
 
-      .footer-title {
-        color: #102228;
-        font-weight: 600;
-        font-size: 1.125rem;
-        margin-bottom: 1rem;
-      }
+.footer-title {
+  color: #102228;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
 
-      .footer-subtitle {
-        color: #102228;
-        font-weight: 500;
-        margin-bottom: 0.75rem;
-      }
+.footer-subtitle {
+  color: #102228;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
 
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-bottom: 0.75rem;
-      }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
 
-      .contact-icon {
-        width: 16px;
-        height: 16px;
-        color: #102228;
-      }
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  color: #102228;
+}
 
-      .contact-text {
-        color: #102228;
-        font-size: 0.875rem;
-      }
+.contact-text {
+  color: #102228;
+  font-size: 0.875rem;
+}
 
-      .footer-links {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-      .footer-link {
-        color: #102228;
-        font-size: 0.875rem;
-        transition: color 0.3s;
-      }
+.footer-link {
+  color: #102228;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
 
-      .footer-link:hover {
-        color: #3884da;
-      }
+.footer-link:hover {
+  color: #3884da;
+}
 
-      .social-icons {
-        display: flex;
-        gap: 1rem;
-      }
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
 
-      .social-icon {
-        width: 32px;
-        height: 32px;
-        background-color: #102228;
-        border-radius: 4px;
-      }
+.social-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #102228;
+  border-radius: 4px;
+}
+.notification-bell {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.bell-icon {
+    font-size: 30px;
+    color: white;
+}
+
+.numero-notificaciones {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    background-color: #FF9800; /* Color naranja */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Para que la campana tenga un efecto al hacer hover */
+.notification-bell:hover .bell-icon {
+    color: #89D1F8;
+}
