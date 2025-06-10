@@ -22,15 +22,19 @@
     <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
         <nav>
             <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
-                <li><a href="#" class="letras-nav">Home</a></li>
+                <li><a href="../../index.html" class="letras-nav">Home</a></li>
                 <li><a href="#" class="letras-nav">Estudiante</a></li>
-                <li><a href="#" class="letras-nav">Nosotros</a></li>
-                <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                <li><a href="../../index.html" class="letras-nav">Nosotros</a></li>
+                <li><a href="../Reclamos/Reclamos.html" class="letras-nav">Contáctanos</a></li>
             </ul>
         </nav>
         <div class="usuario-noti">
-        <span class="nombre-usuario">Alessandro Hesse</span>
-        <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
+            <div class="notification-bell">
+                <a href="../Notificaciones/Notificaciones.html"><ion-icon name="notifications" class="bell-icon"></ion-icon></a>
+                <span class="numero-notificaciones">7</span>
+            </div>
+            <span class="nombre-usuario">Alessandro Hesse</span>
+            <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
         </div>
     </header>
    <div class="dark-bg" id="bg"></div>
@@ -46,8 +50,8 @@
    
    <div class="main-box" id="main-box-1">
         <nav class="breadcrumb">
-        <a href="index.html">Inicio</a> <span class="divider">›</span>
-        <a href="index.html">Empleos</a> <span class="divider">›</span>
+        <a href="../../index.html">Inicio</a> <span class="divider">›</span>
+        <a href="../Busqueda_Empleos/busqueda-empleos.html">Empleos</a> <span class="divider">›</span>
         <span class="actual">Postular</span>
         </nav>
         <h2>Estás a pocos pasos de concluir tu postulación</h2>
@@ -72,6 +76,8 @@
    </main>
 
    <script src="../../js/postulacion-empleos.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
    <footer>
     <div class="container footer-grid">
         <div>
@@ -102,12 +108,15 @@
         </div>
 
         <div>
-            <h3 class="footer-title">Nuestras redes</h3>
-            <div class="social-icons">
-            <div class="social-icon"></div>
-            <div class="social-icon"></div>
-            <div class="social-icon"></div>
-            </div>
+          <h3 class="footer-title fontInter" style="font-weight:bold;">Nuestras redes</h3>
+          <div class="social-icons">
+              <!--div class="social-icon"></div-->
+              <img src="../../resources/fotos/Facebook.png" alt="Facebook" style="width:35px;height:auto;">
+              <!--div class="social-icon"></div-->
+              <img src="../../resources/fotos/Instagram.png" alt="Instagram" style="width:35px;height:auto;">
+              <!--div class="social-icon"></div-->
+              <img src="../../resources/fotos/X.png" alt="X" style="width:35px;height:auto;">
+          </div>
         </div>
         </div>
     </footer>
