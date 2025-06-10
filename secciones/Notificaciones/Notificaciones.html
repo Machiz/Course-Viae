@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notificaciones - Course Vitae</title>
-  <link rel="stylesheet" href="../../css/style.css"> 
+  <link rel="stylesheet" href="../../css/notificaciones.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="notificaciones-body">
  
@@ -18,83 +19,85 @@
 </div>
  <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
                 <nav>
-                    <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px; font-weight: bold;">
+                    <ul style="list-style: none; display: flex; gap: 80px; margin-left: 1px; font-size: 18px;">
                         <li><a href="#" class="letras-nav">Home</a></li>
                         <li><a href="#" class="letras-nav">Estudiante</a></li>
                         <li><a href="#" class="letras-nav">Nosotros</a></li>
                         <li><a href="#" class="letras-nav">Contáctanos</a></li>
                     </ul>
                 </nav>
-
     <div class="usuario-noti">
       <span class="nombre-usuario">Alessandro Hesse</span>
       <img src="../../img/hesse.jpg" alt="usuario" class="avatar-noti">
     </div>
   </header>
 
-
   <main class="notificaciones-container">
-    <a href="#" class="back-noti">&lt; Regresar</a>
+    <nav class="breadcrumb">
+  <a href="index.html">Inicio</a> <span class="divider">›</span>
+  <span class="actual">Notificaciones</span>
+</nav>
+
     <h2>Avisos</h2>
 
     <!-- Grupo 1 -->
     <div class="noti">
-      <strong class="segundo-titulo">4 Ofertas nuevas que encajan a sus intereses.</strong>
+      <strong class="segundo-titulo"> • 4 Ofertas nuevas que encajan a sus intereses.</strong>
       <div class="oferta">
         <div class="oferta-texto">
-        <span>Gestión de Proyectos - Intercorp - Surquillo, Lima<br><small>Hoy a las 8:32 AM</small></span>
-        </div>
-        <button class="btn-noti">Ir a oferta</button>
+        <span>Programador web - Interbank - Miraflores, Lima<br><small>Hace 3 días</small></span>
+        </div>  
+        <a  href="oferta.html" class="btn-noti">Ir a oferta</a> <!--en cada uno de estos botones va el enlace para la oferta de postulación/parte del proceso de postulación-->
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
-        <span>Contabilidad Empresarial - Cenacud - Surquillo, Lima<br><small>Hoy a las 12:00 PM</small></span>
+        <span>Practicante de Procesos y Proyectos - Tottus - Miraflores, Lima<br><small>Hace 3 días</small></span>
         </div>
-        <button class="btn-noti">Ir a oferta</button>
+        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
-        <span>Manager Empresarial - Chilis - San Isidro, Lima<br><small>Ayer a las 8:20 PM</small></span>
+        <span>Diseñador de entorno web - Chilis - Miraflores, Lima<br><small>Hace 3 días</small></span>
         </div>
-        <button class="btn-noti">Ir a oferta</button>
+        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
         <span>Gerente de Empresa - Oeschle - San Isidro, Lima<br><small>Hace 2 días</small></span>
         </div>
-        <button class="btn-noti">Ir a oferta</button>
+        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
     </div>
 
     <!-- Grupo 2 -->
     <div class="noti">
-      <strong class="segundo-titulo">3 Ofertas nuevas cerca a su ubicación.</strong>
+      <strong class="segundo-titulo">• 3 Ofertas nuevas cerca a su ubicación.</strong>
       <div class="oferta">
         <div class="oferta-texto">
         <span>Gestión de Proyectos - Intercorp - Surquillo, Lima<br><small>Hoy a las 9:32 AM</small></span>
         </div>
-        <button class="btn-noti">Ir a oferta</button>
+        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
         <span>Gestión Empresarial - Cencosud - Surquillo, Lima<br><small>Hoy a las 12:00 PM</small></span>
         </div>
-        <button class="btn-noti">Ir a oferta</button>
+        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
        <div class="oferta">
         <div class="oferta-texto">
         <span>Manager Empresarial - Chilis - San Isidro, Lima<br><small>Ayer a las 8:20 PM</small></span>
         </div>
-        <button class="btn-noti">Ir a oferta</button>
+        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
         <span class="close-noti">×</span>
-      </div>
-      </div>
+      </div>    
+      </div>       
       <script>
        // Se seleccionan todos los botones de cerrar
   document.querySelectorAll('.close-noti').forEach(function(button) {
@@ -110,5 +113,46 @@
     });
   });
 </script>
+</main>
+<!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Course vitae</h3>
+        <h4 class="footer-subtitle">Contacto:</h4>
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="contact-text">coursevitae-contact@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="contact-text">999 913 942</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Enlaces rápidos</h3>
+        <div class="footer-links">
+          <a href="Log_in.html" class="footer-link">Iniciar sesión</a>
+          <a href="#" class="footer-link">Crear cuenta</a>
+          <a href="#" class="footer-link">Inicio</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Nuestras redes</h3>
+        <div class="social-icons">
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
