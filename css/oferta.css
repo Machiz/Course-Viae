@@ -64,7 +64,7 @@
   color: #89d1f8; 
   cursor: pointer;
 }
-    .container {
+    .of-container {
       background-color: white;
       padding: 30px 50px;
       border-radius: 12px;
@@ -202,75 +202,76 @@
     font-weight: normal;
     pointer-events: none;
   }
-   footer {
-      background-color: #a39a91;
-      padding: 3rem 2rem;
-    }
+     footer {
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
+        background-color: #a39a91;
+        padding: 3rem 2rem;
+      }
 
-    .footer-title {
-      color: #102228;
-      font-weight: 600;
-      font-size: 1.125rem;
-      margin-bottom: 1rem;
-    }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
 
-    .footer-subtitle {
-      color: #102228;
-      font-weight: 500;
-      margin-bottom: 0.75rem;
-    }
+      .footer-title {
+        color: #102228;
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+      }
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.75rem;
-    }
+      .footer-subtitle {
+        color: #102228;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
 
-    .contact-icon {
-      width: 16px;
-      height: 16px;
-      color: #102228;
-    }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+      }
 
-    .contact-text {
-      color: #102228;
-      font-size: 0.875rem;
-    }
+      .contact-icon {
+        width: 16px;
+        height: 16px;
+        color: #102228;
+      }
 
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+      .contact-text {
+        color: #102228;
+        font-size: 0.875rem;
+      }
 
-    .footer-link {
-      color: #102228;
-      font-size: 0.875rem;
-      transition: color 0.3s;
-    }
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
 
-    .footer-link:hover {
-      color: #3884da;
-    }
+      .footer-link {
+        color: #102228;
+        font-size: 0.875rem;
+        transition: color 0.3s;
+      }
 
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-    }
+      .footer-link:hover {
+        color: #3884da;
+      }
 
-    .social-icon {
-      width: 32px;
-      height: 32px;
-      background-color: #102228;
-      border-radius: 4px;
-    }
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-icon {
+        width: 32px;
+        height: 32px;
+        background-color: #102228;
+        border-radius: 4px;
+      }
 .bloque-comentarios {
   margin-left: 0; 
   display: flex;
