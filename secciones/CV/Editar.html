@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../../css/CV.css">
+    </head>
+        <header>
+            <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
+            <div class="contenedor-header">
+                <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
+                <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
+                    <span>Course</span>
+                    <span>Vitae</span>
+                </div>
+                <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
+                <img src="../../img/logo-principal.png" class = "logo" alt = "Isotipo de Course Vitae">
+
+                <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                <nav>
+                    <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+                        <li><a href="#" class="letras-nav">Home</a></li>
+                        <li><a href="#" class="letras-nav">Estudiante</a></li>
+                        <li><a href="#" class="letras-nav">Nosotros</a></li>
+                        <li><a href="#" class="letras-nav">Contáctanos</a></li>
+                    </ul>
+                </nav>
+
+                <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
+                <div class="usuario-header">
+                    <p class ="nombre_usuario">Alessandro Hesse</p>
+                    <img src="../../img/hesse.jpg" alt = "Usuario">
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            <div class="container-principal">
+                <div class="partes parte1">
+                    <h3>Nombre completo</h3>
+                    <input type="text" value="Alessandro Hesse">
+                    <h3>Titulo profesional</h3>
+                    <input type="text" value="Cientifico de la Computación">
+                    <h3>Experiencia laboral (opcional)</h3>
+                    <input type="text" value="Técnico en la UPC">
+                    <h3>Educacion</h3>
+                    <input type="text" value="Egresado de la UPC">
+                </div>
+                <div class="partes parte2">
+                    <h3>Foto de perfil</h1>
+                    <img src="../../img/hesse.jpg" class = "foto_editar" alt="">
+                    <div>
+                        <button>Editar foto</button>
+                    </div>
+
+                    <h3>Descripcion</h1>
+                    <textarea class="desc" placeholder="Descripcion"rows="4" cols="50">¡Hola! Soy Alessandro Hesse, un científico de la computación apasionado por resolver problemas complejos a través de algoritmos, modelos teóricos y desarrollo de software innovador. Mi enfoque combina rigor matemático, pensamiento algorítmico y aplicaciones prácticas en áreas como inteligencia artificial, sistemas distribuidos y optimización computacional.</textarea>
+                </div>
+            </div>
+
+            <div class="seccion_boton">
+                <button>Crear CV</button>
+            </div>
+        </main>
+
+        <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Course vitae</h3>
+        <h4 class="footer-subtitle">Contacto:</h4>
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="contact-text">coursevitae-contact@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="contact-text">999 913 942</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Enlaces rápidos</h3>
+        <div class="footer-links">
+          <a href="../Inicio de sesion/Log_in.html" class="footer-link fontInter">Iniciar sesión</a>
+              <a href="../Inicio de sesion/Crear.html" class="footer-link fontInter">Crear cuenta</a>
+              <a href="../../index.html" class="footer-link fontInter">Inicio</a>
+        </div>
+      </div>
+
+      <div>
+          <h3 class="footer-title fontInter" style="font-weight:bold;">Nuestras redes</h3>
+          <div class="social-icons">
+              <!--div class="social-icon"></div-->
+              <img src="../../resources/fotos/Facebook.png" alt="Facebook" style="width:35px;height:auto;">
+              <!--div class="social-icon"></div-->
+              <img src="../../resources/fotos/Instagram.png" alt="Instagram" style="width:35px;height:auto;">
+              <!--div class="social-icon"></div-->
+              <img src="../../resources/fotos/X.png" alt="X" style="width:35px;height:auto;">
+          </div>
+      </div>
+    </div>
+  </footer>
+    </body>
+
+    <!--Links de IonIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
