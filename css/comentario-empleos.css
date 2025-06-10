@@ -274,3 +274,36 @@ footer{
       background-color: #102228;
       border-radius: 4px;
 }
+.notification-bell {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+.bell-icon {
+    font-size: 30px;
+    color: white;
+}
+
+.numero-notificaciones {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    background-color: #FF9800; /* Color naranja */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Para que la campana tenga un efecto al hacer hover */
+.notification-bell:hover .bell-icon {
+    color: #89D1F8;
+}
