@@ -9,81 +9,25 @@
 <body>
   <!-- Header -->
   <header>
-      <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
-      <div class="contenedor-header">
-          <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
-          <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
-              <span>Course</span>
-              <span>Vitae</span>
-          </div>
-          <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
-          <img src="resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;">
-
-          <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
-          <nav>
-              <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
-                  <li><a href="index.html" class="letras-nav">Home</a></li>
-                  <li><a href="Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
-                  <li><a href="index.html" class="letras-nav">Nosotros</a></li>
-                  <li><a href="Reclamos/Reclamos.html" class="letras-nav">Contáctanos</a></li>
-              </ul>
-          </nav>
-
-          <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
-          <div class="usuario-header">
-              <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
-              <div onclick = "abrirPerfil()" class="perfil">
-                  <img src="resources/fotos/hesse.jpg" alt = "Usuario">
-              </div>
-          </div>
-
+    <div class="container header-container">
+      <div class="logo">
+        <div class="logo-text"><span>Course</span>
+          <span>Vitae</span>
+        </div>
+        <div class="logo-icon"><img src="./resources/fotos/vitae 2.png" alt = "Isotipo de Course Vitae" style="width: 54px; height: auto;"></div>
       </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="secciones/Editar_perfil/index.html">Estudiante</a>
+        <a href="index.html">Nosotros</a>
+        <a href="secciones/Reclamos/Reclamos.html">Contáctanos</a>
+      </nav>
+      <div class="header-buttons">
+        <button class="btn btn-dark"><a href="secciones/Inicio de sesion/Crear.html"></a>Crear Cuenta</button>
+        <button class="btn btn-blue"><a href="secciones/Inicio de sesion/Log_in.html">Iniciar sesión</a></button>
+      </div>
+    </div>
   </header>
-
-  <!--Visualización de opciones en el perfil de usuario-->
-  <div id="abajoMenu" class="abajoMenu fontInter" style="gap:2px;">
-      <a href="Editar_perfil/index.html">
-          <img src="resources/fotos/Mi Perfil.png" alt="Mi Perfil" style="width:20px; height:auto; margin-right:8px;">
-          Mi perfil
-      </a>
-      <a href="Cursos/mis-cursos.html">
-          <img src="resources/fotos/MisCursos.png" alt="Mis Cursos" style="width:20px; height:auto; margin-right:8px;">
-          Mis cursos
-      </a>
-      <a href="Busqueda_Empleos/busqueda-empleos.html">
-          <img src="resources/fotos/Empleos.png" alt="Empleos" style="width:20px; height:auto; margin-right:8px;">
-          Empleos
-      </a>
-
-      <a href="Cursos/busqueda-cursos-inicio.html">
-          <img src="resources/fotos/Cursos.png" alt="Cursos" style="width:20px; height:auto; margin-right:8px;">
-          Cursos
-      </a>
-      
-      <a href="Reclamos/Reclamos.html">
-          <img src="resources/fotos/Reclamos.png" alt="Reclamos" style="width:20px; height:auto; margin-right:8px;">
-          Reclamos
-      </a>
-      <a href="Inicio de sesion/Log_in.html">
-          <img src="resources/fotos/Cerrar sesión.png" alt="Cerrar Sesión" style="width:20px; height:auto; margin-right:8px;">
-          Cerrar sesión
-      </a>
-  </div>
-
-  <script>
-    function abrirPerfil() {
-        const menu = document.getElementById("abajoMenu");
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-
-    // Cerrar si se hace clic fuera
-    window.addEventListener("click", function(e) {
-        const menu = document.getElementById("abajoMenu");
-        if (!e.target.closest(".perfil")) {
-        menu.style.display = "none";
-        }
-    });
-</script>
   
   <!-- Hero Section -->
   <section class="hero">

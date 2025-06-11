@@ -16,6 +16,73 @@
       text-decoration: none;
     }
 
+    .abajoMenu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.abajoMenu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.abajoMenu a:hover {
+    background-color: #f0f0f0;
+}
+
+.abajoMenu a i {
+    margin-right: 8px;
+    color: #1a75ff;
+}
+
+.usuario-header{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items:center;
+    gap: 10px; /* Espacio entre nombre y foto */
+    font-family: Arial;
+    color: white;
+}
+
+.usuario-header img{
+    width: 60px;
+    height: auto;
+    border-radius: 25px;
+    object-fit:cover;
+}
+
+.letras-titulo{
+    display:flex;
+    font-family: Arial, sans-serif;
+    margin-left: 10px;
+    flex-direction: column; /* Una palabra sobre otra, forma de columnas */
+    text-align:center; /* Centrado de las letras */
+    font-size: 24px; /* Tamaño de letra */
+    color:#058ED9; /* Color azul */
+    font-weight: bold; /* Negrita */
+}
+
+.contenedor-header{
+    display:flex;
+    align-items: center; /* Alineación al inicio del contenedor */
+    gap: 14px; /* Espacio entre imagen y texto */
+    padding-left:20px; /* Espacio a la izquierda */
+}
     /* Header styles */
     /*header { 
       background: linear-gradient(to right, #e3f2fd 0%, #2196f3 50%, #1976d2 100%);
