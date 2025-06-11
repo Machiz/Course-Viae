@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Vitae - Recuperar Contraseña</title>
+    <link rel="stylesheet" href="../../css/styles_pwd.css">
+</head>
+<body>
+    <header>
+      <div class="contenedor-header">
+        <div class="letras-titulo">
+          <span>Course</span>
+          <span>Vitae</span>
+        </div>
+        <img src="../../resources/fotos/vitae 2.png" alt="Isotipo de Course Vitae" style="width: 54px; height: auto;">
+        <nav>
+          <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
+              <li><a href="../../main.html" class="letras-nav">Home</a></li>
+              <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
+              <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
+              <li><a href="../Reclamos/Reclamos.html" class="letras-nav">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+        <div class="login-card">
+            <h1 class="login-title">Recuperar Contraseña</h1>
+            <p class="login-desc">Ingresa tu correo electrónico y te enviaremos instrucciones para restablecer tu contraseña.</p>
+            <form id="recuperarForm">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email*</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        class="form-input" 
+                        placeholder="Correo electrónico"
+                        required
+                    >
+                </div>
+                <button type="submit" class="login-btn">Enviar instrucciones</button>
+            </form>
+            <div class="password-recovery">
+                <span>¿Ya tienes cuenta?</span>
+                <a href="Log_in.html">Iniciar Sesión</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('recuperarForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            if (email) {
+                alert('Si el correo está registrado, recibirás instrucciones para restablecer tu contraseña.');
+            } else {
+                alert('Por favor, ingresa tu correo electrónico.');
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="container footer-grid">
+          <div>
+            <h3 class="footer-title fontInter" style="font-weight:bold;">Course Vitae</h3>
+            <h4 class="footer-subtitle fontInter">Contacto:</h4>
+            <div class="contact-item">
+              <img src="../../resources/fotos/Correo.png" alt="Correo" style="width:30px; height:auto;">
+              <span class="contact-text fontInter">coursevitae-contact@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <img src="../../resources/fotos/Telefono.png" alt="Teléfono" style="width:30px; height:auto;">
+              <span class="contact-text fontInter">999 913 942</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-title fontInter" style="font-weight:bold;">Enlaces rápidos</h3>
+            <div class="footer-links">
+              <a href="Log_in.html" class="footer-link fontInter">Iniciar sesión</a>
+              <a href="Crear.html" class="footer-link fontInter">Crear cuenta</a>
+              <a href="../../main.html" class="footer-link fontInter">Inicio</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-title fontInter" style="font-weight:bold;">Nuestras redes</h3>
+            <div class="social-icons">
+              <img src="../../resources/fotos/Facebook.png" alt="Facebook" style="width:35px;height:auto;">
+              <img src="../../resources/fotos/Instagram.png" alt="Instagram" style="width:35px;height:auto;">
+              <img src="../../resources/fotos/X.png" alt="X" style="width:35px;height:auto;">
+            </div>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
