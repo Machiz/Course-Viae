@@ -337,3 +337,74 @@ footer {
 .notification-bell:hover .bell-icon {
     color: #89D1F8;
 }
+
+@media (max-width: 768px){
+  body{
+    font-family: "Inter", sans-serif;
+    background-size:200%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, beige, #058ED9);
+    width: 90%;
+  }
+  .home-nav {
+    display: none;
+  }
+  .nombre-usuario{
+    display: none;
+  }
+  .logo{
+    margin-left: -20px;
+  }
+  .usuario-noti{
+    margin-left: 60px;
+  }
+
+  .main-box{
+    width: 94%;
+ 
+    margin-left: 1px;
+    margin-bottom: 20px;
+  }
+  .postular-img{
+    margin: auto;
+  }
+  .input-box-1{
+    width: 55%;
+  }
+  .postular-button{
+    margin-left: -160px;
+
+  }
+  .dark-bg{
+    width: 101%;
+    height: 100%;
+    margin-left: -9px;
+    background-color: rgba(30,30,30, 0.5);
+    position: absolute;
+    visibility: hidden;
+  }
+  .popup{
+    width: 85%;
+    height: 62%;
+    margin-left: 20px;
+  }
+
+  .dark-bg-show{
+    margin-left: -9px;
+    width: 101%;
+    height:100%;
+    background-color: rgba(30,30,30, 0.5);
+    position: absolute;
+    visibility: visible;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  footer{
+    width: 97%;
+    margin-left: -29px;
+    margin-top: 55px;
+   
+  }
+
+}

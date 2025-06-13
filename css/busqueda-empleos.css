@@ -39,7 +39,8 @@
   border: 1px solid rgb(165, 165, 165);
   background-color: white;
   padding: 10px;
-  margin: 15px;
+  margin: auto;
+  margin-bottom: 10px;
   margin-top: 5px;
   border-radius: 10px;
 }
@@ -78,6 +79,7 @@
   border: none;
   padding: -10px;
   margin: 0px;
+  margin-left: 98px;
 }
 .scroll_content{
   background-color: aliceblue;
@@ -106,7 +108,7 @@
   background-color: white;
   padding: 10px;
   margin: 25px;
-  margin-right: 40px;
+  margin-right: 112px;
   margin-top: 0px;
   border-radius: 10px;
   text-align: center;
@@ -442,6 +444,16 @@ footer {
   nav {
         display: none;
       }
+  .nombre-usuario{
+    display: none;
+  }
+  .logo{
+    margin-left: -20px;
+  }
+  .usuario-noti{
+    margin-left: 60px;
+  }
+
   .filtros{
     margin-top: 10px;
     display:flex;
@@ -451,8 +463,9 @@ footer {
     margin-top: 12px;
   }
   .filtro_box{
-    width: 90%; /* 1444  */
+    width: 95%; /* 1444  */
     height: 100%;
+    margin-left: 15px;
   }
   .filtro_input{
     width: 90%;
@@ -460,26 +473,27 @@ footer {
 
   .oferta_info_box{
     width: 100%;
-    margin-right: -7%;
+    margin-right: -9%;
   }
   .oferta_info_img{
-    width: 50%;
+    width: 90%;
   }
   .oferta_info_box2{
-    width: 104%;
+    width: 103%;
   }
   .scroll_box{
     width: 108%;
-    margin-left: -3%;
+    margin-left: 0%;
   }
   .oferta_box{
     width: 90%;
   }
 
   .footer-grid {
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   footer{
-    width: 86%;
+    width: 91%;
+    margin-top: 1px;
   }
 }
