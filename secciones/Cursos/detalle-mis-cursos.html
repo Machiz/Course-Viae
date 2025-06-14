@@ -5,46 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="../../css/cursos.css">
+        <link rel="stylesheet" href="../../css/detalle-cursos.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@600&family=Nunito+Sans:opsz,wght@6..12,700&family=Oswald:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosario&display=swap" rel="stylesheet">
         <style>
-            .nombreCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 24px;
-                font-weight: bold;
-                color: #454545;
-            }
-
-            #codigoCurso{
-                font-family: 'Arial', sans-serif;
-                font-size: 14px;
-                color:white;
-            }
-
-            #descripcionCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 16px;
-                color: #000000;
-                line-height: 1.5;
-            }
-
-            .instructorCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 20px;
-                color: #454545;
-                gap:10px;
-                padding-left: 10px; /* Espacio a la izquierda */
-            }   
-
-            #biografiaCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 16px;
-                color: #000000;
-                line-height: 1.5;
-                margin-top: 10px; /* Espacio entre la biografía y el resto del contenido */
-            }
-
             footer {
                 background-color: #a39a91;
                 padding: 3rem 2rem;
@@ -240,7 +205,9 @@
             <div class="container-info-curso">
                 <div style="display:flex; justify-content: space-between; align-items: center; gap: 10px;">
                     <div style="border: 2px solid #058ED9; padding: 10px; border-radius: 8px; display: flex; align-items:center;font-weight: bold; width:370px;">
-                        <h3 style="font-family: Inter; color:#2B2B2B;">¿De qué va  </h3> <h3 class="nombreCurso" style="font-size:20px; padding-left:10px;"></h3><h3 style="font-family:Inter; color:#2B2B2B;">?</h3>
+                        <h3 style="font-family: Inter; color:#2B2B2B;">¿De qué va  </h3> 
+                        <h3 class="nombreCurso" style="font-size:20px; padding-left:10px;"></h3>
+                        <h3 style="font-family:Inter; color:#2B2B2B;">?</h3>
                     </div>
                 </div>
 
@@ -295,7 +262,7 @@
                         <!--Dos reseñas de ejemplo (mis dedos no dan para más tac tic toc tec tuc)-->
                         <div class="reseñas">
                             <div style="display:flex; align-items:center; gap:10px;">
-                                <img src="./resources/fotos/Diego Luna.png" alt="Reseña 1" style="width:50px;height:auto; border-radius:50%;">
+                                <img src="../../resources/fotos/Diego Luna.png" alt="Reseña 1" style="width:50px;height:auto; border-radius:50%;">
                                 <h4 class="autor-reseña">Diego Luna</h4>
                             </div>
                             <div class="texto-reseña" style="display:flex;">
@@ -314,7 +281,7 @@
                         <br><br>
                         <div class="reseñas" style="margin-bottom:10px;">
                             <div style="display:flex; align-items:center; gap:10px;">
-                                <img src="./resources/fotos/Marco Torres.jpg" alt="Reseña 2" style="width:50px;height:auto; border-radius:48%;">
+                                <img src="../../resources/fotos/Marco Torres.jpg" alt="Reseña 2" style="width:50px;height:auto; border-radius:48%;">
                                 <h4 class="autor-reseña">Marco Torres</h4>
                             </div>
                             <div class="texto-reseña" style="display:flex;">
@@ -452,7 +419,7 @@
                 </div>
             </div>
 
-            <script src="./js/modals-cursos.js">
+            <script src="../../js/botones.js">
             </script>
 
             <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
@@ -504,7 +471,97 @@
         </main>
     </body>
 
-    <script src="../../js/otros-cursos.js"></script>
+    <!--script>
+        // Función para mostrar un curso según su nombre
+        function mostrarCursoPorNombre(nombreBuscado) {
+            // Suponiendo que ya tienes una lista de cursos llamada "cursos"
+            const cursoEncontrado = cursos.find(c => c.nombre.toLowerCase() === nombreBuscado.toLowerCase());
+            if (!cursoEncontrado) {
+                console.log(`No se encontró el curso con nombre: ${nombreBuscado}`);
+                return;
+            }
+
+            // Reutiliza tu función original mostrarCursos para mostrar solo ese curso
+            mostrarCursos([cursoEncontrado]);
+        }
+
+        // Obtener el nombre del curso desde la URL
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const nombreCurso = params.get("nombre");
+
+            if (nombreCurso) {
+                const nombreDecodificado = decodeURIComponent(nombreCurso.trim());
+                mostrarCursoPorNombre(nombreDecodificado);
+            } else {
+                console.log("No se recibió ningún nombre de curso en la URL.");
+            }
+        });
+    </script-->
+    
+    <script src="../../js/cursos.js"></script>
+    
+    <script>
+        window.onload = function () {
+        const curso = JSON.parse(localStorage.getItem("cursoSeleccionado"));
+
+        if (!curso) {
+            alert("No se encontró la información del curso.");
+            return;
+        }
+
+        // Insertar información del curso
+        document.querySelector(".nombreCurso").innerText = curso.nombre;
+        document.getElementById("codigoCurso").innerText = curso.codigo;
+        document.getElementById("descripcionCurso").innerText = curso.descripcion;
+        document.getElementById("precioCurso").innerText = curso.precio;
+        document.getElementById("duracionCurso").innerText = curso.duracion;
+
+        // Aquí aprenderás
+        document.getElementById("ap1Curso").innerText = curso.ap1;
+        document.getElementById("ap2Curso").innerText = curso.ap2;
+        document.getElementById("ap3Curso").innerText = curso.ap3;
+        document.getElementById("ap4Curso").innerText = curso.ap4;
+
+        // Instructor
+        document.querySelector(".instructorCurso").innerText = curso.instructor;
+        document.getElementById("biografiaCurso").innerText = curso.biografia;
+
+        // Imagen de instructor
+        const imgFoto = document.createElement("img");
+        imgFoto.src = curso.foto;
+        imgFoto.alt = "Foto del instructor";
+        imgFoto.style.width = "40px";
+        imgFoto.style.height = "auto";
+        imgFoto.style.borderRadius = "50px";
+        document.getElementById("fotoImgCurso").appendChild(imgFoto);
+
+        // Módulos
+        document.getElementById("mod1Curso").innerText = curso.mod1;
+        document.getElementById("mod2Curso").innerText = curso.mod2;
+        document.getElementById("mod3Curso").innerText = curso.mod3;
+        document.getElementById("mod4Curso").innerText = curso.mod4;
+
+        // Aprendizajes
+        document.getElementById("ap1Curso").innerText = curso.ap1;
+        document.getElementById("ap2Curso").innerText = curso.ap2;
+        document.getElementById("ap3Curso").innerText = curso.ap3;
+        document.getElementById("ap4Curso").innerText = curso.ap4;
+
+        // Imagen del curso
+        const contenedor = document.getElementById("contenedorImagenCurso");
+        const imagen = document.createElement("img");
+        imagen.src = curso.imagen;
+        imagen.alt = curso.nombre;
+        imagen.style.width = "100%"; // Ancho completo del contenedor
+        imagen.style.height = "250px";
+        imagen.style.objectFit = "cover"; // Mantiene la proporción de la imagen
+        imagen.style.borderRadius = "10px";
+        imagen.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+        //imagen.style = "width:400px;height:auto;border-radius:10px;";
+        contenedor.appendChild(imagen);
+    };
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

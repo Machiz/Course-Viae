@@ -166,6 +166,8 @@
             });
         </script>
 
+        <script src="../../js/cursos.js"></script>
+
         <main>
             <div style="padding:10px;"> <!--Div para el botón Regresar-->
                 <a href="busqueda-cursos-inicio.html"> <!--Volver al futuro-->
@@ -199,12 +201,10 @@
                         <div>
                             <h3 class="fontInter" style="color:#333;">Gestión Empresarial</h3>
                             <p class="fontInter" style="color:#8C8C8C; font-size:14px;">#124512</p>
-                            <a href="detalle-mis-cursos.html?id=curso1">
                                 <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
-                                class="fontInter">
+                                class="fontInter" onclick="verDetalleCurso('Gestión Empresarial')">
                                     Visitar curso
                                 </button>
-                            </a>
                         </div>
                     </div>
 
@@ -213,12 +213,10 @@
                         <div>
                             <h3 class="fontInter" style="color:#333;">Diseño Web</h3>
                             <p class="fontInter" style="color:#8C8C8C; font-size:14px;">#123512</p>
-                            <a href="detalle-mis-cursos.html?id=curso2">
                                 <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
-                                class="fontInter">
+                                class="fontInter" onclick="verDetalleCurso('Diseño Web')">
                                     Visitar curso
                                 </button>
-                            </a>
                         </div>
                     </div>
 
@@ -227,30 +225,10 @@
                         <div>
                             <h3 class="fontInter" style="color:#333;">Python Intermedio</h3>
                             <p class="fontInter" style="color:#8C8C8C; font-size:14px;">#777512</p>
-                            <!--a href="detalle-mis-cursos.html?nombre=Python%20Intermedio
-                            &duracion=8%20horas
-                            &precio=25
-                            &nivel=Intermedio
-                            &codigo=%23777512
-                            &imagen=..%2F..%2Fresources%2Ffotos%2Fpython-intermedio.png
-                            &descripcion=Python%20es%20uno%20de%20los%20lenguajes%20de%20programaci%C3%B3n%20m%C3%A1s%20coloquiales%2C%20accesible%20al%20p%C3%BAblico%20y%20compuesto%20de%20sintaxis%20agraciada.%20%20En%20el%20presente%20curso%2C%20se%20tratar%C3%A1n%20temas%20m%C3%A1s%20complejos%20en%20Python%2C%20relacionados%20a%20problemas%20matem%C3%A1ticos%2C%20bibliotecas%20in%C3%A9ditas%20y%20funciones%20desconocidas%2C%20%C3%BAtiles%20para%20ofertas%20de%20trabajo.
-                            &instructor=Sir%20Linux
-                            &foto=.%2Fresources%2Ffotos%2FSir%20Linux.png
-                            &biografia=Sir%20Linux%2C%20pseud%C3%B3nimo%20de%20Mario%20Cornejo%20Reyes%2C%20graduado%20y%20licenciado%20en%20Ingenier%C3%ADa%20de%20Software%20por%20la%20PUCP.%20Acu%C3%B1%C3%B3%20su%20alias%20en%20honor%20al%20sistema%20operativo%20de%20su%20preferencia.%20Ser%C3%A1%20tu%20gu%C3%ADa%20en%20este%20trayecto%20con%20Python%2C%20lenguaje%20universal.%20%20Trabajaba%20desde%20hace%20m%C3%A1s%20de%20cinco%20a%C3%B1os%20en%20proyectos%20con%20Python%2C%20JavaScript%2C%20PHP%2C%20C%2B%2B%2C%20C%23%20y%20Assembler.
-                            &mod1=Video%20%2810%20min.%29%3A%20Algunas%20estructuras%20de%20datos%20avanzadas
-                            &mod2=Lectura%3A%20Sobre%20list%2C%20tuplas%2C%20set%20y%20colecciones
-                            &mod3=Video%20%2820%20min.%29%3A%20Bibliotecas%20de%20Python
-                            &mod4=Video%20%2825%20min.%29%3A%20POO%20en%20Python
-                            &ap1=Funciones%20especiales%20en%20Python
-                            &ap2=Programaci%C3%B3n%20Orientada%20a%20Objetos%20%28POO%29%20en%20Python
-                            &ap3=Bibliotecas%20de%20Python
-                            &ap4=Estructuras%20de%20datos%20avanzadas%20en%20Python"-->
-                            <a href="../Cursos/detalle-mis-cursos.html?id=4">
-                                <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
-                                class="fontInter">
-                                    Visitar curso
-                                </button>
-                            </a>
+                            <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
+                            class="fontInter" onclick="verDetalleCurso('Python Intermedio')">
+                                Visitar curso
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -259,8 +237,7 @@
         </main>
 
         <script src="../../js/modals-cursos.js"></script>
-        <!--script src="../../js/cursos.js"></script-->
-        <script src="../../js/otros-cursos.js"></script>
+        <script src="../../js/cursos.js"></script>
 
         <br>
         <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
@@ -307,6 +284,22 @@
     </body>
 
     <!--Links de IonIcons-->
+    <script>
+        function verDetalleCurso(nombreCurso) {
+            // Asegúrate de que la variable "cursos" esté disponible
+            const curso = cursos.find(c => c.nombre === nombreCurso);
+            if (!curso) {
+                alert("Curso no encontrado");
+                return;
+            }
+
+            // Guarda el curso en localStorage
+            localStorage.setItem("cursoSeleccionado", JSON.stringify(curso));
+
+            // Redirige a la página de detalle
+            window.location.href = "detalle-mis-cursos.html";
+        }
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
