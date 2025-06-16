@@ -470,34 +470,6 @@
 
         </main>
     </body>
-
-    <!--script>
-        // Función para mostrar un curso según su nombre
-        function mostrarCursoPorNombre(nombreBuscado) {
-            // Suponiendo que ya tienes una lista de cursos llamada "cursos"
-            const cursoEncontrado = cursos.find(c => c.nombre.toLowerCase() === nombreBuscado.toLowerCase());
-            if (!cursoEncontrado) {
-                console.log(`No se encontró el curso con nombre: ${nombreBuscado}`);
-                return;
-            }
-
-            // Reutiliza tu función original mostrarCursos para mostrar solo ese curso
-            mostrarCursos([cursoEncontrado]);
-        }
-
-        // Obtener el nombre del curso desde la URL
-        document.addEventListener("DOMContentLoaded", () => {
-            const params = new URLSearchParams(window.location.search);
-            const nombreCurso = params.get("nombre");
-
-            if (nombreCurso) {
-                const nombreDecodificado = decodeURIComponent(nombreCurso.trim());
-                mostrarCursoPorNombre(nombreDecodificado);
-            } else {
-                console.log("No se recibió ningún nombre de curso en la URL.");
-            }
-        });
-    </script-->
     
     <script src="../../js/cursos.js"></script>
     
@@ -511,7 +483,13 @@
         }
 
         // Insertar información del curso
-        document.querySelector(".nombreCurso").innerText = curso.nombre;
+        //document.querySelector(".nombreCurso").innerText = curso.nombre;
+        const textoCurso = document.querySelectorAll('.nombreCurso');
+
+        textoCurso.forEach(texto =>{
+            texto.textContent = curso.nombre;
+        });
+
         document.getElementById("codigoCurso").innerText = curso.codigo;
         document.getElementById("descripcionCurso").innerText = curso.descripcion;
         document.getElementById("precioCurso").innerText = curso.precio;
