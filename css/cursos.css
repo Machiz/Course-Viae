@@ -1,3 +1,10 @@
+@media (max-width: 768px) {
+}
+
+*{
+    box-sizing:border-box;
+}
+
 .fondo{
     background: linear-gradient(to right, #F4EBD9, #058ED9); 
     height:100vh;
@@ -8,9 +15,11 @@
     background-color: white; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    align-items: center; 
+    align-items: center;
     gap: 5px;
+    height:990px;
 }
+
 .contenedor-header{
     display:flex;
     align-items: center; /* Alineación al inicio del contenedor */
@@ -71,13 +80,13 @@
     padding-left: 20px;
     background-color:white;
     border-radius:20px;
-    height: 890px;
+    height: 990px;
 }
 
 .container-filtros{
     display: flex;
     background-color:white;
-    border:#454545;
+    /*border:1px solid #454545;*/
     gap: 30px;
 }
 
@@ -110,12 +119,12 @@
 }
 
 .opciones{
-        display:block; /* Select visible desde el comienzo */
-        background-color: #89D1F8;
-        border-radius: 5px; /* Bordes redondeados */
-        padding: 10px; /* Espacio interno */
-        margin-top:5px;
-        width:200px;
+    display:block; /* Select visible desde el comienzo */
+    background-color: #89D1F8;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interno */
+    margin-top:5px;
+    width:200px;
 }
 
 .modal{
@@ -183,7 +192,7 @@ ul.decoracion-puntos li::before {
         display: inline-block;
         cursor: pointer;
         margin-right: 15px;
-    }
+}
 
 .bell-icon {
     font-size: 30px;
@@ -215,10 +224,6 @@ ul.decoracion-puntos li::before {
 .textos{
     max-width:650px;
     word-wrap:break-word;
-}
-
-.fontInter{
-    font-family: 'Inter', sans-serif;
 }
 
 .stars {
