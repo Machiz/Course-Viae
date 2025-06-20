@@ -84,9 +84,10 @@
 }
 
 body {
-  width: 100%;
   font-family:'Inter', sans-serif;
   background: linear-gradient(to right, #F4EBD9, #058ED9);
+  margin: 0;
+  padding: 0;
 }
 .main-box{
   background-color: white;
@@ -336,4 +337,106 @@ footer {
 /* Para que la campana tenga un efecto al hacer hover */
 .notification-bell:hover .bell-icon {
     color: #89D1F8;
+}
+
+.abajoMenu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.abajoMenu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.abajoMenu a:hover {
+    background-color: #f0f0f0;
+}
+
+.abajoMenu a i {
+    margin-right: 8px;
+    color: #1a75ff;
+}
+
+@media (max-width: 768px){
+  body{
+    font-family: "Inter", sans-serif;
+    background-size:200%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, beige, #058ED9);
+    width: 90%;
+  }
+  .home-nav {
+    display: none;
+  }
+  .nombre-usuario{
+    display: none;
+  }
+  .logo{
+    margin-left: -20px;
+  }
+  .usuario-noti{
+    margin-left: 60px;
+  }
+
+  .main-box{
+    width: 94%;
+    margin-left: 1px;
+    margin-bottom: 20px;
+  }
+  .postular-img{
+    margin: auto;
+  }
+  .input-box-1{
+    width: 55%;
+  }
+  .postular-button{
+    margin-left: -160px;
+
+  }
+  .dark-bg{
+    width: 101%;
+    height: 100%;
+    margin-left: -9px;
+    background-color: rgba(30,30,30, 0.5);
+    position: absolute;
+    visibility: hidden;
+  }
+  .popup{
+    width: 85%;
+    height: 62%;
+    margin-left: 20px;
+  }
+
+  .dark-bg-show{
+    margin-left: -9px;
+    width: 101%;
+    height:100%;
+    background-color: rgba(30,30,30, 0.5);
+    position: absolute;
+    visibility: visible;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  footer{
+    width: 97%;
+    margin-left: -29px;
+    margin-top: 105px;
+   
+  }
+
 }

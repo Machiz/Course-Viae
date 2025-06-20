@@ -307,3 +307,98 @@ footer{
 .notification-bell:hover .bell-icon {
     color: #89D1F8;
 }
+
+.abajoMenu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.abajoMenu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.abajoMenu a:hover {
+    background-color: #f0f0f0;
+}
+
+.abajoMenu a i {
+    margin-right: 8px;
+    color: #1a75ff;
+}
+
+@media (max-width: 768px){
+  body{
+    font-family: "Inter", sans-serif;
+    background-size:200%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, beige, #058ED9);
+    width: 90%;
+  }
+  .home-nav {
+    display: none;
+  }
+  .nombre-usuario{
+    display: none;
+  }
+  .logo{
+    margin-left: -20px;
+  }
+  .usuario-noti{
+    margin-left: 60px;
+  }
+
+  .head_box{
+    margin-left: 10px;
+    width: 100%;
+  }
+  .dejar_comentario{
+    width: 100%;
+    height: 60%;
+    margin-right: -29px;
+    margin-bottom: 15px;
+  }
+  .comentario_text{
+    width: 90%;
+    margin-left: 5px;
+  }
+  .comentario_button{
+    margin-left: 45px;
+  }
+  .comentario_box{
+    width: 89%;
+    
+  }
+  .comentario_exito{
+    margin-right: 50px;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .scroll_box{
+    width: 109%;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  footer{
+    width: 91%;
+    margin-top: 1px;
+  }
+
+}
