@@ -33,7 +33,10 @@
               <span class="numero-notificaciones">7</span>
           </div>
           <span class="nombre-usuario">Alessandro Hesse</span>
-          <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
+          <div onclick = "abrirPerfil()" class="perfil">
+            <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
+          </div>
+          
         </div>
     </header>
     <div id="abajoMenu" class="abajoMenu fontInter" style="gap:2px;">
@@ -189,7 +192,20 @@
       </div>
     </div>
   </footer>
+    <script>
+        function abrirPerfil() {
+            const menu = document.getElementById("abajoMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
 
+        // Cerrar si se hace clic fuera
+        window.addEventListener("click", function(e) {
+            const menu = document.getElementById("abajoMenu");
+            if (!e.target.closest(".perfil")) {
+            menu.style.display = "none";
+            }
+        });
+    </script>
     <script src="../../js/busqueda-empleos.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -308,6 +308,38 @@ footer{
     color: #89D1F8;
 }
 
+.abajoMenu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.abajoMenu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.abajoMenu a:hover {
+    background-color: #f0f0f0;
+}
+
+.abajoMenu a i {
+    margin-right: 8px;
+    color: #1a75ff;
+}
+
 @media (max-width: 768px){
   body{
     font-family: "Inter", sans-serif;
