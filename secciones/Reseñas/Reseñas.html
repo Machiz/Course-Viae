@@ -18,7 +18,7 @@
 </div>
  <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
     <nav>
-        <ul style="list-style: none; display: flex; gap: 80px; margin-left: 80px;">
+        <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
           <li><a href="../../index.html" class="letras-nav">Home</a></li>
           <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
           <li><a href="../../index.html" class="letras-nav">Nosotros</a></li>
@@ -74,24 +74,9 @@
         </a>
     </div>
 
-        <script>
-            function abrirPerfil() {
-                const menu = document.getElementById("abajoMenu");
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
-            }
-
-            // Cerrar si se hace clic fuera
-            window.addEventListener("click", function(e) {
-                const menu = document.getElementById("abajoMenu");
-                if (!e.target.closest(".perfil")) {
-                menu.style.display = "none";
-                }
-            });
-        </script>
-
   <div class="re-container">
     <nav class="breadcrumb">
-  <a href="../Cursos/detalle-curso.html">Curso</a> 
+  <a href="../Cursos/detalle-mis-cursos.html">Curso</a> 
   <span>›</span>
   <span>Reseñas</span>
 </nav>
@@ -185,6 +170,6 @@
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+<script src="../../js/reseñas.js"></script>
 </body>
 </html>

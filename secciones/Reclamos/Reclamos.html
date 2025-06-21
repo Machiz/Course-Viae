@@ -18,7 +18,7 @@
 </div>
  <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
     <nav>
-        <ul style="list-style: none; display: flex; gap: 80px; margin-left: 80px;">
+        <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
             <li><a href="../../main.html" class="letras-nav">Home</a></li>
             <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
             <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
@@ -74,20 +74,6 @@
         </a>
     </div>
 
-        <script>
-            function abrirPerfil() {
-                const menu = document.getElementById("abajoMenu");
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
-            }
-
-            // Cerrar si se hace clic fuera
-            window.addEventListener("click", function(e) {
-                const menu = document.getElementById("abajoMenu");
-                if (!e.target.closest(".perfil")) {
-                menu.style.display = "none";
-                }
-            });
-        </script>
   <div class="contenedor-reclamos">
     <nav class="breadcrumb">
   <a href="../../main.html">Inicio</a> <span class="divider">›</span>
@@ -95,7 +81,7 @@
 </nav>
     <div class="titulo-reclamos">Reclamos sobre Course Vitae</div>
    <!-- Botones de navegación -->
-  <div class="numeros">
+  <div class="numeros" id="botones-grupos">
     <div onclick="mostrarGrupo(1)">1</div>
     <div onclick="mostrarGrupo(2)">2</div>
     <div onclick="mostrarGrupo(3)">3</div>
@@ -141,7 +127,7 @@
   </div>
 </div>
   <!-- GRUPO 2 -->
-  <div class="reclamos-grupo grupo-1">
+  <div class="reclamos-grupo grupo-2">
   <div class="reclamo-usuario">
     <div class="reclamo-usuario-header">
       <img src="../../../img/imagen-reclamo4.webp" alt="Foto usuario">
@@ -181,7 +167,7 @@
   </div>
 </div>
   <!-- GRUPO 3 -->
-  <div class="reclamos-grupo grupo-1">
+  <div class="reclamos-grupo grupo-3">
   <div class="reclamo-usuario">
     <div class="reclamo-usuario-header">
       <img src="../../../img/imagen-reclamo1.png" alt="Foto usuario">
@@ -229,10 +215,8 @@
     <div class="botones">
       <button id="publicar-btn" class="publicar">Publicar reclamo</button>
     </div>
-    <div id="mensaje-confirmacion" style="display:none; color: blue; margin-top: 10px;font-family: 'Inter';">
-  Gracias por hacernos saber su reclamo.
-</div>
   </div>
+ 
    <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
       <footer>
         <div class="container footer-grid">
@@ -278,32 +262,16 @@
         </div>
         </div>
       </footer>
-  <script>
-  function mostrarGrupo(numero) {
-    const grupos = document.querySelectorAll('.reclamos-grupo');
-    grupos.forEach((grupo, index) => {
-      grupo.style.display = (index === numero - 1) ? 'flex' : 'none';
-    });
-  }
-</script>
-<script>
-  document.getElementById("publicar-btn").addEventListener("click", function () {
-    const textarea = document.getElementById("reclamo");
-    const mensaje = document.getElementById("mensaje-confirmacion");
-
-    if (textarea.value.trim() !== "") {
-      mensaje.style.display = "block";        // Se muestra el mensaje
-      textarea.value = "";                    // Se borra el texto en la caja de texto
-      // El mensaje se oculta luego de 4 segundos
-      setTimeout(() => {
-        mensaje.style.display = "none";
-      }, 4000);
-    } else {
-      alert("Por favor, escriba un reclamo antes de publicar.");
-    }
-  });
-</script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     
+     <div class="modal-reclamo" id="modalReclamo">
+  <div class="modal-contenido">
+    <img src="../../img/check.webp" alt="Icono gracias" style="width: 70px; font-family: 'Inter';">
+    <h4>¡Gracias por hacernos saber su reclamo!</h4>
+    <button onclick="cerrarModal()" class="btn-modal">Regresar a reclamos</button>
+  </div>
+</div>
+<script src="../../js/reclamos.js"></script>
 </body>
 </html>
