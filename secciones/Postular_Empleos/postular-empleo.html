@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body style="background: linear-gradient(to right, #F4EBD9, #058ED9); height:90vh;">
-  <header class="header">
+<body>
+    <header class="header">
     <div class="logo">
     <div class="logo-text">
         <span>Course</span>
@@ -20,23 +20,62 @@
     <img src="../../resources/fotos/vitae 2.png" alt="Logo Course Vitae">
     </div>
     <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
-        <nav>
-            <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
-                <li><a href="../../main.html" class="letras-nav">Home</a></li>
-                <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
-                <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
-                <li><a href="../Reclamos/Reclamos.html" class="letras-nav">Contáctanos</a></li>
-            </ul>
-        </nav>
+    <nav class = "home-nav">
+        <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
+            <li><a href="../../main.html" class="letras-nav">Home</a></li>
+            <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
+            <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
+            <li><a href="../Reclamos/Reclamos.html" class="letras-nav">Contáctanos</a></li>
+        </ul>
+    </nav>
         <div class="usuario-noti">
             <div class="notification-bell">
                 <a href="../Notificaciones/Notificaciones.html"><ion-icon name="notifications" class="bell-icon"></ion-icon></a>
                 <span class="numero-notificaciones">7</span>
             </div>
             <span class="nombre-usuario">Alessandro Hesse</span>
-            <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
+            <div onclick = "abrirPerfil()" class="perfil">
+                <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
+            </div>
+            
         </div>
     </header>
+
+    <!--Visualización de opciones en el perfil de usuario-->
+    <div id="abajoMenu" class="abajoMenu fontInter" style="gap:2px;">
+        <a href="../Editar_perfil/index.html">
+            <img src="../../resources/fotos/Mi Perfil.png" alt="Mi Perfil" style="width:20px; height:auto; margin-right:8px;">
+            Mi perfil
+        </a>
+        <a href="../CV/index.html">
+            <img src="../../resources/fotos/Empleos.png" alt="Curriculum" style="width:20px; height:auto; margin-right:8px;">
+            CV
+        </a>
+
+        <a href="../Cursos/mis-cursos.html">
+            <img src="../../resources/fotos/MisCursos.png" alt="Mis Cursos" style="width:20px; height:auto; margin-right:8px;">
+            Mis cursos
+        </a>
+        <a href="../Busqueda_Empleos/busqueda-empleos.html">
+            <img src="../../resources/fotos/Empleos.png" alt="Empleos" style="width:20px; height:auto; margin-right:8px;">
+            Empleos
+        </a>
+
+        <a href="../Cursos/busqueda-cursos-inicio.html">
+            <img src="../../resources/fotos/Cursos.png" alt="Cursos" style="width:20px; height:auto; margin-right:8px;">
+            Cursos
+        </a>
+
+        <a href="../Reclamos/Reclamos.html">
+            <img src="../../resources/fotos/Reclamos.png" alt="Reclamos" style="width:20px; height:auto; margin-right:8px;">
+            Reclamos
+        </a>
+        <a href="../Inicio de sesion/Log_in.html">
+            <img src="../../resources/fotos/Cerrar sesión.png" alt="Cerrar Sesión" style="width:20px; height:auto; margin-right:8px;">
+            Cerrar sesión
+        </a>
+    </div>
+
    <div class="dark-bg" id="bg"></div>
    <div class="popup" id="popup1"> 
         <img class = "popup-img" src="../../resources/fotos/fiesta.png" alt="emoticon de fiesta">
@@ -64,9 +103,7 @@
         <input id = "in-2" class = input-box-1 placeholder="example@gmail.com" type="text">
 
         <p class = "input-h4"> Se estará enviando el CV adjunto a su perfil.</p>
-        <a href="../CV/Editar.html"><button type="button" class="editar-cv"> 
-            Editar CV
-        </button></a>
+
 
         <div class= "postular-box">
         <button type="button" class="postular-button" id="postular1">
@@ -75,9 +112,6 @@
     </div>
    </main>
 
-   <script src="../../js/postulacion-empleos.js"></script>
-   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
    <footer>
     <div class="container footer-grid">
         <div>
@@ -120,6 +154,25 @@
         </div>
         </div>
     </footer>
+
+   <script>
+        function abrirPerfil() {
+            const menu = document.getElementById("abajoMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+
+        // Cerrar si se hace clic fuera
+        window.addEventListener("click", function(e) {
+            const menu = document.getElementById("abajoMenu");
+            if (!e.target.closest(".perfil")) {
+            menu.style.display = "none";
+            }
+        });
+    </script>
+   <script src="../../js/postulacion-empleos.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
 </body>
 
 </html>
