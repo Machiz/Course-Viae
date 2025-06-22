@@ -18,7 +18,7 @@
 </div>
  <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
     <nav>
-        <ul style="list-style: none; display: flex; gap: 80px; margin-left: 80px;">
+        <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
           <li><a href="../../index.html" class="letras-nav">Home</a></li>
           <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
           <li><a href="../../index.html" class="letras-nav">Nosotros</a></li>
@@ -74,20 +74,6 @@
         </a>
     </div>
 
-        <script>
-            function abrirPerfil() {
-                const menu = document.getElementById("abajoMenu");
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
-            }
-
-            // Cerrar si se hace clic fuera
-            window.addEventListener("click", function(e) {
-                const menu = document.getElementById("abajoMenu");
-                if (!e.target.closest(".perfil")) {
-                menu.style.display = "none";
-                }
-            });
-        </script>
     <main class="main-content">
   <div class="form-container">
     <nav class="breadcrumb">
@@ -165,17 +151,15 @@
           </div>
         </div>
       </footer>
-  <script>
-    const estrellas = document.querySelectorAll('.estrella');
-    estrellas.forEach((estrella, index) => {
-      estrella.addEventListener('click', () => {
-        estrellas.forEach((e, i) => {
-          e.classList.toggle('seleccionada', i <= index);
-        });
-      });
-    });
-  </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../../js/formulario-reseñas.js"></script>
+    <div class="modal-reseña" id="modalReseña">
+  <div class="modal-contenido">
+    <img src="../../resources/fotos/Fiesta fiesta.png" alt="Gracias" style="width: 70px; font-family: 'Inter';">
+    <h4>¡Gracias por compartir tu reseña!</h4>
+    <button onclick="cerrarModalReseña()" class="btn-modal">Volver a reseñas</button>
+  </div>
+</div>
 </body>
 </html>

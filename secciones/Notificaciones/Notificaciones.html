@@ -19,7 +19,7 @@
 </div>
  <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
     <nav>
-        <ul style="list-style: none; display: flex; gap: 80px; margin-left: 80px;"">
+        <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
             <li><a href="../../main.html" class="letras-nav">Home</a></li>
             <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
             <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
@@ -73,21 +73,6 @@
         </a>
     </div>
 
-        <script>
-            function abrirPerfil() {
-                const menu = document.getElementById("abajoMenu");
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
-            }
-
-            // Cerrar si se hace clic fuera
-            window.addEventListener("click", function(e) {
-                const menu = document.getElementById("abajoMenu");
-                if (!e.target.closest(".perfil")) {
-                menu.style.display = "none";
-                }
-            });
-        </script>
-
   <main class="notificaciones-container">
     <nav class="breadcrumb">
   <a href="../../main.html">Inicio</a> <span class="divider">›</span>
@@ -103,28 +88,64 @@
         <div class="oferta-texto">
         <span>Programador web - Interbank - Miraflores, Lima<br><small>Hace 3 días</small></span>
         </div>  
-        <a  href="oferta.html" class="btn-noti">Ir a oferta</a> <!--en cada uno de estos botones va el enlace para la oferta de postulación/parte del proceso de postulación-->
+        <a  href="oferta.html" class="btn-noti" onclick="verOferta(this)"
+       data-titulo="Programador Web"
+       data-empresa="Interbank"
+       data-ubicacion="Miraflores, Lima"
+       data-tiempo="Hace 3 días"
+       data-descripcion="Trabaja como programador web en el banco internacional de prestigio Interbank, el tercer banco más grande del Perú. Trabaja bajo todos los beneficios de Intercorp."
+       data-salario="2400"
+       data-requisitos='["Ser mayor a 18 años", "Residir en Lima", "Conocimientos en MongoDB", "HTML y CSS", "Angular o frameworks similares"]'
+       data-beneficios='["Entrar a planilla", "Seguro social", "Pagos puntuales", "Beneficios Intercorp"]'
+       data-logo="oferta-logo1.png">Ir a oferta</a> <!--en cada uno de estos botones va el enlace para la oferta de postulación/parte del proceso de postulación-->
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
         <span>Practicante de Procesos y Proyectos - Tottus - Miraflores, Lima<br><small>Hace 3 días</small></span>
         </div>
-        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
+        <a href="oferta.html" class="btn-noti" onclick="verOferta(this)"
+   data-titulo="Practicante de Procesos y Proyectos"
+   data-empresa="Tottus"
+   data-ubicacion="Miraflores, Lima"
+   data-tiempo="Hace 3 días"
+   data-descripcion="Apoya en procesos y mejora continua dentro de Tottus."
+   data-salario="1100"
+   data-logo="Logo_Tottus.png"
+   data-requisitos='["Estudiante de últimos ciclos de Ingeniería Industrial o afines", "Manejo de Excel intermedio", "Habilidad para el trabajo en equipo"]'
+   data-beneficios='["Oportunidad de aprendizaje", "Horario flexible", "Ambiente colaborativo"]'>Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
         <span>Diseñador de entorno web - Chilis - Miraflores, Lima<br><small>Hace 3 días</small></span>
         </div>
-        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
+        <a href="oferta.html" class="btn-noti" onclick="verOferta(this)"
+   data-titulo="Diseñador de entorno web"
+   data-empresa="Chilis"
+   data-ubicacion="Miraflores, Lima"
+   data-tiempo="Hace 3 días"
+   data-descripcion="Diseña interfaces web atractivas para Chilis."
+   data-salario="1800"
+   data-logo="Chilis.png"
+   data-requisitos='["Experiencia en diseño UI/UX", "Manejo de Figma o Adobe XD", "Conocimiento en HTML/CSS"]'
+   data-beneficios='["Ambiente dinámico", "Horario híbrido", "Almuerzos corporativos"]'>Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
         <span>Gerente de Empresa - Oeschle - San Isidro, Lima<br><small>Hace 2 días</small></span>
         </div>
-        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
+        <a href="oferta.html" class="btn-noti" onclick="verOferta(this)"
+   data-titulo="Gerente de Empresa"
+   data-empresa="Oeschle"
+   data-ubicacion="San Isidro, Lima"
+   data-tiempo="Hace 2 días"
+   data-descripcion="Lidera las operaciones estratégicas de la tienda."
+   data-salario="5000"
+   data-logo="Oeschle.png"
+   data-requisitos='["Licenciatura en Administración", "5 años de experiencia en retail", "Liderazgo y toma de decisiones"]'
+   data-beneficios='["Bono por desempeño", "Vehículo corporativo", "EPS cubierta al 100%"]'>Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
     </div>
@@ -136,39 +157,52 @@
         <div class="oferta-texto">
         <span>Gestión de Proyectos - Intercorp - Surquillo, Lima<br><small>Hoy a las 9:32 AM</small></span>
         </div>
-        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
+        <a href="oferta.html" class="btn-noti" onclick="verOferta(this)"
+   data-titulo="Gestión de Proyectos"
+   data-empresa="Intercorp"
+   data-ubicacion="Surquillo, Lima"
+   data-tiempo="Hoy a las 9:32 AM"
+   data-descripcion="Gestiona proyectos internos clave para Intercorp."
+   data-salario="3300"
+   data-logo="Intercorp.png"
+   data-requisitos='["Experiencia mínima de 2 años en gestión de proyectos", "Certificación Scrum deseable", "Habilidades de comunicación"]'
+   data-beneficios='["Seguro privado", "Capacitaciones continuas", "Oportunidades de crecimiento"]'>Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
       <div class="oferta">
         <div class="oferta-texto">
         <span>Gestión Empresarial - Cencosud - Surquillo, Lima<br><small>Hoy a las 12:00 PM</small></span>
         </div>
-        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
+        <a href="oferta.html" class="btn-noti" onclick="verOferta(this)"
+   data-titulo="Gestión Empresarial"
+   data-empresa="Cencosud"
+   data-ubicacion="Surquillo, Lima"
+   data-tiempo="Hoy a las 12:00 PM"
+   data-descripcion="Supervisa y mejora la eficiencia operativa en tienda."
+   data-salario="3100"
+   data-logo="Cencosud.svg"
+   data-requisitos='["Egresado en Administración o Ingeniería", "Capacidad analítica", "Experiencia en supervisión de equipos"]'
+   data-beneficios='["Planilla desde el primer día", "Descuentos corporativos", "Ambiente profesional"]'>Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>
        <div class="oferta">
         <div class="oferta-texto">
         <span>Manager Empresarial - Chilis - San Isidro, Lima<br><small>Ayer a las 8:20 PM</small></span>
         </div>
-        <a href="oferta.html" class="btn-noti">Ir a oferta</a>
+        <a href="oferta.html" class="btn-noti" onclick="verOferta(this)"
+   data-titulo="Manager Empresarial"
+   data-empresa="Chilis"
+   data-ubicacion="San Isidro, Lima"
+   data-tiempo="Ayer a las 8:20 PM"
+   data-descripcion="Dirige operaciones comerciales de la sede asignada."
+   data-salario="3500"
+   data-logo="Chilis.png"
+   data-requisitos='["Experiencia en manejo de restaurantes", "Habilidades de liderazgo", "Disponibilidad a tiempo completo"]'
+   data-beneficios='["Bonos trimestrales", "Alimentación cubierta", "Clases de liderazgo"]'>Ir a oferta</a>
         <span class="close-noti">×</span>
       </div>    
       </div>       
-      <script>
-       // Se seleccionan todos los botones de cerrar
-  document.querySelectorAll('.close-noti').forEach(function(button) {
-    button.addEventListener('click', function() {
-      const oferta = this.parentElement;
-      const grupoNoti = oferta.parentElement;
-       // Elimina la oferta
-      oferta.remove();
-      // Si ya no hay ofertas dentro del grupo, oculta todo el grupo
-      if (grupoNoti.querySelectorAll('.oferta').length === 0) {
-        grupoNoti.style.display = 'none';
-      }
-    });
-  });
-</script>
+      
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </main>
@@ -220,5 +254,6 @@
       </footer>
        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="../../js/notificaciones.js"></script>
 </body>
 </html>

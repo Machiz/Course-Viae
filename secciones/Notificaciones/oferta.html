@@ -19,7 +19,7 @@
 </div>
  <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
                 <nav>
-                    <ul style="list-style: none; display: flex; gap: 80px; margin-left: 80px;">
+                    <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
                         <li><a href="../../main.html" class="letras-nav">Home</a></li>
                         <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
                         <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
@@ -75,20 +75,6 @@
         </a>
     </div>
 
-        <script>
-            function abrirPerfil() {
-                const menu = document.getElementById("abajoMenu");
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
-            }
-
-            // Cerrar si se hace clic fuera
-            window.addEventListener("click", function(e) {
-                const menu = document.getElementById("abajoMenu");
-                if (!e.target.closest(".perfil")) {
-                menu.style.display = "none";
-                }
-            });
-        </script>
 <div class="of-container">
 <nav class="breadcrumb">
   <a href="../../main.html">Inicio</a> 
@@ -97,42 +83,31 @@
   <span class="divider">›</span>
   <span class="actual">Oferta</span>
 </nav>
-    <div class="top-bar">
-      <div>
-        <div class="titulo">Programador web</div>
-        <div class="info-local">Miraflores, Lima • Hace 3 días</div>
-        <a href="../Postular_Empleos/postular-empleo.html" class="postular-btn">Postular</a>
-        <p style="font-size: 14px; color: #666; margin-top: 8px; display: flex; flex-direction: column; align-items: center;">4 candidatos</p>
-      </div>
-      <img src="../../img/oferta-logo1.png" alt="Interbank" class="empresa-logo">
+<div class="top-bar">
+  <div>
+    <div class="titulo"></div>
+    <div class="info-local"></div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <a href="#" class="postular-btn">Postular</a>
+      <p style="font-size: 14px; color: #666; margin-top: 8px;">4 candidatos</p>
     </div>
-
+  </div>
+  <img src="" alt="Empresa" class="empresa-logo">
+</div>
     <div class="grid">
       <div class="section">
         <h4>Descripción de la oferta:</h4>
-        <p>Trabaja como programador web en el banco internacional de prestigio Interbank, el tercer banco más grande del Perú. Trabaja bajo todos los beneficios de Intercorp.</p>
-
+        <p id="descripcion"></p>
         <h4>Requisitos:</h4>
-        <ul>
-          <li>Ser mayor a 18 años.</li>
-          <li>Residir en Lima.</li>
-          <li>Conocimientos en bases de datos no relacionales, de preferencia MongoDB.</li>
-          <li>Conocimientos en HTML, CSS.</li>
-          <li>Conocer Angular o frameworks similares.</li>
-        </ul>
+        <ul class="lista-requisitos"></ul>
       </div>
 
       <div class="section">
         <h4>Beneficios:</h4>
-        <ul>
-          <li>Entrar a planilla</li>
-          <li>Seguro social</li>
-          <li>Pagos puntuales</li>
-          <li>Beneficios Intercorp</li>
-        </ul>
+        <ul class="lista-beneficios"></ul>
 
         <h4>Salario</h4>
-        <p>S/. 2400 por mes</p>
+        <p id="salario"></p>
       </div>
       <div class="bloque-comentarios">
       <a href="../Comentario_Empleos/comentario-empleos.html" class="ver-comentarios">Ver comentarios</a>
@@ -188,5 +163,6 @@
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../../js/oferta.js"></script>
 </body>
 </html>
