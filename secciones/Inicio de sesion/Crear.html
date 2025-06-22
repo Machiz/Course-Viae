@@ -84,7 +84,7 @@
       Acepto las <a href="politicas-de-privacidad.html" target="_blank">políticas de privacidad</a>.
     </label>
   </div><br>
-                <button type="submit" class="login-btn">Crear Cuenta</button>
+                <button type="submit" class="login-btn" href="CV.html">Crear Cuenta</button>
             </form>
 
             <div class="social-section">
@@ -131,7 +131,7 @@
             const password = document.getElementById('password').value;
             
             if (email && password) {
-                alert('Login functionality would be implemented here');
+                window.location.href = "CV.html";
             } else {
                 alert('Por favor, completa todos los campos requeridos');
             }
