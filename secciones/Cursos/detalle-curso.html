@@ -231,8 +231,10 @@
                 <div class="usuario-header">
                     <!--Campana de notificación-->
                     <div class="notification-bell">
+                        <a href="../../secciones/Notificaciones/Notificaciones.html">
                         <ion-icon name="notifications" class="bell-icon"></ion-icon>
                         <span class="numero-notificaciones">7</span>
+                        </a>
                     </div>
                     <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
                     <div onclick = "abrirPerfil()" class="perfil">
@@ -329,7 +331,7 @@
                 <!--Div de la sección de Reseñas y Aquí aprenderás nada-->
                 <div class="fijoDiv">
                     <!--Botón para inscribirse al curso-->
-                    <button onclick = "toggleBoton()"
+                    <button onclick = "inscribirseAlCurso()"
                         style="background-color:#89D1F8; color:white; border-radius:10px; width:150px; height:60px; border:none; cursor:pointer; font-weight:bold;">
                             <span id="textoBoton">¡Inscríbete ya!</span><br>
                             <span style="font-size:10px; font-weight:lighter;">(Inicio inmediato)</span>
@@ -453,6 +455,9 @@
                 </div>
             </div>
 
+            <!--Inscripción al curso-->
+
+
             <!--Div del modal de inscripción al curso-->
             <div id ="ModalButton" class="modal-div">
                 <div class="modal">
@@ -526,7 +531,7 @@
                 </div>
             </div>
 
-            <script src="../../js/modals-cursos.js">
+            <script src="../../js/modals-detalle-cursos.js">
             </script>
             <script src="../../js/botones.js"></script>
 
