@@ -375,6 +375,11 @@ footer {
     gap: 1rem;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .contenedor-header {
