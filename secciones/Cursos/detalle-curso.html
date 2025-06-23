@@ -331,7 +331,7 @@
                 <!--Div de la sección de Reseñas y Aquí aprenderás nada-->
                 <div class="fijoDiv">
                     <!--Botón para inscribirse al curso-->
-                    <button onclick = "inscribirseAlCurso()"
+                    <button onclick = "toggleBoton()"
                         style="background-color:#89D1F8; color:white; border-radius:10px; width:150px; height:60px; border:none; cursor:pointer; font-weight:bold;">
                             <span id="textoBoton">¡Inscríbete ya!</span><br>
                             <span style="font-size:10px; font-weight:lighter;">(Inicio inmediato)</span>
@@ -461,7 +461,7 @@
             <!--Div del modal de inscripción al curso-->
             <div id ="ModalButton" class="modal-div">
                 <div class="modal">
-                    <img src="../../resources/fotos/Fiesta fiesta.png" alt="Fista Time">
+                    <img src="../../resources/fotos/Fiesta fiesta.png" alt="Fiesta Time">
                     <h3 class="fontInter" style="font-weight:bold;">¡Has sido inscrito de manera exitosa!</h3>
                     <h5 style="color:#454545;" class="fontInter">Visita la sección de "Mis Cursos" para iniciar tu curso.</h5>
                     <!--Botón de Mis Curso-->
@@ -531,9 +531,8 @@
                 </div>
             </div>
 
-            <script src="../../js/modals-detalle-cursos.js">
-            </script>
-            <script src="../../js/botones.js"></script>
+            
+            <!--script src="../../js/botones.js"></script-->
 
             <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
             <footer>
@@ -580,9 +579,15 @@
             </footer>
 
         </main>
+
+        <script src="../../js/cursos.js"></script>
+        <script src="../../js/detalle-oficial.js"></script>
+        <script src="../../js/modals-detalle-cursos.js"></script>
+        <script src="../../js/casilla-curso.js"></script>
+        <script src="../../js/container-cursos.js"></script>
+
     </body>
 
-    <script src="../../js/cursos.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

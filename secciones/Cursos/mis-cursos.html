@@ -168,7 +168,7 @@
             });
         </script>
 
-        <script src="../../js/cursos.js"></script>
+        <!--script type ="module" src="../../js/cursos.js"></script-->
 
         <main>
             <div style="padding:10px;"> <!--Div para el botón Regresar-->
@@ -181,7 +181,8 @@
             </div>
             <!--Recuadro donde se puede ingresar nombre de curso a buscar-->
             <div class = "cont-escribir-curso">
-                <input type="text" id = "curso" style="border-radius:5px; width:20%; height:36px; outline:none; border:none;" placeholder="Buscar en Mis Cursos">
+                <input type="text" id = "curso" style="border-radius:5px; width:20%; height:36px; outline:none; border:none;" 
+                placeholder="Buscar en Mis Cursos">
                 <!--Botón Buscar-->
                 <button style="border-radius: 50px; background:#F4EBD9; color:#058ED9; border:none; font-weight:bold; width:90px;">
                     <ion-icon name="search-outline"></ion-icon>
@@ -197,7 +198,7 @@
                 <!--Cursos predeterminados-->
 
                 <!--Gestión empresarial-->
-                <div style="display:flex; gap:20px;">
+                <!--div style="display:flex; gap:20px;">
                     <div style="border: 2px solid #058ED9; padding:10px; border-radius:6px; width:200px;">
                         <img src="../../resources/fotos/gestion-empresarial.png" alt="Hola mundo" style="width:100%; margin-bottom:10px;">
                         <div>
@@ -233,13 +234,19 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div-->
+
+                <div id="contenedor-principal" style="display:flex; gap:20px;"></div>
 
             </div>
         </main>
 
-        <script src="../../js/modals-cursos.js"></script>
         <script src="../../js/cursos.js"></script>
+        <script src="../../js/casilla-curso.js"></script>
+        <script src="../../js/container-cursos.js"></script>
+
+        <!--script src="../../js/input-cursos.js"></script-->
+        <!--script src="../../js/modals-cursos.js"></script-->
 
         <br>
         <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
@@ -285,6 +292,7 @@
                 </div>
             </div>
         </footer>
+
 
     </body>
 

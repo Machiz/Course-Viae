@@ -58,8 +58,11 @@ window.onload = function () {
     imagen.style.width = "100%"; // Ancho completo del contenedor
     imagen.style.height = "250px";
     imagen.style.objectFit = "cover"; // Mantiene la proporción de la imagen
+    imagen.style.objectPosition = "50% 20%";
     imagen.style.borderRadius = "10px";
     imagen.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
     //imagen.style = "width:400px;height:auto;border-radius:10px;";
     contenedor.appendChild(imagen);
+
+    
 }
