@@ -104,12 +104,14 @@
                 <div class="usuario-header">
                     <!--Campana de notificación-->
                     <div class="notification-bell">
+                        <a href="../../secciones/Notificaciones/Notificaciones.html">
                         <ion-icon name="notifications" class="bell-icon"></ion-icon>
                         <span class="numero-notificaciones">7</span>
+                        </a>
                     </div>
                     <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
                     <div onclick = "abrirPerfil()" class="perfil">
-                        <img src="./resources/fotos/hesse.jpg" alt = "Usuario">
+                        <img src="../../resources/fotos/hesse.jpg" alt = "Usuario">
                     </div>
                 </div>
 
@@ -166,6 +168,8 @@
             });
         </script>
 
+        <script src="../../js/cursos.js"></script>
+
         <main>
             <div style="padding:10px;"> <!--Div para el botón Regresar-->
                 <a href="busqueda-cursos-inicio.html"> <!--Volver al futuro-->
@@ -195,92 +199,38 @@
                 <!--Gestión empresarial-->
                 <div style="display:flex; gap:20px;">
                     <div style="border: 2px solid #058ED9; padding:10px; border-radius:6px; width:200px;">
-                        <img src="./resources/fotos/gestion-empresarial.png" alt="Hola mundo" style="width:100%; margin-bottom:10px;">
+                        <img src="../../resources/fotos/gestion-empresarial.png" alt="Hola mundo" style="width:100%; margin-bottom:10px;">
                         <div>
                             <h3 class="fontInter" style="color:#333;">Gestión Empresarial</h3>
                             <p class="fontInter" style="color:#8C8C8C; font-size:14px;">#124512</p>
-                            <a href="detalle-mis-cursos.html?nombre=Gestión Empresarial&codigo=%23124512&duracion=7%20horas&precio=15
-                            &nivel=B%C3%A1sico
-                            &imagen=./resources/fotos/gestion-empresarial.png
-                            &descripcion=Es%20un%20proceso%20de%20planificaci%C3%B3n%2C%20organizaci%C3%B3n%20y%20control%20de%20recursos%2C%20cuyo%20objetivo%20es%20el%20alcance%20de%20metas%20trazadas%20por%20una%20empresa%2Forganizaci%C3%B3n%2Fequipo%20tomando%20en%20cuenta%20la%20eficiencia%20y%20la%20productividad%2C%20crecimiento%2C%20desarrollo%20e%20innovaci%C3%B3n.
-                            &instructor=Zack%20Snyder
-                            &foto=./resources/fotos/300.png
-                            &biografia=Zack%20Snyder%20naci%C3%B3%20en%20Mollendo%2C%20Arequipa%2C%20en%20el%20a%C3%B1o%201979.%20Es%20MBA%20en%20Gesti%C3%B3n%20Empresarial%20por%20ESAN%20y%20la%20Munich%20Business%20School%2C%20lincenciado%20en%20Administraci%C3%B3n%20de%20empresas%20en%20la%20Universidad%20de%20Lima%2C%20ser%C3%A1%20tu%20gu%C3%ADa%20en%20el%20cocnocimiento%20de%20gesti%C3%B3n%20en%20sectores%20organizacionales%2C%20empresas%20modernas%20y%20las%20claves%20a%20un%20futuro%20en%20el%20que%20todo%20es%20equipo%2C%20apoyo%20y%20direcci%C3%B3n%20eficiente.%20Con%20m%C3%A1s%20de%20diez%20a%C3%B1os%20de%20experiencia%20en%20su%20campo%2C%20Snyder%20ha%20sido%20subgerente%20de%20la%20empresa%20Intercorp.
-                            &mod1=Video%20%2815%20min.%29%3A%20Fundamentos%20de%20la%20Gesti%C3%B3n%20Empresarial
-                            &mod2=Lectura%3A%20Estrategias%20Empresariales
-                            &mod3=Caso%20Pr%C3%A1ctico%3A%20An%C3%A1lisis%20de%20una%20Empresa
-                            &mod4=Examen%20Final%20de%20Gesti%C3%B3n%20Empresarial
-                            &ap1=Hacer%20que%20tu%20negocio%20prospere
-                            &ap2=Gestionar%20ambientes
-                            &ap3=Abordar%20situaciones%20complejas
-                            &ap4=Conocer%20las%20pol%C3%ADticas%20de%20tu%20organizaci%C3%B3n">
                                 <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
-                                class="fontInter">
+                                class="fontInter" onclick="verDetalleCurso('Gestión Empresarial')">
                                     Visitar curso
                                 </button>
-                            </a>
                         </div>
                     </div>
 
                     <div style="border: 2px solid #058ED9; padding:10px; border-radius:6px; width:200px;">
-                        <img src="./resources/fotos/diseno-web.png" alt="Hola mundo" style="width:100%; margin-bottom:10px;">
+                        <img src="../../resources/fotos/diseno-web.png" alt="Hola mundo" style="width:100%; margin-bottom:10px;">
                         <div>
                             <h3 class="fontInter" style="color:#333;">Diseño Web</h3>
                             <p class="fontInter" style="color:#8C8C8C; font-size:14px;">#123512</p>
-                            <a href="detalle-mis-cursos.html?nombre=Dise%C3%B1o%20Web
-                            &duracion=12%20horas
-                            &precio=20
-                            &nivel=B%C3%A1sico
-                            &codigo=%23123512
-                            &imagen=.%2Fresources%2Ffotos%2Fdiseno-web.png
-                            &descripcion=Es%20un%20proceso%20de%20planificaci%C3%B3n%2C%20organizaci%C3%B3n%20y%20control%20de%20recursos%2C%20cuyo%20objetivo%20es%20el%20alcance%20de%20metas%20trazadas%20por%20una%20empresa%2Forganizaci%C3%B3n%2Fequipo%20tomando%20en%20cuenta%20la%20eficiencia%20y%20la%20productividad%2C%20crecimiento%2C%20desarrollo%20e%20innovaci%C3%B3n.
-                            &instructor=Jairo%20P%C3%A9rez
-                            &foto=.%2Fresources%2Ffotos%2FVan%20Gogh.png
-                            &biografia=Jairo%20Arnulfo%20P%C3%A9rez%20Ord%C3%B3%C3%B1ez%2C%20aficionado%20al%20arte%20y%20la%20literatura%2C%20es%20maestro%2C%20ingernieo%20de%20software%20por%20la%20UNI%20%28Universidad%20Nacional%20de%20Ingenier%C3%ADa%29.%20Debido%20a%20su%20pasi%C3%B3n%20por%20la%20pintura%20y%20las%20letras%2C%20Jairo%20se%20dedica%20al%20dise%C3%B1o%20de%20p%C3%A1ginas%20y%20plataformas%20web%2C%20as%C3%AD%20como%20codificaci%C3%B3n%20de%20estas%20y%20trabajo%20en%20frontend%20y%20backend%20de%20las%20mismas.%20Ocho%20a%C3%B1os%20de%20experiencia%20trabajando%20para%20plataformas%20web%20de%20empresas%20art%C3%ADsticas%2C%20diarios%20perdiod%C3%ADsticos%20y%20librear%C3%ADas%20virtuales.
-                            &mod1=Video%20%2830%20min.%29%3A%20Introducci%C3%B3n%20al%20Dise%C3%B1o%20Web
-                            &mod2=HTML%20y%20CSS%20B%C3%A1sico
-                            &mod3=JavaScript%20para%20Principiantes
-                            &mod4=Proyecto%20Final%20de%20Dise%C3%B1o%20Web
-                            &ap1=Introducci%C3%B3n%20a%20HTML%20y%20programaci%C3%B3n%20web
-                            &ap2=CSS%20y%20JS
-                            &ap3=Teor%C3%ADa%20de%20colores
-                            &ap4=Dise%C3%B1o%20y%20orden%20de%20estilos">
                                 <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
-                                class="fontInter">
+                                class="fontInter" onclick="verDetalleCurso('Diseño Web')">
                                     Visitar curso
                                 </button>
-                            </a>
                         </div>
                     </div>
 
                     <div style="border: 2px solid #058ED9; padding:10px; border-radius:6px; width:200px;">
-                        <img src="./resources/fotos/python-intermedio.png" alt="Hola mundo" style="width:100%; margin-bottom:10px;">
+                        <img src="../../resources/fotos/python-intermedio.png" alt="Hola mundo" style="width:100%; margin-bottom:10px;">
                         <div>
                             <h3 class="fontInter" style="color:#333;">Python Intermedio</h3>
                             <p class="fontInter" style="color:#8C8C8C; font-size:14px;">#777512</p>
-                            <a href="detalle-mis-cursos.html?nombre=Python%20Intermedio
-                            &duracion=8%20horas
-                            &precio=25
-                            &nivel=Intermedio
-                            &codigo=%23777512
-                            &imagen=.%2Fresources%2Ffotos%2Fpython-intermedio.png
-                            &descripcion=Python%20es%20uno%20de%20los%20lenguajes%20de%20programaci%C3%B3n%20m%C3%A1s%20coloquiales%2C%20accesible%20al%20p%C3%BAblico%20y%20compuesto%20de%20sintaxis%20agraciada.%20%20En%20el%20presente%20curso%2C%20se%20tratar%C3%A1n%20temas%20m%C3%A1s%20complejos%20en%20Python%2C%20relacionados%20a%20problemas%20matem%C3%A1ticos%2C%20bibliotecas%20in%C3%A9ditas%20y%20funciones%20desconocidas%2C%20%C3%BAtiles%20para%20ofertas%20de%20trabajo.
-                            &instructor=Sir%20Linux
-                            &foto=.%2Fresources%2Ffotos%2FSir%20Linux.png
-                            &biografia=Sir%20Linux%2C%20pseud%C3%B3nimo%20de%20Mario%20Cornejo%20Reyes%2C%20graduado%20y%20licenciado%20en%20Ingenier%C3%ADa%20de%20Software%20por%20la%20PUCP.%20Acu%C3%B1%C3%B3%20su%20alias%20en%20honor%20al%20sistema%20operativo%20de%20su%20preferencia.%20Ser%C3%A1%20tu%20gu%C3%ADa%20en%20este%20trayecto%20con%20Python%2C%20lenguaje%20universal.%20%20Trabajaba%20desde%20hace%20m%C3%A1s%20de%20cinco%20a%C3%B1os%20en%20proyectos%20con%20Python%2C%20JavaScript%2C%20PHP%2C%20C%2B%2B%2C%20C%23%20y%20Assembler.
-                            &mod1=Video%20%2810%20min.%29%3A%20Algunas%20estructuras%20de%20datos%20avanzadas
-                            &mod2=Lectura%3A%20Sobre%20list%2C%20tuplas%2C%20set%20y%20colecciones
-                            &mod3=Video%20%2820%20min.%29%3A%20Bibliotecas%20de%20Python
-                            &mod4=Video%20%2825%20min.%29%3A%20POO%20en%20Python
-                            &ap1=Funciones%20especiales%20en%20Python
-                            &ap2=Programaci%C3%B3n%20Orientada%20a%20Objetos%20%28POO%29%20en%20Python
-                            &ap3=Bibliotecas%20de%20Python
-                            &ap4=Estructuras%20de%20datos%20avanzadas%20en%20Python">
-                                <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
-                                class="fontInter">
-                                    Visitar curso
-                                </button>
-                            </a>
+                            <button style="background-color:#3A89E2; border-radius:20px; width:100px; height:36px; color:white; border:none; cursor:pointer;" 
+                            class="fontInter" onclick="verDetalleCurso('Python Intermedio')">
+                                Visitar curso
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -314,7 +264,7 @@
                 </div>
 
                 <div>
-                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <h3 class="footer-title fontInter">Enlaces rápidos</h3>
                     <div class="footer-links">
                         <a href="../Inicio de sesion/Log_in.html" class="footer-link fontInter">Iniciar sesión</a>
                         <a href="../Inicio de sesion/Crear.html" class="footer-link fontInter">Crear cuenta</a>
@@ -323,11 +273,14 @@
                 </div>
 
                 <div>
-                    <h3 class="footer-title">Nuestras redes</h3>
+                    <h3 class="footer-title fontInter">Nuestras redes</h3>
                     <div class="social-icons">
-                        <div class="social-icon"></div>
-                        <div class="social-icon"></div>
-                        <div class="social-icon"></div>
+                        <!--div class="social-icon"></div-->
+                        <img src="../../resources/fotos/Facebook.png" alt="Facebook" style="width:35px;height:auto;">
+                        <!--div class="social-icon"></div-->
+                        <img src="../../resources/fotos/Instagram.png" alt="Instagram" style="width:35px;height:auto;">
+                        <!--div class="social-icon"></div-->
+                        <img src="../../resources/fotos/X.png" alt="X" style="width:35px;height:auto;">
                     </div>
                 </div>
             </div>
@@ -336,6 +289,8 @@
     </body>
 
     <!--Links de IonIcons-->
+    <script src="../../js/mis-cursos-funcion.js">
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

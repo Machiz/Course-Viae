@@ -113,21 +113,23 @@ a:hover{
     justify-content: center;
 }
 
-button{
+button {
     width: 250px;
     height: 50px;
     background-color: #058ed9;
+    color: white;
+    border: 3px solid #058ed9;
     border-radius: 20px;
-    border-width: 3px;
-    border-color: #058ed9;
-    transition: color .3s ease-in-out, background-color .3s ease-in-out, transform .3s ease-in-out;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover{
-    transform: scale(1.1);
+button:hover {
+    transform: scale(1.05);
     background-color: #035d8e;
-    color:white;
-    cursor: pointer;
+    border-color: #035d8e;
 }
 
 input{

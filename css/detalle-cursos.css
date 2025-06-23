@@ -1,0 +1,35 @@
+.nombreCurso {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #454545;
+}
+
+#codigoCurso{
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color:white;
+}
+
+#descripcionCurso {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+.instructorCurso {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #454545;
+    gap:10px;
+    padding-left: 10px; /* Espacio a la izquierda */
+}   
+
+#biografiaCurso {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+    margin-top: 10px; /* Espacio entre la biografía y el resto del contenido */
+}

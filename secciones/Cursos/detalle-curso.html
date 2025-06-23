@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="../../css/cursos.css">
+        <link rel="stylesheet" href="../../css/detalle-cursos.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@600&family=Nunito+Sans:opsz,wght@6..12,700&family=Oswald:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosario&display=swap" rel="stylesheet">
@@ -64,42 +65,6 @@
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
                 align-items: center; 
                 gap: 5px;
-            }
-
-            .nombreCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 24px;
-                font-weight: bold;
-                color: #454545;
-            }
-
-            #codigoCurso{
-                font-family: 'Arial', sans-serif;
-                font-size: 14px;
-                color:white;
-            }
-
-            #descripcionCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 16px;
-                color: #000000;
-                line-height: 1.5;
-            }
-
-            .instructorCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 20px;
-                color: #454545;
-                gap:10px;
-                padding-left: 10px; /* Espacio a la izquierda */
-            }   
-
-            #biografiaCurso {
-                font-family: 'Inter', sans-serif;
-                font-size: 16px;
-                color: #000000;
-                line-height: 1.5;
-                margin-top: 10px; /* Espacio entre la biografía y el resto del contenido */
             }
 
             .textos{
@@ -266,8 +231,10 @@
                 <div class="usuario-header">
                     <!--Campana de notificación-->
                     <div class="notification-bell">
+                        <a href="../../secciones/Notificaciones/Notificaciones.html">
                         <ion-icon name="notifications" class="bell-icon"></ion-icon>
                         <span class="numero-notificaciones">7</span>
+                        </a>
                     </div>
                     <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
                     <div onclick = "abrirPerfil()" class="perfil">
@@ -364,7 +331,7 @@
                 <!--Div de la sección de Reseñas y Aquí aprenderás nada-->
                 <div class="fijoDiv">
                     <!--Botón para inscribirse al curso-->
-                    <button onclick = "toggleBoton()"
+                    <button onclick = "inscribirseAlCurso()"
                         style="background-color:#89D1F8; color:white; border-radius:10px; width:150px; height:60px; border:none; cursor:pointer; font-weight:bold;">
                             <span id="textoBoton">¡Inscríbete ya!</span><br>
                             <span style="font-size:10px; font-weight:lighter;">(Inicio inmediato)</span>
@@ -488,6 +455,9 @@
                 </div>
             </div>
 
+            <!--Inscripción al curso-->
+
+
             <!--Div del modal de inscripción al curso-->
             <div id ="ModalButton" class="modal-div">
                 <div class="modal">
@@ -561,8 +531,9 @@
                 </div>
             </div>
 
-            <script src="../../js/modals-cursos.js">
+            <script src="../../js/modals-detalle-cursos.js">
             </script>
+            <script src="../../js/botones.js"></script>
 
             <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
             <footer>
