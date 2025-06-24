@@ -64,6 +64,12 @@
   height: auto;
   border-radius: 50%;
 }
+.avatar-noti:hover{
+  color: black;
+  opacity: 80%;
+  cursor: pointer;
+}
+
 .nombre-usuario {
   font-size: 18px;
   color: #FFFFFF;
