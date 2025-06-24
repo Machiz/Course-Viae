@@ -231,8 +231,10 @@
                 <div class="usuario-header">
                     <!--Campana de notificación-->
                     <div class="notification-bell">
+                        <a href="../../secciones/Notificaciones/Notificaciones.html">
                         <ion-icon name="notifications" class="bell-icon"></ion-icon>
                         <span class="numero-notificaciones">7</span>
+                        </a>
                     </div>
                     <span style="font-family: Arial; color:white;">Alessandro Hesse</span>
                     <div onclick = "abrirPerfil()" class="perfil">
@@ -406,7 +408,7 @@
 
                         <!--Ver más reseñas-->
                         <div style="justify-content:center; align-items:center; display:flex;">
-                            <a href="../../secciones/Reseñas/Reseñas.html">
+                            <a href="../Reseñas/Reseñas.html">
                                 <button style="cursor:pointer; align-items:center; font-weight:bold; border-radius:10px; border:none; margin-bottom:20px; 
                                 margin-top:10px; width:130px;height:40px;" 
                                 class="fontInter">
@@ -453,10 +455,13 @@
                 </div>
             </div>
 
+            <!--Inscripción al curso-->
+
+
             <!--Div del modal de inscripción al curso-->
             <div id ="ModalButton" class="modal-div">
                 <div class="modal">
-                    <img src="../../resources/fotos/Fiesta fiesta.png" alt="Fista Time">
+                    <img src="../../resources/fotos/Fiesta fiesta.png" alt="Fiesta Time">
                     <h3 class="fontInter" style="font-weight:bold;">¡Has sido inscrito de manera exitosa!</h3>
                     <h5 style="color:#454545;" class="fontInter">Visita la sección de "Mis Cursos" para iniciar tu curso.</h5>
                     <!--Botón de Mis Curso-->
@@ -526,9 +531,8 @@
                 </div>
             </div>
 
-            <script src="../../js/modals-cursos.js">
-            </script>
-            <script src="../../js/botones.js"></script>
+            
+            <!--script src="../../js/botones.js"></script-->
 
             <!--Footer: Course Vitae, contacto, enlaces rápidos y redes sociales-->
             <footer>
@@ -575,9 +579,15 @@
             </footer>
 
         </main>
+
+        <script src="../../js/cursos.js"></script>
+        <script src="../../js/detalle-oficial.js"></script>
+        <script src="../../js/modals-detalle-cursos.js"></script>
+        <script src="../../js/casilla-curso.js"></script>
+        <script src="../../js/container-cursos.js"></script>
+
     </body>
 
-    <script src="../../js/cursos.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

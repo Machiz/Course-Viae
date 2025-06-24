@@ -131,6 +131,20 @@ function filtrarCursos(){
     mostrarCursos(cursosFiltrados);
 }
 
+function verDetalleOficial(nombrecurso) {
+    // Asegúrate de que la variable "cursos" esté disponible
+    const cursoActual = cursos.find(c => c.nombre === nombrecurso);
+    if (!cursoActual) {
+        alert("Curso no encontrado");
+        return;
+    }
+
+    // Guarda el curso en localStorage
+    localStorage.setItem("cursoElegido", JSON.stringify(cursoActual));
+
+    //window.location.href = "../../secciones/Cursos/detalle-curso.html";
+}
+
 function mostrarCursos(cursos){
     let container = document.querySelector(".container-cursos");
     container.innerHTML = ""; // Limpiar el contenedor
@@ -170,7 +184,7 @@ function mostrarCursos(cursos){
             <p style="font-family: Inter;"><strong>Nivel de experiencia:</strong> ${curso.nivel}</p>
             <p style="font-family: Inter;"><strong>Precio:</strong> S/ ${curso.precio}</p>
             <button style="background-color:#058ed9; color:white; font-weight:bold;border:none; border-radius:10px; width:130px; height:30px;
-            cursor:pointer;">Explora el curso</button>
+            cursor:pointer;" onclick="verDetalleOficial('${curso.nombre}')">Explora el curso</button>
         `;
 
         divCurso.appendChild(imgCurso);

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="../../css/CV.css">
+        <link rel="stylesheet" href="../../css/Confirmaciones.css">
     </head>
         <header>
             <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
@@ -60,8 +61,17 @@
                 </div>
             </div>
 
+            <div id="Confirmacion" class="modal-overlay">
+                <div class="modal-content">
+                    <div class="checkmark"></div>
+                    <h2>¡Cambios Guardados!</h2>
+                    <p>Los cambios realizados en el CV se han guardado correctamente</p>
+                    <button onclick="window.location.href='../Cursos/busqueda-cursos-inicio.html'">Continuar</button>
+                </div>
+            </div>
+
             <div class="seccion_boton">
-                <button>Crear CV</button>
+                <button onclick="guardarCambios()">Editar CV</button>
             </div>
         </main>
 
@@ -112,4 +122,5 @@
     <!--Links de IonIcons-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src = "../../js/Cambios_guardados.js"></script>
 </html>

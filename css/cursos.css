@@ -1,5 +1,4 @@
-@media (max-width: 768px) {
-}
+
 
 *{
     box-sizing:border-box;
@@ -10,14 +9,25 @@
     height:100vh;
 }
 .container-info-curso{
-    margin:20px;
+    /*margin:20px;
     padding: 50px; 
     background-color: white; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     align-items: center;
     gap: 5px;
-    height:990px;
+    height:990px;*/
+
+    margin: 20px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*display: flex; /* por si estás usando align-items */
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    height: auto; /* Esto es clave: evitamos forzar una altura */
 }
 
 .contenedor-header{
@@ -301,4 +311,46 @@ ul.decoracion-puntos li::before {
 .abajoMenu a i {
     margin-right: 8px;
     color: #1a75ff;
+}
+
+@media (max-width: 768px) {
+    .contenedor-header {
+        flex-direction: column;
+        align-items: flex-start;
+  }
+
+    .usuario-header {
+        position: static; /* o relative si necesitas mantener algo de posicionamiento */
+        width: 100%;
+        /*justify-content: space-between;*/
+        justify-content:right;
+        margin-top: 10px;
+  }
+
+    nav ul {
+        /*flex-direction: column;*/
+        display:flex;
+        gap: 3px;
+        margin-left: 0;
+  }
+
+    .fijoDiv {
+    position: static !important;  /* ¡Clave para forzar que salga del flujo absoluto! */
+    margin: 20px auto !important; /* Centrado y con margen controlado */
+    width: 90%;
+    max-width: 310px;
+  }
+}
+
+@media (min-width: 768px) {
+    .fijoDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 40px auto; /* Centra horizontalmente */
+        top:480px;
+        max-width: 90%;
+        width: 310px;
+  }
 }
