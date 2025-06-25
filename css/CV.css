@@ -8,6 +8,11 @@ body{
 
 h3{
     color: grey;
+    
+}
+
+input, h3{
+    margin-bottom: 1.5rem;
 }
 
 a{
@@ -132,6 +137,14 @@ button:hover {
     border-color: #035d8e;
 }
 
+
+
+.boton_img{
+    margin-top: .5rem;
+}
+.boton_fondo{
+    margin-bottom: 1rem;
+}
 input{
     height:2rem;
     width: 20rem;
@@ -140,6 +153,7 @@ input{
 .desc{
     height:10rem;
     width: 20rem;
+    margin-bottom: 1rem;
 }
 
 .input
