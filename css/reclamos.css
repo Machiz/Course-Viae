@@ -34,43 +34,27 @@ body {
 }
 .contenedor-reclamos {
   background-color: white;
-  max-width: 950px;
+  max-width: 600px;
   margin: auto;
   padding: 25px 30px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   margin-bottom: 40px;
 }
-.titulo-reclamos {
+h1 {
   font-family: 'Inter', sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   color: black;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   margin-bottom: 25px;
+  text-align: center;
 }
-.numeros {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
+p{
+  text-align: center;
+  font-size: 14px;
 }
-/* Se aplica a cada elemento dentro de la clase numeros*/
-.numeros div { 
-      width: 35px;
-      height: 35px;
-      background-color: #007bff;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-}
-.numeros div:hover {
-      background-color: #0056b3; 
-      transform: scale(1.1);
-      transition: all 0.2s ease;
-}
+
 .reclamos-grupo {
       display: none;
       gap: 20px;
@@ -115,20 +99,27 @@ body {
 .formulario-reclamo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-top: 20px;
+  align-items: center;
+  gap: 5px;
 }
 .formulario-reclamo label {
   font-weight: bold;
-  margin-bottom: 5px;
 }
+.formulario-reclamo label,
+.formulario-reclamo textarea,
+.formulario-reclamo input[type="file"] {
+  width: 100%;
+  max-width: 500px;
+}
+
 textarea {
-      width: 280px;
+      width: 460px;
       height: 120px;
       border-radius: 6px;
       padding: 10px;
       margin-top: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       border: 1px solid #ccc;
       resize: none;
 }
@@ -140,6 +131,7 @@ textarea::placeholder {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
+      margin-top: 15px;
 }
 .botones button {
       padding: 10px 20px;
@@ -153,7 +145,7 @@ textarea::placeholder {
 .publicar {
       background-color: #007bff;
       color: white;
-      
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);    
 }
 .breadcrumb {
     font-size: 14px;
