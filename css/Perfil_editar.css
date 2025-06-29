@@ -11,71 +11,99 @@ body {
 }
 
 /* Header Styles */
-header {
-    background: transparent;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.contenedor-header {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    min-height: 80px;
-}
-
-.brand-section {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
 
 .logo {
-    width: 54px;
-    height: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.letras-titulo {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.5rem;
-    color: #058ED9;
-    font-weight: bold;
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
+.logo img {
+  height: auto;
+  width: 54px;
+}
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.avatar-noti:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
 .letras-nav {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
-
 .letras-nav:hover {
-    color: #F4EBD9;
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.notification-bell {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+.bell-icon {
+    font-size: 30px;
+    color: white;
 }
 
-.usuario-header {
+.numero-notificaciones {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    background-color: #FF9800; /* Color naranja */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: white;
-    position: relative;
-    margin-left: 23rem;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
 }
 
+/* Para que la campana tenga un efecto al hacer hover */
+.notification-bell:hover .bell-icon {
+    color: #89D1F8;
+}
 .perfil {
     cursor: pointer;
 }

@@ -39,7 +39,7 @@
 
 .letras-titulo{
     display:flex;
-    font-family: Arial, sans-serif;
+    font-family: "Inter";
     margin-left: 10px;
     flex-direction: column; /* Una palabra sobre otra, forma de columnas */
     text-align:center; /* Centrado de las letras */
@@ -48,35 +48,70 @@
     font-weight: bold; /* Negrita */
 }
 
-.letras-nav{
-    font-family: Arial;
-    color: white;
-    text-decoration: none; /* Sin subrayado */
-    font-weight:bold; /* Negrita */
-}
-            
-.letras-nav:hover{
-    color: #89D1F8; /* Color azul claro al pasar el mouse */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
 }
 
-.usuario-header{
-    position:absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items:center;
-    gap: 10px; /* Espacio entre nombre y foto */
-    font-family: Arial;
-    color: white;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.usuario-header img{
-    width: 60px;
-    height: auto;
-    border-radius: 25px;
-    object-fit:cover;
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
 }
 
+.logo img {
+  height: auto;
+  width: 54px;
+}
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.avatar-noti:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+
+.letras-nav {
+  font-family: "Inter";
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
 .cont-escribir-curso{
     display:flex;
     text-align:center;

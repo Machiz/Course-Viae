@@ -238,7 +238,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 20px 40px;
 }
 
 .logo {
@@ -299,7 +299,7 @@ body {
   font-family:'Inter', sans-serif;
   background: linear-gradient(to right, #F4EBD9, #058ED9);
   margin: 0;
-  padding: 0;
+
 }
 
 footer {

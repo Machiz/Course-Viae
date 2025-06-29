@@ -6,34 +6,37 @@
         <title>Document</title>
         <link rel="stylesheet" href="../../css/CV.css">
         <link rel="stylesheet" href="../../css/Confirmaciones.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
-        <header>
-            <!--Header: Course Vitae, isotipo de Course Vitae, botón Buscar y foto de perfil-->
-            <div class="contenedor-header">
-                <!--Título "Course Vitae" al lado del isotipo, con un tamaño de letra grande-->
-                <div class="letras-titulo"> <!--Div para concentrar y estilizar las letras de Course Vitae-->
-                    <span>Course</span>
-                    <span>Vitae</span>
-                </div>
-                <!--Isotipo de Course Vitae al extremo superior izquierdo, ni tan extremo ni tan derecho-->
-                <img src="../../img/logo-principal.png" class = "logo" alt = "Isotipo de Course Vitae">
-
-                <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
-                <nav>
-                    <ul style="list-style: none; display: flex; gap: 160px; margin-left: 80px;">
-                        <li><a href="../../main.html" class="letras-nav">Home</a></li>
-                        <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
-                        <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
-                        <li><a href="../Reclamos/Reclamos.html" class="letras-nav">Contáctanos</a></li>
-                    </ul>
-                </nav>
-
-                <!--Nombre del usuario: Alessandro Hesse, y su foto de perfil-->
-                <div class="usuario-header">
-                    <p class ="nombre_usuario">Alessandro Hesse</p>
-                    <img src="../../img/hesse.jpg" alt = "Usuario">
-                </div>
-
+        <header class="header">
+        <div class="logo">
+        <div class="logo-text">
+            <span>Course</span>
+            <span>Vitae</span>
+        </div>
+        <img src="../../resources/fotos/vitae 2.png" alt="Logo Course Vitae">
+        </div>
+        <!--Palabras Home, Estudiante, Nosotros y Contáctanos del header-->
+                        <nav>
+                            <ul style="list-style: none; display: flex; gap: 90px; margin-left: 1px; font-size: 18px;">
+                                <li><a href="../../main.html" class="letras-nav">Home</a></li>
+                                <li><a href="../Editar_perfil/index.html" class="letras-nav">Estudiante</a></li>
+                                <li><a href="../../main.html" class="letras-nav">Nosotros</a></li>
+                                <li><a href="../Reclamos/Reclamos.html" class="letras-nav">Contáctanos</a></li>
+                            </ul>
+                        </nav>
+            <div class="usuario-noti">
+            <div class="notification-bell">
+                <a href="../Notificaciones/Notificaciones.html"><ion-icon name="notifications" class="bell-icon"></ion-icon></a>
+                <span class="numero-notificaciones">7</span>
+            </div>
+            <span class="nombre-usuario">Alessandro Hesse</span>
+            <div onclick = "abrirPerfil()" class="perfil">
+                <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
+            </div>
+            
             </div>
         </header>
 
