@@ -427,12 +427,12 @@
 
 
             <!--Div del modal de inscripción al curso-->
-            <div id ="ModalButton" class="modal-div">
+            <!--div id ="ModalButton" class="modal-div">
                 <div class="modal">
                     <img src="../../resources/fotos/Fiesta fiesta.png" alt="Fiesta Time">
                     <h3 class="fontInter" style="font-weight:bold;">¡Has sido inscrito de manera exitosa!</h3>
                     <h5 style="color:#454545;" class="fontInter">Visita la sección de "Mis Cursos" para iniciar tu curso.</h5>
-                    <!--Botón de Mis Curso-->
+                    
                     <div style="display:flex; flex-direction:column; align-items:center;">
                         <a href="../Cursos/mis-cursos.html">
                             <button style="background-color:#058ED9; color:white; border-radius:10px; border:none; height:30px; width:100px;">
@@ -443,6 +443,114 @@
                         <button style="display:flex; align-items:center; background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; 
                         height:30px; width:100px; cursor:pointer;" onclick="cerrarModal()">
                             <ion-icon name="chevron-back-outline" style="margin-right:5px;"></ion-icon>Regresar
+                        </button>
+                    </div>
+                </div>
+            </div-->
+
+            <!--Modal de método de pago-->
+            <div id="ModalButton" class="modal-div">
+                <div class="modal">
+                    <h3 class="fontInter" style="font-weight:bold;">Seleccione su método de pago:</h3>
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:20px;">
+                        <!--Sección para elegir VISA, Mastercad, Paypal-->
+                        <div style="display:flex; gap:10px; justify-content:center; align-items:center;">
+                            <div onclick="mostrarModalTarjeta()"> 
+                                <!--Si se da clic a la foto visa.png, sus contornos se pintan de azul. Hacerlo en style-->
+                                <img src="../../resources/fotos/visa.png" alt="Visa"class="img-interact">
+                            </div>
+                            <div onclick="mostrarModalTarjeta()"> <!--Contorno azul que rodee a Mastercard.png-->
+                                <img src="../../resources/fotos/mastercard.png" alt="Mastercard" class ="img-interact">
+                            </div>
+                            <div onclick="mostrarModalTarjeta()"> <!--Contorno azul que rodee a PayPal.png-->
+                                <img src="../../resources/fotos/americanexpress.png" alt="PayPal" class="img-interact">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex; justify-content:center; align-items:center; margin-top:20px;">
+                        <button style="background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
+                        cursor:pointer;" onclick = "cerrarModalPago()">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal de tarjeta de crédito-->
+            <div id="ModalTarjeta" class="modal-div">
+                <div class="modal">
+                    <div style="background-color:#058ED9; color:white; border-radius:10px; border:none; height:30px; width:200px; font-weight:bold; 
+                    cursor:pointer; align-items:center; display:flex; justify-content:center; margin-bottom:20px;"
+                    class="fontInter">
+                        Tarjeta de crédito
+                        <ion-icon name="card-outline" style="margin-left:10px;"></ion-icon>
+                    </div>
+
+                    <!--Rellenar/completar campos: número de tarjeta, nombre del apoderado, fecha de expiración. Colocar espacios-->
+                    <!--Asegurarse de que el usuario completa todos los campos. Si da clic y no están completos todos los campos, no podrá efectuar el pago-->
+                    <h2 class="fontInter" style="font-weight:bold;">Ingrese los datos de su tarjeta:</h2>
+                    <p class="fontInter" style="color:#454545;">Asegúrese de que los datos sean correctos para evitar problemas con el pago.</p>
+                    <p class="fontInter" style="color:#454545;">Recuerde que el pago se realizará de forma segura.</p>
+                    <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" class="input-tarjeta">
+                    <input type="text" id="nombreTitular" placeholder="Nombre del titular" class="input-tarjeta">
+                    <input type="text" id="fechaExpiracion" placeholder="Fecha de expiración (MM/AA)" class="input-tarjeta">
+                    <input type="text" id="codigoSeguridad" placeholder="Código de seguridad (CVV)" class="input-tarjeta">
+                    <p class="fontInter" style="color:#454545;">Al hacer clic en "Pagar", acepta los términos y condiciones del curso.</p>
+
+                    <!--Botón de Pagar-->
+                    <div style="display:flex; justify-content:space-between; margin-top:20px;">
+                        <button style="background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
+                        cursor:pointer;" onclick = "cerrarModalTarjeta()">
+                            Cancelar
+                        </button>
+
+                        <button style="background-color:#058ED9; color:white; border-radius:10px; height:36px; width:100px; cursor:pointer; border:none;" 
+                        onclick = "pagarConTarjeta()">
+                            Pagar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal de pago exitoso-->
+            <div id="ModalPagoExitoso" class="modal-div">
+                <div class="modal">
+                    <img src="../../resources/fotos/Fiesta fiesta.png" alt="Fiesta Time">
+                    <h3 class="fontInter" style="font-weight:bold;">¡Has sido inscrito de manera exitosa!</h3>
+                    <h5 style="color:#454545;" class="fontInter">Visita la sección de "Mis Cursos" para iniciar tu curso.</h5>
+                    
+                    <div style="display:flex; flex-direction:column; align-items:center;">
+                        <a href="../Cursos/mis-cursos.html">
+                            <button style="background-color:#058ED9; color:white; border-radius:10px; border:none; height:30px; width:100px;">
+                                Mis Cursos
+                            </button>
+                        </a>
+                        <br>
+                        <button style="display:flex; align-items:center; background-color:white; color:#058ED9; border-radius:10px; 
+                        border-color:#058ED9; height:30px; width:100px; cursor:pointer;" onclick="cerrarModal()">
+                            <ion-icon name="chevron-back-outline" style="margin-right:5px;"></ion-icon>
+                            Regresar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal para pagar con tarjeta de crédito-->
+            <div id="ModalTarjeta" class="modal-div">
+                <div class="modal">
+                    <h3 class="fontInter" style="font-weight:bold;">Ingrese los datos de su tarjeta:</h3>
+                    <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" class="input-tarjeta">
+                    <input type="text" id="nombreTitular" placeholder="Nombre del titular" class="input-tarjeta">
+
+                    <div style="display:flex; justify-content:space-between; margin-top:20px;">
+                        <button style="background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
+                        cursor:pointer;" onclick = "cerrarModalPago()">
+                            Cancelar
+                        </button>
+
+                        <button style="background-color:#058ED9; color:white; border-radius:10px; height:36px; width:100px; cursor:pointer; border:none;" 
+                        onclick = "pagarConTarjeta()">
+                            Pagar
                         </button>
                     </div>
                 </div>

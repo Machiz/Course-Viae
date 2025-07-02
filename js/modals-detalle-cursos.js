@@ -76,7 +76,7 @@ function toggleBoton(){
     if (boton.innerText === "¡Inscríbete ya!"){
         modalInscripcion.style.display = "flex";
         console.log(JSON.parse(localStorage.getItem("cursoElegido"))); // Sí funciona
-        boton.innerText = "Retirarme del curso";
+        boton.innerText = "Está inscrito al curso";
 
         if (precioText){
             precioText.style.display = "block";
@@ -84,7 +84,6 @@ function toggleBoton(){
 
         // Guardar curso en localStorage
         
-        //const nombreSeleccionado = localStorage.getItem("cursoElegido");
         const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
         console.log("Curso actual:", cursoActual.nombre);
 
@@ -118,9 +117,37 @@ function inscribirseAlCurso(){
 }
 
 function cerrarModal(){
-    document.getElementById("ModalButton").style.display = "none";
+    document.getElementById("ModalPagoExitoso").style.display = "none";
     //var boton = document.getElementById("textoBoton");
     //boton.innerText = "Retirarme del curso";
+}
+
+function cerrarModalTarjeta() {
+    document.getElementById("ModalTarjeta").style.display = "none";
+}
+
+function cerrarModalPago(){
+    document.getElementById("ModalButton").style.display = "none";
+}
+
+// Modal para efectuar medio de pago:
+function mostrarModalPago() {
+    var modalPago = document.getElementById("ModalPago");
+    modalPago.style.display = "flex";
+    // Aquí puedes agregar lógica para mostrar información de pago, etc.
+}
+
+// Modal para pagar por tarjeta de crédito
+function mostrarModalTarjeta() {
+    var modalTarjeta = document.getElementById("ModalTarjeta");
+    modalTarjeta.style.display = "flex";
+    // Aquí puedes agregar lógica para mostrar información de pago con tarjeta de crédito
+}
+
+function pagarConTarjeta(){
+    // Modal que contiene el mensaje de pago exitoso
+    var modalPagoExitoso = document.getElementById("ModalPagoExitoso");
+    modalPagoExitoso.style.display = "flex";
 }
 
 function cerrarModalRetiro() {
