@@ -17,6 +17,7 @@ const ap2Curso = params.get("ap2") || "Aprendizaje 2";
 const ap3Curso = params.get("ap3") || "Aprendizaje 3";
 const ap4Curso = params.get("ap4") || "Aprendizaje 4";
 const precioCurso = params.get("precio") || "XD";
+const videoCurso = params.get("video") || "Video de presentación del curso"; // Video del curso
 
 // Mostrar nombre del curso seleccionado en busqueda-cursos-inicio.html
 document.getElementById("codigoCurso").innerText = `${codigoCurso}`;
@@ -34,7 +35,9 @@ document.getElementById("ap2Curso").innerText = `${ap2Curso}`;
 document.getElementById("ap3Curso").innerText = `${ap3Curso}`;
 document.getElementById("ap4Curso").innerText = `${ap4Curso}`;
 document.getElementById("precioCurso").innerText = `${precioCurso}`;
+//document.getElementById("videoCurso").innerText = `${videoCurso}`;
 //document.getElementById("fotoCurso").src = `${fotoCurso}`;
+console.log("ID del video: ", videoCurso);
 
 // Imagen del instructor
 const imgFoto = document.createElement("img");
@@ -66,6 +69,35 @@ imgCurso.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
 
 document.getElementById("contenedorImagenCurso").appendChild(imgCurso);
 
+// Video del curso
+/*const videoCursoElement = document.createElement("video");
+videoCursoElement.src = videoCurso;
+videoCursoElement.alt = "Video del curso";
+videoCursoElement.controls = true; // Agrega controles al video
+videoCursoElement.style.width = "100%"; // Ancho completo del contenedor
+videoCursoElement.style.height = "auto"; // Altura automática para mantener la proporción
+videoCursoElement.style.borderRadius = "10px";
+videoCursoElement.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+//videoCursoElement.style.frameborder= "0"; // Elimina el borde del video
+//videoCursoElement.style.allowFullscreen = true; // Permite pantalla completa
+document.getElementById("videoCursoV").appendChild(videoCursoElement)*/
+
+
+const embedUrl = `https://www.youtube.com/embed/${videoCurso}`; // Asegúrate de que videoCurso sea un ID de YouTube válido
+const iframe = document.createElement("iframe");
+iframe.src = embedUrl;
+iframe.width = "100%";
+iframe.height = "480"; // Puedes ajustar la altura según tu diseño
+iframe.style.borderRadius = "10px";
+iframe.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+iframe.allowFullscreen = true;
+
+const contenedorV = document.getElementById("videoCursoI");
+contenedorV.innerHTML = ""; // Limpia el contenido anterior si lo hubiera
+contenedorV.appendChild(iframe);
+
+
 function toggleBoton(){
     var boton = document.getElementById("textoBoton");
     var modalInscripcion = document.getElementById("ModalButton");
@@ -76,7 +108,7 @@ function toggleBoton(){
     if (boton.innerText === "¡Inscríbete ya!"){
         modalInscripcion.style.display = "flex";
         console.log(JSON.parse(localStorage.getItem("cursoElegido"))); // Sí funciona
-        boton.innerText = "Está inscrito al curso";
+        //boton.innerText = "Está inscrito al curso";
 
         if (precioText){
             precioText.style.display = "block";
@@ -148,6 +180,9 @@ function pagarConTarjeta(){
     // Modal que contiene el mensaje de pago exitoso
     var modalPagoExitoso = document.getElementById("ModalPagoExitoso");
     modalPagoExitoso.style.display = "flex";
+
+    var boton = document.getElementById("textoBoton");
+    boton.innerText = "Inscrito al curso";
 }
 
 function cerrarModalRetiro() {
