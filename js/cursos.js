@@ -2,8 +2,7 @@ const cursos = [
     {
         id: "Curso1", 
         nombre: "JavaScript Básico", 
-        duracion: "15 horas", 
-        precio: 19, 
+        duracion: "15 horas",  
         nivel: "Básico", 
         codigo: "#134562", 
         imagen: "../../resources/fotos/javascript-basico.png", 
@@ -19,7 +18,6 @@ const cursos = [
         id: "Curso2", 
         nombre: "Python Intermedio", 
         duracion: "8 horas", 
-        precio: 25, 
         nivel: "Intermedio", 
         codigo: "#777512", 
         imagen: "../../resources/fotos/python-intermedio.png", 
@@ -32,7 +30,6 @@ const cursos = [
     {id: "Curso3", 
         nombre: "Diseño Web", 
         duracion: "12 horas", 
-        precio: 20, 
         nivel: "Básico", 
         codigo: "#123512", 
         imagen: "../../resources/fotos/diseno-web.png", 
@@ -48,7 +45,7 @@ const cursos = [
     {
         id: "Curso4", 
         nombre: "Gestión Empresarial", duracion: "7 horas", 
-        precio: 15, nivel: "Básico", codigo: "#124512", 
+        nivel: "Básico", codigo: "#124512", 
         imagen:"../../resources/fotos/gestion-empresarial.png", 
         descripcion: "Es un proceso de planificación, organización y control de recursos, cuyo objetivo es el alcance de metas trazadas por una empresa/organización/equipo tomando en cuenta la eficiencia y la productividad, crecimiento, desarrollo e innovación.", 
         instructor: "Zack Snyder", 
@@ -62,7 +59,7 @@ const cursos = [
     {
         id: "Curso5", 
         nombre: "Cálculo Avanzado",
-        duracion: "11 horas", precio: 18, nivel: "Avanzado",
+        duracion: "11 horas", nivel: "Avanzado",
         codigo: "#136772", imagen: "../../resources/fotos/calculo-avanzado.jpg",
         descripcion: "Explora conceptos avanzados del cálculo diferencial e integral, incluyendo series infinitas, ecuaciones diferenciales, cálculo multivariable y aplicaciones en física e ingeniería. Diseñado para estudiantes con una base sólida en cálculo básico que buscan profundizar en el análisis matemático.", 
         instructor: "Marcelo Hernández", foto: "../../resources/fotos/Marcelo Hernandez.webp", 
@@ -74,7 +71,7 @@ const cursos = [
 
     {
         id: "Curso6", nombre: "Python Avanzado", duracion: "18 horas",
-        precio: 26, nivel: "Avanzado", codigo: "#125513", imagen: "../../resources/fotos/python-avanzado.jpg",
+        nivel: "Avanzado", codigo: "#125513", imagen: "../../resources/fotos/python-avanzado.jpg",
         descripcion: "Profundiza tus conocimientos en Python explorando temas como programación orientada a objetos, manejo avanzado de errores, decoradores, generadores, concurrencia, y uso de bibliotecas especializadas. Ideal para quienes ya dominan los fundamentos y desean llevar sus habilidades al siguiente nivel.", 
         instructor: "Liliana Ontoy", foto: "../../resources/fotos/Liliana Ontoy.jpeg", 
         biografia: "Liliana Ontoy es doctora en Ciencias de la Computación por la Universidad de Columbia, nacida en Castilla, Piura, en 1973. Cuenta con más de diez años de experiencia en el campo laboral, instructora en HTML y JS, así como Python, C++ y PHP.",
@@ -87,12 +84,12 @@ const cursos = [
 // Función para filtrar cursos
 function filtrarCursos(){
     let duracion = document.getElementById("duracion").value;
-    let precio = document.getElementById("precio").value;
+    //let precio = document.getElementById("precio").value;
     let nivel = document.getElementById("nivel").value;
 
     let cursosFiltrados = cursos.filter(curso => {
         let duracionNumerica = parseInt(curso.duracion); // Extrae número de texto
-        let precioNumerico = parseInt(curso.precio); // Extrae número de texto
+        //let precioNumerico = parseInt(curso.precio); // Extrae número de texto
 
         let cumpleDuracion = true;
         let cumplePrecio = true;
@@ -111,7 +108,7 @@ function filtrarCursos(){
         }
 
         // Precio
-        if (precio === "Menor a S/ 20"){
+        /*if (precio === "Menor a S/ 20"){
             cumplePrecio = precioNumerico < 20;
         }
         else if (precio === "Menor a S/ 30"){
@@ -122,7 +119,7 @@ function filtrarCursos(){
         }
         else if (precio === "Mayor a S/ 50"){
             cumplePrecio = precioNumerico > 50;
-        }
+        }*/
 
         // Nivel de experiencia
         if (nivel !== "") {
@@ -167,7 +164,7 @@ function mostrarCursos(cursos){
         divCurso.addEventListener("click", () => {
             window.location.href = `detalle-curso.html?nombre=
             ${encodeURIComponent(curso.nombre)}&codigo=${encodeURIComponent(curso.codigo)}&imagen=${curso.imagen}&duracion=
-            ${encodeURIComponent(curso.duracion)}&nivel=${encodeURIComponent(curso.nivel)}&precio=${encodeURIComponent(curso.precio)}&descripcion=
+            ${encodeURIComponent(curso.duracion)}&nivel=${encodeURIComponent(curso.nivel)}&descripcion=
             ${encodeURIComponent(curso.descripcion)} &instructor=${encodeURIComponent(curso.instructor)}&foto=${curso.foto}&biografia=
             ${encodeURIComponent(curso.biografia)}&mod1=${encodeURIComponent(curso.mod1)}&mod2=${encodeURIComponent(curso.mod2)}&mod3=${encodeURIComponent(curso.mod3)}
             &mod4=${encodeURIComponent(curso.mod4)}&ap1=${encodeURIComponent(curso.ap1)}&ap2=${encodeURIComponent(curso.ap2)}&ap3=${encodeURIComponent(curso.ap3)}
@@ -187,7 +184,6 @@ function mostrarCursos(cursos){
             <p style="font-family: Inter; color: #8C8C8C;">${curso.codigo}</p>
             <p style="font-family: Inter;"><strong>Duración:</strong>${curso.duracion}</p>
             <p style="font-family: Inter;"><strong>Nivel de experiencia:</strong> ${curso.nivel}</p>
-            <p style="font-family: Inter;"><strong>Precio:</strong> S/ ${curso.precio}</p>
             <button style="background-color:#058ed9; color:white; font-weight:bold;border:none; border-radius:10px; width:130px; height:30px;
             cursor:pointer;" onclick="verDetalleOficial('${curso.nombre}')">Explora el curso</button>
         `;
@@ -206,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Activar filtros para los selects
 document.getElementById("duracion").addEventListener("change", filtrarCursos);
-document.getElementById("precio").addEventListener("change", filtrarCursos);
+//document.getElementById("precio").addEventListener("change", filtrarCursos);
 document.getElementById("nivel").addEventListener("change", filtrarCursos);
 
 /*function mostrarMisCursos(cursos){

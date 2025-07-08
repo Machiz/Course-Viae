@@ -16,7 +16,7 @@ const ap1Curso = params.get("ap1") || "Aprendizaje 1";
 const ap2Curso = params.get("ap2") || "Aprendizaje 2";
 const ap3Curso = params.get("ap3") || "Aprendizaje 3";
 const ap4Curso = params.get("ap4") || "Aprendizaje 4";
-const precioCurso = params.get("precio") || "XD";
+//const precioCurso = params.get("precio") || "XD";
 const videoCurso = params.get("video") || "Video de presentación del curso"; // Video del curso
 
 // Mostrar nombre del curso seleccionado en busqueda-cursos-inicio.html
@@ -34,7 +34,7 @@ document.getElementById("ap1Curso").innerText = `${ap1Curso}`;
 document.getElementById("ap2Curso").innerText = `${ap2Curso}`;
 document.getElementById("ap3Curso").innerText = `${ap3Curso}`;
 document.getElementById("ap4Curso").innerText = `${ap4Curso}`;
-document.getElementById("precioCurso").innerText = `${precioCurso}`;
+//document.getElementById("precioCurso").innerText = `${precioCurso}`;
 //document.getElementById("videoCurso").innerText = `${videoCurso}`;
 //document.getElementById("fotoCurso").src = `${fotoCurso}`;
 console.log("ID del video: ", videoCurso);
@@ -146,6 +146,7 @@ function toggleBoton() {
         }
     }
     else if (cursosInscritos.some(c => c.nombre === cursoActual.nombre)){
+        boton.innerText = "Ya está inscrito al curso";
         var inscrito = document.getElementById("YaInscrito");
         inscrito.style.display = "flex";
          // Mostrar modal de inscripción exitosa
@@ -176,6 +177,10 @@ function cerrarModal(){
     pagoExitoso = true; // Indicamos que el pago fue exitoso
     localStorage.setItem("pagoExitoso", "true");
     console.log("Pago exitoso");
+}
+
+function cerrarModalYaInscrito(){
+    document.getElementById("YaInscrito").style.display = "none";
 }
 
 function cerrarModalTarjeta() {
