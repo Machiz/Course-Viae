@@ -205,7 +205,8 @@
                     <a href="../Notificaciones/Notificaciones.html"><ion-icon name="notifications" class="bell-icon"></ion-icon></a>
                     <span class="numero-notificaciones">7</span>
                 </div>
-                <span class="nombre-usuario">Alessandro Hesse</span>
+                <!--Nombre de usuario guardado-->
+                <span class="nombre-usuario" id="nombreUsuario"></span>
                 <div onclick = "abrirPerfil()" class="perfil">
                     <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
                 </div>
@@ -304,12 +305,22 @@
 
                 <!--Div de la sección de Reseñas y Aquí aprenderás nada-->
                 <div class="fijoDiv">
+                    <!--Botón para donar ya, y poder inscribirse en cualquier curso gratuitamente-->
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
+                        <button onclick="donarYa()" style="background-color:#058ED9; color:white; border-radius:10px; width:150px; 
+                        height:60px; border:none; cursor:pointer; font-weight:bold;">
+                            <span class="fontInter" style="font-weight:bold;" id="botonDonar">¡Dona ya!</span>
+                            <span style="font-size:1px;">E inscríbase en el curso que desee</span>
+                        </button>
+                    </div>
+
                     <!--Botón para inscribirse al curso-->
                     <button onclick = "toggleBoton()"
-                        style="background-color:#89D1F8; color:white; border-radius:10px; width:150px; height:60px; border:none; cursor:pointer; font-weight:bold;">
+                        style="background-color:#89D1F8; color:white; border-radius:10px; width:150px; height:60px; border:none; 
+                        cursor:pointer; font-weight:bold;">
                             <span id="textoBoton">¡Inscríbete ya!</span><br>
                             <span style="font-size:10px; font-weight:lighter;">(Inicio inmediato)</span>
-                    </button> 
+                    </button>
                     <div style="font-size:14px;">
                         <span style="text-decoration:underline;" class="fontInter">
                         Precio curso: S/</span><span id="precioCurso" style="text-decoration:underline;" class="fontInter"></span>
@@ -473,6 +484,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div style="display:flex; justify-content:center; align-items:center; margin-top:20px;">
                         <button style="background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
                         cursor:pointer;" onclick = "cerrarModalPago()">
@@ -497,6 +509,7 @@
                     <h2 class="fontInter" style="font-weight:bold;">Ingrese los datos de su tarjeta:</h2>
                     <p class="fontInter" style="color:#454545;">Asegúrese de que los datos sean correctos para evitar problemas con el pago.</p>
                     <p class="fontInter" style="color:#454545;">Recuerde que el pago se realizará de forma segura.</p>
+                    <p class="fontInter" style="color:#000000; font-weight:bold;">Donación a realizar: S/ 15</p>
                     <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" class="input-tarjeta">
                     <input type="text" id="nombreTitular" placeholder="Nombre del titular" class="input-tarjeta">
                     <input type="text" id="fechaExpiracion" placeholder="Fecha de expiración (MM/AA)" class="input-tarjeta">
@@ -518,8 +531,24 @@
                 </div>
             </div>
 
-            <!--Modal de pago exitoso-->
+            <!--Modal para mostrar que el pago fue exitoso-->
             <div id="ModalPagoExitoso" class="modal-div">
+                <div class="modal">
+                    <!--Mostrar Ha efectuado el pago exitosamente, y un check verde-->
+                    <h3 class="fontInter" style="font-weight:bold;">¡Pago exitoso!</h3>
+                    <p class="fontInter" style="color:#454545;">Gracias por su donación. Ahora puede inscribirse en el curso.</p>
+                    <div style="display:flex; flex-direction:column; align-items:center;">
+                        <img src="../../resources/fotos/check.png" alt="Pago Exitoso" style="width:50px; height:auto; margin-bottom:10px;">
+                        <button style="background-color:#058ED9; color:white; border-radius:10px; border:none; height:30px; width:100px; cursor:pointer;" 
+                        onclick="cerrarModal()">
+                            Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal de inscripción lograda satisfactoriamente-->
+            <div id="ModalInscripcion" class="modal-div">
                 <div class="modal">
                     <img src="../../resources/fotos/Fiesta fiesta.png" alt="Fiesta Time">
                     <h3 class="fontInter" style="font-weight:bold;">¡Has sido inscrito de manera exitosa!</h3>
@@ -533,7 +562,7 @@
                         </a>
                         <br>
                         <button style="display:flex; align-items:center; background-color:white; color:#058ED9; border-radius:10px; 
-                        border-color:#058ED9; height:30px; width:100px; cursor:pointer;" onclick="cerrarModal()">
+                        border-color:#058ED9; height:30px; width:100px; cursor:pointer;" onclick="cerrarModalInscripcion()">
                             <ion-icon name="chevron-back-outline" style="margin-right:5px;"></ion-icon>
                             Regresar
                         </button>
@@ -541,29 +570,15 @@
                 </div>
             </div>
 
-            <!--Modal para pagar con tarjeta de crédito-->
-            <div id="ModalTarjeta" class="modal-div">
+            <!--Modal: Ya está inscrito, si vuelve a presionar el botón de Inscripción-->
+            <div id="YaInscrito" class="modal-div">
                 <div class="modal">
-                    <h3 class="fontInter" style="font-weight:bold;">Ingrese los datos de su tarjeta:</h3>
-                    <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" class="input-tarjeta">
-                    <input type="text" id="nombreTitular" placeholder="Nombre del titular" class="input-tarjeta">
-
-                    <div style="display:flex; justify-content:space-between; margin-top:20px;">
-                        <button style="background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
-                        cursor:pointer;" onclick = "cerrarModalPago()">
-                            Cancelar
-                        </button>
-
-                        <button style="background-color:#058ED9; color:white; border-radius:10px; height:36px; width:100px; cursor:pointer; border:none;" 
-                        onclick = "pagarConTarjeta()">
-                            Pagar
-                        </button>
-                    </div>
+                    <h3 class="fontInter" style="font-weight:bold;">¡Ya estás inscrito en este curso!</h3>
+                    <p class="fontInter">Regresar</p>
                 </div>
             </div>
-
             <!--Retiro del curso-->
-            <div id ="ModalRetiro" class="modal-div">
+            <!--div id ="ModalRetiro" class="modal-div">
                 <div class="modal">
                     <h3 class="fontInter">¿Está seguro de retirarse del curso?</h3>
                     <div style="display:flex; flex-direction:column; align-items:center;">
@@ -579,7 +594,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div-->
 
             <!--Modal para escribir las razones del retiro del curso-->
             <div id="ModalFormulario" class="modal-div">
@@ -662,11 +677,15 @@
 
         </main>
 
+        <!--script src="../../js/guadar-nombre.js"> // Guardar el nombre del usuario en localStorage
+        </script-->
         <script src="../../js/cursos.js"></script>
         <script src="../../js/detalle-oficial.js"></script>
         <script src="../../js/modals-detalle-cursos.js"></script>
         <script src="../../js/casilla-curso.js"></script>
         <script src="../../js/container-cursos.js"></script>
+        <script src="../../js/guadar-nombre.js"> // Guardar el nombre del usuario en localStorage
+        </script>
 
     </body>
 

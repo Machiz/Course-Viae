@@ -103,7 +103,8 @@
                     <a href="../Notificaciones/Notificaciones.html"><ion-icon name="notifications" class="bell-icon"></ion-icon></a>
                     <span class="numero-notificaciones">7</span>
                 </div>
-                <span class="nombre-usuario">Alessandro Hesse</span>
+                <!--Nombre de usuario guardado-->
+                <span class="nombre-usuario" id="nombreUsuario"></span>
                 <div onclick = "abrirPerfil()" class="perfil">
                     <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
                 </div>
@@ -258,6 +259,8 @@
     </body>
 
     <!--Links de IonIcons-->
+    <script src="../../js/guadar-nombre.js"> // Guardar el nombre del usuario en localStorage
+    </script>
     <script src="../../js/mis-cursos-funcion.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

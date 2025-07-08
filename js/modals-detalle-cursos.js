@@ -97,61 +97,85 @@ const contenedorV = document.getElementById("videoCursoI");
 contenedorV.innerHTML = ""; // Limpia el contenido anterior si lo hubiera
 contenedorV.appendChild(iframe);
 
+// Creamos una variable universal para revisar si realizó el pago completo tras cerrarModal() o no
+//let pagoExitoso = false;
 
-function toggleBoton(){
+function toggleBoton() {
     var boton = document.getElementById("textoBoton");
-    var modalInscripcion = document.getElementById("ModalButton");
-    var modalRetiro = document.getElementById("ModalRetiro");
+    var modalInscripcion = document.getElementById("ModalInscripcion");
     //let precioModal = document.getElementById("precio-modal");
-    const precioText = document.getElementById("precio-modal");
+    //const precioText = document.getElementById("precio-modal");
 
-    if (boton.innerText === "¡Inscríbete ya!"){
+    // Si el usuario dio Aceptar en el modal con id Modal Pago Exitoso, puede ver el modal Inscripcion
+    // Caso contrario, no podrá ver el modal Inscripcion
+    //let esPago = localStorage.getItem("pagoExitoso") === "true";
+    let cursosInscritos = JSON.parse(localStorage.getItem("cursosInscritos")) || [];
+    console.log(JSON.parse(localStorage.getItem("cursoElegido"))); // Sí funciona
+
+    // Guardar curso en localStorage
+        
+    const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
+    console.log("Curso actual:", cursoActual.nombre);
+    if (boton.innerText === "¡Inscríbete ya!" && localStorage.getItem("pagoExitoso") === "true" && !cursosInscritos.some(c => c.nombre === cursoActual.nombre)) {
+        console.log("Estado del pago exitoso:", localStorage.getItem("pagoExitoso"));
+        console.log("Entró al flujo correctamente");
         modalInscripcion.style.display = "flex";
-        console.log(JSON.parse(localStorage.getItem("cursoElegido"))); // Sí funciona
-        //boton.innerText = "Está inscrito al curso";
-
-        if (precioText){
-            precioText.style.display = "block";
-        }
+        boton.innerText = "Ya está inscrito al curso";
+        /*console.log(JSON.parse(localStorage.getItem("cursoElegido"))); // Sí funciona
 
         // Guardar curso en localStorage
         
         const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
-        console.log("Curso actual:", cursoActual.nombre);
+        console.log("Curso actual:", cursoActual.nombre);*/
 
         if (!cursoActual) {
             alert("Error: No se encontró el curso actual en localStorage.");
             return;
         }
 
-        let cursosInscritos = JSON.parse(localStorage.getItem("cursosInscritos")) || [];
 
         // Evitar duplicados
         if (!cursosInscritos.some(c => c.nombre === cursoActual.nombre)) {
             cursosInscritos.push(cursoActual);
             localStorage.setItem("cursosInscritos", JSON.stringify(cursosInscritos));
             console.log("Curso guardado exitosamente.");
+            
         } 
-        else {
+        else{
             console.log("Curso ya estaba inscrito.");
         }
     }
-    else{
-        modalRetiro.style.display = "flex";
-        //precioText.style.display = "none";
-        boton.innerText = "¡Inscríbete ya!";
+    else if (cursosInscritos.some(c => c.nombre === cursoActual.nombre)){
+        var inscrito = document.getElementById("YaInscrito");
+        inscrito.style.display = "flex";
+         // Mostrar modal de inscripción exitosa
     }
+    else{
+        console.log("Usted no puede inscribirse a: " + nombreCurso);
+        // Estado de pago
+        localStorage.setItem("pagoExitoso", "false");
+        console.log("Estado del pago xd:", localStorage.getItem("pagoExitoso"));
+        modalInscripcion.style.display = "none";
+    }
+
 }
 
-// Modal tras el clic presuroso en "Inscríbete al curso...":
-function inscribirseAlCurso(){
-    document.getElementById("ModalButton").style.display = "flex";
+// Si el usuario no llega hasta el último modal de pago y coloca Aceptar, entonces ModalInscripcion mostrará que no puede inscribirse al curso
+
+
+// Función para mostrar el modal para pagar con tarjeta
+function donarYa(){
+    document.getElementById("ModalButton").style.display = "flex"; 
 }
 
 function cerrarModal(){
     document.getElementById("ModalPagoExitoso").style.display = "none";
-    //var boton = document.getElementById("textoBoton");
-    //boton.innerText = "Retirarme del curso";
+    var donarBoton = document.getElementById("botonDonar");
+    donarBoton.innerText = "Usted ya donó";
+
+    pagoExitoso = true; // Indicamos que el pago fue exitoso
+    localStorage.setItem("pagoExitoso", "true");
+    console.log("Pago exitoso");
 }
 
 function cerrarModalTarjeta() {
@@ -160,6 +184,7 @@ function cerrarModalTarjeta() {
 
 function cerrarModalPago(){
     document.getElementById("ModalButton").style.display = "none";
+    //localStorage.removeItem("pagoExitoso");
 }
 
 // Modal para efectuar medio de pago:
@@ -181,12 +206,12 @@ function pagarConTarjeta(){
     var modalPagoExitoso = document.getElementById("ModalPagoExitoso");
     modalPagoExitoso.style.display = "flex";
 
-    var boton = document.getElementById("textoBoton");
-    boton.innerText = "Inscrito al curso";
+    //var boton = document.getElementById("textoBoton");
+    //boton.innerText = "Ya está inscrito al curso";
 }
 
-function cerrarModalRetiro() {
-    document.getElementById("ModalRetiro").style.display = "none";
+function cerrarModalInscripcion() {
+    document.getElementById("ModalInscripcion").style.display = "none";
 }
 
 function eliminarCursoInscrito(nombreCurso){
@@ -197,7 +222,7 @@ function eliminarCursoInscrito(nombreCurso){
     console.log("Curso actualizado después de eliminación:", cursosInscritos);
 }
 
-function retirarseDelCurso(){
+/*function retirarseDelCurso(){
     var boton = document.getElementById("textoBoton");
 
     // Cambiar el texto del botón a "¡Inscríbete ya!" cuando se retire
@@ -213,10 +238,10 @@ function retirarseDelCurso(){
     } else {
         console.log("No se pudo eliminar el curso porque no está definido.");
     }
-}
+}*/
 
 // Función para mostrar el formulario de razones de retirada
-function mostrarFormularioRetiro() {
+/*function mostrarFormularioRetiro() {
     // Cerrar el modal de retiro
     document.getElementById("ModalRetiro").style.display = "none";
 
@@ -254,4 +279,4 @@ function enviarFormulario() {
     document.getElementById("textoBoton").innerText = "¡Inscríbete ya!";
 
     retirarseDelCurso();
-}
+}*/

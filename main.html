@@ -187,7 +187,7 @@
 
       <div class="testimonials-grid">
         <div class="testimonial">
-          <div class="testimonial-image testimonial-1"><img src="/resources/fotos/Estudiante 1.jpg" alt="estudiante 1" width="272px" height="272px"></div>
+          <div class="testimonial-image testimonial-1"><img src="resources/fotos/Estudiante 1.jpg" alt="estudiante 1" width="272px" height="272px"></div>
           
           <div class="testimonial-text">
             <p>
@@ -199,7 +199,7 @@
         </div>
 
         <div class="testimonial">
-          <div class="testimonial-image testimonial-2"><img src="/resources/fotos/Estudiante 2.jpg" alt="estudiante 1" width="100px" height="100px"></div>
+          <div class="testimonial-image testimonial-2"><img src="resources/fotos/Estudiante 2.jpg" alt="estudiante 1" width="100px" height="100px"></div>
           <div class="testimonial-text">
             <p>
               "Como estudiante en los últimos ciclos, tenía muchas dudas sobre cómo empezar mi carrera profesional.
@@ -209,7 +209,7 @@
         </div>
 
         <div class="testimonial">
-          <div class="testimonial-image testimonial-3"><img src="/resources/fotos/Estudiante 3.jpg" alt="estudiante 1" width="100px" height="100px"></div>
+          <div class="testimonial-image testimonial-3"><img src="resources/fotos/Estudiante 3.jpg" alt="estudiante 1" width="100px" height="100px"></div>
           <div class="testimonial-text">
             <p>
               "Una excelente iniciativa para quienes estamos a punto de egresar o recién terminamos nuestros estudios.
@@ -220,15 +220,15 @@
       </div>
     </div>
   </section>
-  <section class="cursos">
-  <h2>Nuestros cursos</h2>
-  <div style="display: flex; flex-direction: row; gap: 32px; justify-content: center; align-items: flex-start; width: 100%;">
+    <section class="cursos">
+    <h1 style="font-size:50px;">Nuestros cursos</h1>
+    <div style="display: flex; flex-direction: row; gap: 32px; justify-content: center; align-items: flex-start; width: 100%;">
     <div class="curso">
       <h2>JavaScript Básico <span class="nivel Básico">Básico</span></h2>
       <div class="info">
         <img src="./resources/fotos/javascript-basico.png" alt="Curso JavaScript" class="curso-img">
         <div class="detalle">
-          <p class="codigo">Código: #134562 | Duración: 15 horas | Precio: <span class="precio">$19</span></p>
+          <p class="codigo">Código: #134562 | Duración: 15 horas | Precio: <span class="precio">S/ 19</span></p>
           <p>Aprende los fundamentos del lenguaje de programación más popular para el desarrollo web. En este curso descubrirás cómo funciona JavaScript, cómo manipular elementos del navegador, y cómo crear interactividad en tus páginas web. Ideal para principiantes sin experiencia previa en programación.</p>
           <ul class="aprendizajes">
             <strong>Aprenderás:</strong>
@@ -246,13 +246,23 @@
           </div>
         </div>
       </div>
+
+      <div style="display:flex; justify-content:center; margin-top:20px;">
+        <a href="./secciones/Cursos/detalle-mis-cursos.html">
+          <button style="background-color:#058ed9; color:white; border:none; width:90px; height:26px; border-radius:10px; cursor:pointer;"
+          onclick="verDetalleCurso('JavaScript Básico')">
+            Visitar curso
+          </button>
+        </a>
+      </div>
+
     </div>
     <div class="curso">
       <h2>Python Intermedio <span class="nivel Intermedio">Intermedio</span></h2>
       <div class="info">
         <img src="./resources/fotos/python-intermedio.png" alt="Curso Python" class="curso-img">
         <div class="detalle">
-          <p class="codigo">Código: #777512 | Duración: 8 horas | Precio: <span class="precio">$25</span></p>
+          <p class="codigo">Código: #777512 | Duración: 8 horas | Precio: <span class="precio">S/ 25</span></p>
           <p>Python es uno de los lenguajes de programación más coloquiales, accesible al público y compuesto de sintaxis agraciada. En el presente curso, se tratarán temas más complejos en Python, relacionados a problemas matemáticos, bibliotecas inéditas y funciones desconocidas, útiles para ofertas de trabajo.</p>
           <ul class="aprendizajes">
             <strong>Aprenderás:</strong>
@@ -270,6 +280,16 @@
           </div>
         </div>
       </div>
+
+      <div style="display:flex; justify-content:center; margin-top:20px;">
+        <a href="./secciones/Cursos/detalle-mis-cursos.html">
+          <button style="background-color:#058ed9; color:white; border:none; width:90px; height:26px; border-radius:10px; cursor:pointer;"
+          onclick="verDetalleCurso('Python Intermedio')">
+            Visitar curso
+          </button>
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
