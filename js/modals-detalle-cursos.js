@@ -115,6 +115,7 @@ function toggleBoton() {
     // Guardar curso en localStorage
         
     const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
+
     console.log("Curso actual:", cursoActual.nombre);
     if (boton.innerText === "¡Inscríbete ya!" && localStorage.getItem("pagoExitoso") === "true" && !cursosInscritos.some(c => c.nombre === cursoActual.nombre)) {
         console.log("Estado del pago exitoso:", localStorage.getItem("pagoExitoso"));
@@ -148,8 +149,10 @@ function toggleBoton() {
     else if (cursosInscritos.some(c => c.nombre === cursoActual.nombre)){
         boton.innerText = "Ya está inscrito al curso";
         var inscrito = document.getElementById("YaInscrito");
+        var donarBoton = document.getElementById("botonDonar");
+        donarBoton.innerText = "Usted ya donó";
         inscrito.style.display = "flex";
-         // Mostrar modal de inscripción exitosa
+        // Mostrar modal de inscripción exitosa
     }
     else{
         console.log("Usted no puede inscribirse a: " + nombreCurso);
@@ -166,6 +169,17 @@ function toggleBoton() {
 
 // Función para mostrar el modal para pagar con tarjeta
 function donarYa(){
+    const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
+    const pagos = JSON.parse(localStorage.getItem("pagosPorCurso")) || {};
+
+    const yaPagado = pagos[cursoActual.nombre] === true;
+
+    const donarBoton = document.getElementById("botonDonar");
+    if (yaPagado) {
+        donarBoton.innerText = "Usted ya donó";
+    } else {    
+        donarBoton.innerText = "Dona Ya";
+    }
     document.getElementById("ModalButton").style.display = "flex"; 
 }
 
@@ -177,6 +191,11 @@ function cerrarModal(){
     pagoExitoso = true; // Indicamos que el pago fue exitoso
     localStorage.setItem("pagoExitoso", "true");
     console.log("Pago exitoso");
+
+    const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
+    const pagos = JSON.parse(localStorage.getItem("pagosPorCurso")) || [];
+    pagos[cursoActual.nombre] = true; // Marcar el curso como pagado
+    localStorage.setItem("pagosPorCurso", JSON.stringify(pagos));
 }
 
 function cerrarModalYaInscrito(){

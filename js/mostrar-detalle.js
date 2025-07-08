@@ -16,7 +16,7 @@ window.onload = function () {
 
     document.getElementById("codigoCurso").innerText = curso.codigo;
     document.getElementById("descripcionCurso").innerText = curso.descripcion;
-    document.getElementById("precioCurso").innerText = curso.precio;
+    //document.getElementById("precioCurso").innerText = curso.precio;
     document.getElementById("duracionCurso").innerText = curso.duracion;
 
     // Aquí aprenderás
