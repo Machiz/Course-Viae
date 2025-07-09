@@ -48,102 +48,100 @@
     color: #1a75ff;
 }
 
-.usuario-header{
-    position:absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items:center;
-    gap: 10px; /* Espacio entre nombre y foto */
-    font-family: Arial;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
+}
+
+.logo img {
+  height: auto;
+  width: 54px;
+}
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.avatar-noti:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+.letras-nav {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.letras-nav:hover {
+  color: #89d1f8; 
+  cursor: pointer;
+}
+
+.notification-bell {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+.bell-icon {
+    font-size: 30px;
     color: white;
 }
 
-.usuario-header img{
-    width: 60px;
-    height: auto;
-    border-radius: 25px;
-    object-fit:cover;
+.numero-notificaciones {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    background-color: #FF9800; /* Color naranja */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
 }
 
-.letras-titulo{
-    display:flex;
-    font-family: Arial, sans-serif;
-    margin-left: 10px;
-    flex-direction: column; /* Una palabra sobre otra, forma de columnas */
-    text-align:center; /* Centrado de las letras */
-    font-size: 24px; /* Tamaño de letra */
-    color:#058ED9; /* Color azul */
-    font-weight: bold; /* Negrita */
+/* Para que la campana tenga un efecto al hacer hover */
+.notification-bell:hover .bell-icon {
+    color: #89D1F8;
 }
-
-.contenedor-header{
-    display:flex;
-    align-items: center; /* Alineación al inicio del contenedor */
-    gap: 14px; /* Espacio entre imagen y texto */
-    padding-left:20px; /* Espacio a la izquierda */
-}
-    /* Header styles */
-    /*header { 
-      background: linear-gradient(to right, #e3f2fd 0%, #2196f3 50%, #1976d2 100%);
-      padding: 1rem 2rem;
-    }*/
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .logo-text {
-      display: flex;
-        font-family: Arial, sans-serif;
-        margin-left: 10px;
-        flex-direction: column; /* Una palabra sobre otra, forma de columnas */
-        text-align: center; /* Centrado de las letras */
-        font-size: 24px; /* Tamaño de letra */
-        color: #058ED9; /* Color azul */
-        font-weight: bold; /* Negrita */
-    }
-
-    nav {
-      font-family: Arial;
-
-        color: white;
-
-        text-decoration: none; /* Sin subrayado */
-
-        font-weight: bold; /* Negrita */
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: #102228;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #3884da;
-    }
-
-    .header-buttons {
-      display: flex;
-      gap: 0.75rem;
-      border-radius: 20;
-    }
-
     .btn {
       padding: 0.5rem 1rem;
       border-radius: 20px;
