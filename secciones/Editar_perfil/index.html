@@ -34,7 +34,7 @@
             </div>
             <span class="nombre-usuario">Alessandro Hesse</span>
             <div onclick = "abrirPerfil()" class="perfil">
-                <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
+                <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti" id="minifoto">
             </div>
             
             </div>
@@ -90,7 +90,13 @@
                 <div class="bienvenida-container">
                     <h3 class="bienvenida-texto">¡Bienvenido de nuevo,<br>nuevo día por delante!</h3>
                 </div>
-                <img src="../../img/hesse.jpg" class="foto_editar" alt="" id="foto">
+                <input 
+                            type="file" 
+                            id="inputFoto" 
+                            accept="image/*" 
+                            style="display: none;" 
+                            onchange="actualizarFoto()">
+                <img src="../../img/hesse.jpg" class="foto_editar" alt="" id="foto" onclick="document.getElementById('inputFoto').click()">
             </div>
             <div class="container-principal">
                 <div class="informacion">

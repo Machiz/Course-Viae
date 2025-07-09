@@ -194,6 +194,11 @@ main {
     flex-shrink: 0;
 }
 
+.foto_editar:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
 /* Main Container */
 .container-principal {
     display: grid;
