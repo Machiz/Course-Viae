@@ -9,6 +9,39 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <style>
+            .abajoMenu {
+                display: none;
+                position: absolute;
+                top: 40px;
+                right: 0;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                width: 180px;
+                z-index: 999;
+                padding: 10px 0;
+            }
+
+            .abajoMenu a {
+                display: flex;
+                align-items: center;
+                padding: 10px 15px;
+                text-decoration: none;
+                color: #003366;
+                font-size: 14px;
+                transition: background 0.2s;
+            }
+
+            .abajoMenu a:hover {
+                background-color: #f0f0f0;
+            }
+
+            .abajoMenu a i {
+                margin-right: 8px;
+                color: #1a75ff;
+            }
+        </style>
     </head>
        <header class="header">
         <div class="logo">
@@ -32,20 +65,70 @@
                 <a href="../Notificaciones/Notificaciones.html"><ion-icon name="notifications" class="bell-icon"></ion-icon></a>
                 <span class="numero-notificaciones">7</span>
             </div>
-            <span class="nombre-usuario">Alessandro Hesse</span>
+            <span class="nombre-usuario" id ="nombreUsuario"></span>
             <div onclick = "abrirPerfil()" class="perfil">
                 <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti" id="minifoto">
             </div>
             
             </div>
         </header>
+
+        <!--Visualización de opciones en el perfil de usuario-->
+        <div id="abajoMenu" class="abajoMenu fontInter" style="gap:2px;">
+            <a href="../Editar_perfil/index.html">
+                <img src="../../resources/fotos/Mi Perfil.png" alt="Mi Perfil" style="width:20px; height:auto; margin-right:8px;">
+                Mi perfil
+            </a>
+            <a href="../CV/Editar.html">
+                <img src="../../resources/fotos/Empleos.png" alt="Curriculum" style="width:20px; height:auto; margin-right:8px;">
+                CV
+            </a>
+            <a href="../Cursos/mis-cursos.html">
+                <img src="../../resources/fotos/MisCursos.png" alt="Mis Cursos" style="width:20px; height:auto; margin-right:8px;">
+                Mis cursos
+            </a>
+            <a href="../Busqueda_Empleos/busqueda-empleos.html">
+                <img src="../../resources/fotos/Empleos.png" alt="Empleos" style="width:20px; height:auto; margin-right:8px;">
+                Empleos
+            </a>
+
+            <a href="../Cursos/busqueda-cursos-inicio.html">
+                <img src="../../resources/fotos/Cursos.png" alt="Cursos" style="width:20px; height:auto; margin-right:8px;">
+                Cursos
+            </a>
+            
+            <a href="../Reclamos/Reclamos.html">
+                <img src="../../resources/fotos/Reclamos.png" alt="Reclamos" style="width:20px; height:auto; margin-right:8px;">
+                Reclamos
+            </a>
+            <a href="../Inicio de sesion/Log_in.html">
+                <img src="../../resources/fotos/Cerrar sesión.png" alt="Cerrar Sesión" style="width:20px; height:auto; margin-right:8px;">
+                Cerrar sesión
+            </a>
+        </div>
+
+
+        <script>
+            function abrirPerfil() {
+                const menu = document.getElementById("abajoMenu");
+                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            }
+
+            // Cerrar si se hace clic fuera
+            window.addEventListener("click", function(e) {
+                const menu = document.getElementById("abajoMenu");
+                if (!e.target.closest(".perfil")) {
+                menu.style.display = "none";
+                }
+            });
+        </script>
         
         <main>
             <div class="container-principal">
                 <div class="partes parte1">
                     <h3>Nombre completo</h3>
                     <input type="text" value="Alessandro Hesse">
-                    <h3>Titulo profesional</h3>
+                    <h3>Título profesional</h3>
                     <input type="text" value="Cientifico de la Computación">
                     <h3>Experiencia laboral (opcional)</h3>
                     <input type="text" value="Técnico en la UPC">
@@ -138,4 +221,5 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src = "../../js/Cambios_guardados.js"></script>
     <script src="../../js/modificarFoto.js"></script>
+    <script src="../../js/guadar-nombre.js"></script>
 </html>
