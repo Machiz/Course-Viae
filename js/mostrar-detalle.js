@@ -64,5 +64,21 @@ window.onload = function () {
     //imagen.style = "width:400px;height:auto;border-radius:10px;";
     contenedor.appendChild(imagen);
 
-    
+    // Video
+    document.getElementById("videoCursoI").innerText = curso.video || "Video de presentación del curso";
+    //const videoCurso = params.get("video") || "Video de presentación del curso"; // Video del curso
+
+    const embedUrl = `https://www.youtube.com/embed/${curso.video}`; // Asegúrate de que videoCurso sea un ID de YouTube válido
+    const iframe = document.createElement("iframe");
+    iframe.src = embedUrl;
+    iframe.width = "100%";
+    iframe.height = "480"; // Puedes ajustar la altura según tu diseño
+    iframe.style.borderRadius = "10px";
+    iframe.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    const contenedorV = document.getElementById("videoCursoI");
+    contenedorV.innerHTML = ""; // Limpia el contenido anterior si lo hubiera
+    contenedorV.appendChild(iframe);
 }

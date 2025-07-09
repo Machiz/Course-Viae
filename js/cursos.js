@@ -67,7 +67,7 @@ const cursos = [
         mod1: "Video (20 min.): Introducción al Cálculo Avanzado", mod2: "Lectura: Teoremas Fundamentales", 
         mod3: "Ejercicios Prácticos de Cálculo", mod4: "Examen Final de Cálculo Avanzado",
         ap1:"Integrales triples", ap2:"Integrales especiales", ap3:"Cálculo multivariable", ap4:"Series de Taylor y teoría del calor",
-        video: "8lbsQyMhMT8"},
+        video: "FHLsTqxW9uc"},
 
     {
         id: "Curso6", nombre: "Python Avanzado", duracion: "18 horas",

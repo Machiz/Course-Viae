@@ -169,18 +169,15 @@ function toggleBoton() {
 
 // Función para mostrar el modal para pagar con tarjeta
 function donarYa(){
-    const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
-    const pagos = JSON.parse(localStorage.getItem("pagosPorCurso")) || {};
-
-    const yaPagado = pagos[cursoActual.nombre] === true;
-
+    // Verificar si el usuario ya donó, por lo menos una vez
+    let yaPagado = localStorage.getItem("pagoExitoso") === "true";
     const donarBoton = document.getElementById("botonDonar");
     if (yaPagado) {
         donarBoton.innerText = "Usted ya donó";
     } else {    
-        donarBoton.innerText = "Dona Ya";
+        donarBoton.innerText = "¡Dona Ya!";
+        document.getElementById("ModalButton").style.display = "flex"; 
     }
-    document.getElementById("ModalButton").style.display = "flex"; 
 }
 
 function cerrarModal(){

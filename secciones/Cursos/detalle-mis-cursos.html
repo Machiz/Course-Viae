@@ -115,6 +115,7 @@
                     <a href="../Notificaciones/Notificaciones.html"><ion-icon name="notifications" class="bell-icon"></ion-icon></a>
                     <span class="numero-notificaciones">7</span>
                 </div>
+                <!--Nombre de usuario-->
                 <span class="nombre-usuario" id="nombreUsuario"></span>
                 <div onclick = "abrirPerfil()" class="perfil">
                     <img src="../../resources/fotos/hesse.jpg" alt="usuario" class="avatar-noti">
@@ -201,6 +202,13 @@
                         <h3 style="font-family: Inter; color:#2B2B2B;">¿De qué va  </h3> 
                         <h3 class="nombreCurso" style="font-size:20px; padding-left:10px;"></h3>
                         <h3 style="font-family:Inter; color:#2B2B2B;">?</h3>
+                    </div>
+                </div>
+
+                <!--Video de presentación del curso-->
+                <div style="display: flex; justify-content: left; margin-top: 20px;">
+                    <!--Llamar al id del video del curso para que sea visible-->
+                    <div id="videoCursoI" style="width:100%; max-width:800px;">
                     </div>
                 </div>
 
@@ -465,6 +473,7 @@
         </main>
 
         <script src="../../js/cursos.js"></script>
+        <script src="../../js/guadar-nombre.js"></script>
         <script src="../../js/mostrar-detalle.js"></script>
         <script src="../../js/casilla-curso.js"></script>
         <script src="../../js/container-cursos.js"></script>

@@ -216,11 +216,100 @@
                 <div class="container-cursos">
                      
                 </div>
+
+                <!--Creación de botón Donar Ya-->
+                <button onclick="donarYa()" style="background-color:#058ED9; color:white; border-radius:10px; width:150px; 
+                height:60px; border:none; cursor:pointer; font-weight:bold;">
+                    <span class="fontInter" style="font-weight:bold;" id="botonDonar">¡Dona ya!</span>
+                    <span style="font-size:1px;">E inscríbase en el curso que desee</span>
+                </button>
             </div>
         </main>
 
         <script src="../../js/cursos.js">
         </script>
+
+        <!--Modal de método de pago-->
+        <div id="ModalButton" class="modal-div">
+            <div class="modal">
+                <h3 class="fontInter" style="font-weight:bold;">Seleccione su método de pago:</h3>
+                <div style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:20px;">
+                    <!--Sección para elegir VISA, Mastercad, Paypal-->
+                    <div style="display:flex; gap:10px; justify-content:center; align-items:center;">
+                        <div onclick="mostrarModalTarjeta()"> 
+                            <!--Si se da clic a la foto visa.png, sus contornos se pintan de azul. Hacerlo en style-->
+                            <img src="../../resources/fotos/visa.png" alt="Visa"class="img-interact">
+                        </div>
+                        <div onclick="mostrarModalTarjeta()"> <!--Contorno azul que rodee a Mastercard.png-->
+                            <img src="../../resources/fotos/mastercard.png" alt="Mastercard" class ="img-interact">
+                        </div>
+                        <div onclick="mostrarModalTarjeta()"> <!--Contorno azul que rodee a PayPal.png-->
+                            <img src="../../resources/fotos/americanexpress.png" alt="PayPal" class="img-interact">
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="display:flex; justify-content:center; align-items:center; margin-top:20px;">
+                    <button style="background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
+                    cursor:pointer;" onclick = "cerrarModalPago()">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal de tarjeta de crédito-->
+        <div id="ModalTarjeta" class="modal-div">
+            <div class="modal">
+                <div style="background-color:#058ED9; color:white; border-radius:10px; border:none; height:30px; width:200px; font-weight:bold; 
+                cursor:pointer; align-items:center; display:flex; justify-content:center; margin-bottom:20px;"
+                class="fontInter">
+                    Tarjeta de crédito
+                    <ion-icon name="card-outline" style="margin-left:10px;"></ion-icon>
+                </div>
+
+                <!--Rellenar/completar campos: número de tarjeta, nombre del apoderado, fecha de expiración. Colocar espacios-->
+                <!--Asegurarse de que el usuario completa todos los campos. Si da clic y no están completos todos los campos, no podrá efectuar el pago-->
+                <h2 class="fontInter" style="font-weight:bold;">Ingrese los datos de su tarjeta:</h2>
+                <p class="fontInter" style="color:#454545;">Asegúrese de que los datos sean correctos para evitar problemas con el pago.</p>
+                <p class="fontInter" style="color:#454545;">Recuerde que el pago se realizará de forma segura.</p>
+                <p class="fontInter" style="color:#000000; font-weight:bold;">Donación a realizar: S/ 15</p>
+                <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" class="input-tarjeta">
+                <input type="text" id="nombreTitular" placeholder="Nombre del titular" class="input-tarjeta">
+                <input type="text" id="fechaExpiracion" placeholder="Fecha de expiración (MM/AA)" class="input-tarjeta">
+                <input type="text" id="codigoSeguridad" placeholder="Código de seguridad (CVV)" class="input-tarjeta">
+                <p class="fontInter" style="color:#454545;">Al hacer clic en "Pagar", acepta los términos y condiciones del curso.</p>
+
+                <!--Botón de Pagar-->
+                <div style="display:flex; justify-content:space-between; margin-top:20px;">
+                    <button style="background-color:white; color:#058ED9; border-radius:10px; border-color:#058ED9; height:30px; width:100px;
+                    cursor:pointer;" onclick = "cerrarModalTarjeta()">
+                        Cancelar
+                    </button>
+
+                    <button style="background-color:#058ED9; color:white; border-radius:10px; height:36px; width:100px; cursor:pointer; border:none;" 
+                    onclick = "pagarConTarjeta()">
+                        Pagar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal para mostrar que el pago fue exitoso-->
+        <div id="ModalPagoExitoso" class="modal-div">
+            <div class="modal">
+                <!--Mostrar Ha efectuado el pago exitosamente, y un check verde-->
+                <h3 class="fontInter" style="font-weight:bold;">¡Pago exitoso!</h3>
+                <p class="fontInter" style="color:#454545;">Gracias por su donación. Ahora puede inscribirse en el curso.</p>
+                <div style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="../../resources/fotos/check.png" alt="Pago Exitoso" style="width:50px; height:auto; margin-bottom:10px;">
+                    <button style="background-color:#058ED9; color:white; border-radius:10px; border:none; height:30px; width:100px; cursor:pointer;" 
+                    onclick="cerrarModal()">
+                        Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <br>
         <footer>
@@ -267,8 +356,10 @@
         </footer>
 
         
-        <!--script src="../../js/guadar-nombre.js"> // Guardar el nombre del usuario en localStorage
-        </script-->
+        <script src="../../js/guadar-nombre.js"> // Guardar el nombre del usuario en localStorage
+        </script>
+
+        <script src="../../js/modals-detalle-cursos.js"></script>
 
     </body>
 
