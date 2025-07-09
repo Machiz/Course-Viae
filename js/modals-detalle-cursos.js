@@ -247,7 +247,7 @@ function pagarConTarjeta(){
     const cvv = document.getElementById("cvv").value;
 
     // Validas campos vacíos
-    if (!numero || !titular || !expiracion || !cvv) {
+    if (!numero || !nombre || !fecha || !cvv) {
         alert("⚠️ Por favor completa todos los campos antes de continuar.");
         return;
     }
@@ -262,7 +262,7 @@ function pagarConTarjeta(){
         return;
     }
 
-    if (!fechaRegex.test(expiracion)) {
+    if (!fechaRegex.test(fecha)) {
         alert("La fecha debe estar en formato MM/AA.");
         return;
     }
