@@ -170,14 +170,19 @@ function toggleBoton() {
 // Función para mostrar el modal para pagar con tarjeta
 function donarYa(){
     // Verificar si el usuario ya donó, por lo menos una vez
-    let yaPagado = localStorage.getItem("pagoExitoso") === "true";
+    // Verificar si el usuario es nuevo
+    const usuarioNombre = localStorage.getItem("nombreUsuario");
+    const esPago = localStorage.getItem(`pagoExitoso_${usuarioNombre}`) === "true";
     const donarBoton = document.getElementById("botonDonar");
-    if (yaPagado) {
-        donarBoton.innerText = "Usted ya donó";
-    } else {    
-        donarBoton.innerText = "¡Dona Ya!";
+
+    console.log("Estado del pago para ", usuarioNombre, ":", esPago);
+    if (!esPago) {
         document.getElementById("ModalButton").style.display = "flex"; 
+    } else {
+        donarBoton.innerText = "Usted ya donó";
+        document.getElementById("ModalButton").style.display = "none"; 
     }
+    //localStorage.setItem("pagoExitoso", "false");
 }
 
 function cerrarModal(){
