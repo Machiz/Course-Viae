@@ -8,3 +8,4 @@ window.onload = function () {
         document.getElementById("nombreUsuario").textContent = "Usuario";
     };
 }
+
