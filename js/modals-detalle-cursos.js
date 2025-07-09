@@ -116,8 +116,13 @@ function toggleBoton() {
         
     const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
 
+    // Solo podemos inscribirnos si el pago fue exitoso
+    const usuarioNombre = localStorage.getItem("nombreUsuario");
+    const esPago = localStorage.getItem(`pagoExitoso_${usuarioNombre}`) === "true";
+    console.log("Estado del pago para ", usuarioNombre, ":", esPago);
+
     console.log("Curso actual:", cursoActual.nombre);
-    if (boton.innerText === "¡Inscríbete ya!" && localStorage.getItem("pagoExitoso") === "true" && !cursosInscritos.some(c => c.nombre === cursoActual.nombre)) {
+    if (boton.innerText === "¡Inscríbete ya!" && esPago && !cursosInscritos.some(c => c.nombre === cursoActual.nombre)) {
         console.log("Estado del pago exitoso:", localStorage.getItem("pagoExitoso"));
         console.log("Entró al flujo correctamente");
         modalInscripcion.style.display = "flex";
@@ -170,14 +175,22 @@ function toggleBoton() {
 // Función para mostrar el modal para pagar con tarjeta
 function donarYa(){
     // Verificar si el usuario ya donó, por lo menos una vez
-    let yaPagado = localStorage.getItem("pagoExitoso") === "true";
+    // Verificar si el usuario es nuevo
+    const usuarioNombre = localStorage.getItem("nombreUsuario");
+    const esPago = localStorage.getItem(`pagoExitoso_${usuarioNombre}`) === "true";
     const donarBoton = document.getElementById("botonDonar");
-    if (yaPagado) {
-        donarBoton.innerText = "Usted ya donó";
-    } else {    
+
+    console.log("Estado del pago para ", usuarioNombre, ":", esPago);
+    if (!esPago) {
         donarBoton.innerText = "¡Dona Ya!";
         document.getElementById("ModalButton").style.display = "flex"; 
+    } else {
+        donarBoton.innerText = "Usted ya donó";
+        alert("Ya realizaste tu donación. Gracias por tu apoyo.");
+        return; // No mostrar el modal si ya donó
+        //document.getElementById("ModalButton").style.display = "none";  
     }
+    //localStorage.setItem("pagoExitoso", "false");
 }
 
 function cerrarModal(){
@@ -188,6 +201,10 @@ function cerrarModal(){
     pagoExitoso = true; // Indicamos que el pago fue exitoso
     localStorage.setItem("pagoExitoso", "true");
     console.log("Pago exitoso");
+
+    const usuarioNombre = localStorage.getItem("nombreUsuario");
+    localStorage.setItem(`pagoExitoso_${usuarioNombre}`, "true");
+    console.log("✅ pagoExitoso marcado para", usuarioNombre);
 
     const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
     const pagos = JSON.parse(localStorage.getItem("pagosPorCurso")) || [];
@@ -223,12 +240,41 @@ function mostrarModalTarjeta() {
 }
 
 function pagarConTarjeta(){
+    // Validaciones en los inputs
+    const numero = document.getElementById("numeroTarjeta").value;
+    const nombre = document.getElementById("nombreTitular").value;
+    const fecha = document.getElementById("fechaExpiracion").value;
+    const cvv = document.getElementById("cvv").value;
+
+    // Validas campos vacíos
+    if (!numero || !nombre || !fecha || !cvv) {
+        alert("⚠️ Por favor completa todos los campos antes de continuar.");
+        return;
+    }
+
+    // Validaciones importantes
+    const tarjetaRegex = /^\d{16}$/;
+    const cvvRegex = /^\d{3,4}$/;
+    const fechaRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+
+    if (!tarjetaRegex.test(numero)) {
+        alert("El número de tarjeta debe tener 16 dígitos.");
+        return;
+    }
+
+    if (!fechaRegex.test(fecha)) {
+        alert("La fecha debe estar en formato MM/AA.");
+        return;
+    }
+
+    if (!cvvRegex.test(cvv)) {
+        alert("El código de seguridad (CVV) debe tener 3 o 4 dígitos.");
+        return;
+    }
+
     // Modal que contiene el mensaje de pago exitoso
     var modalPagoExitoso = document.getElementById("ModalPagoExitoso");
     modalPagoExitoso.style.display = "flex";
-
-    //var boton = document.getElementById("textoBoton");
-    //boton.innerText = "Ya está inscrito al curso";
 }
 
 function cerrarModalInscripcion() {

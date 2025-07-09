@@ -193,6 +193,7 @@
 
         // Inicializar información del nuevo usuario
         // Cero cursos al haber ingresado por primera vez
+        localStorage.setItem(`pagoExitoso_${nombre}`, "false");
         localStorage.setItem("cursosInscritos", JSON.stringify([]));
         window.location.href = "CV.html"; // Redirige si deseas
         });
