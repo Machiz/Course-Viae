@@ -54,9 +54,20 @@
                 </div>
                 <div class="partes parte2">
                     <h3>Foto de perfil</h1>
-                    <img src="../../img/hesse.jpg" class = "foto_editar" alt="">
+                        <img src="../../img/hesse.jpg" class="foto_editar" alt="" id="foto">
                     <div>
-                        <button class="boton_img">Editar foto</button>
+                        <input 
+                            type="file" 
+                            id="inputFoto" 
+                            accept="image/*" 
+                            style="display: none;" 
+                            onchange="actualizarFoto()">
+
+                        <button class="boton_img" onclick="document.getElementById('inputFoto').click()">
+                            Editar foto
+                        </button>
+                    
+                    
                     </div>
 
                     <h3>Descripcion</h1>
@@ -73,8 +84,8 @@
                 </div>
             </div>
 
-            <div class="boton_fondo">
-                <button onclick="guardarCambios()" class ="boton_fondo">Editar CV</button>
+            <div class="seccion_boton boton_fondo">
+                <button onclick="guardarCambios()">Editar CV</button>
             </div>
         </main>
 
@@ -126,4 +137,5 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src = "../../js/Cambios_guardados.js"></script>
+    <script src="../../js/modificarFoto.js"></script>
 </html>
