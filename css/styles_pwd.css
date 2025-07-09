@@ -5,51 +5,82 @@ body {
     min-height: 100vh;
 }
 
-.contenedor-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 2rem 1.5rem 2rem;
-    background: transparent;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
 }
 
-.letras-titulo {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    color: #058ED9;
-    font-weight: bold;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-nav ul {
-    display: flex;
-    gap: 160px;
-    margin-left: 80px;
-    list-style: none;
-    padding: 0;
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: bold;
+  color: #058ED9;
+  line-height: 1.1;
+  text-align: right; 
+}
+
+.logo img {
+  height: auto;
+  width: 54px;
+}
+.usuario-noti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-noti {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.avatar-noti:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+.nombre-usuario {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+}
+.nombre-usuario:hover {
+  color: #89d1f8; 
+  cursor: pointer;
 }
 
 .letras-nav {
-    color: #102228;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+  font-family: "Inter";
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 .letras-nav:hover {
-    color: #3884da;
+  color: #89d1f8; 
+  cursor: pointer;
 }
 
 .login-card {
     background: #fff;
     max-width: 400px;
     margin: 3rem auto 2rem auto;
+
     padding: 2.5rem 2rem;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .login-title {
@@ -128,6 +159,8 @@ nav ul {
 }
 
 footer {
+
+    margin-bottom: -300px;
     background-color: #a39a91;
     padding: 3rem 2rem;
 }

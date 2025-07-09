@@ -33,7 +33,37 @@ a:hover{
     width: 200px;
     object-fit: cover;
 }
+.abajoMenu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    z-index: 999;
+    padding: 10px 0;
+}
 
+.abajoMenu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.abajoMenu a:hover {
+    background-color: #f0f0f0;
+}
+
+.abajoMenu a i {
+    margin-right: 8px;
+    color: #1a75ff;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -50,6 +80,7 @@ a:hover{
 .logo-text {
   display: flex;
   flex-direction: column;
+  font-family: 'Inter';
   font-size: 24px;
   font-weight: bold;
   color: #058ED9;
@@ -85,7 +116,9 @@ a:hover{
   color: #89d1f8; 
   cursor: pointer;
 }
+
 .letras-nav {
+  font-family: "Inter";
   font-size: 18px;
   color: #FFFFFF;
   text-decoration: none;
@@ -156,8 +189,8 @@ a:hover{
     background-color: white;
     border-radius: 20px;
     width: auto;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .seccion_boton {
@@ -200,6 +233,7 @@ input{
 }
 
 .desc{
+    resize: none;
     height:10rem;
     width: 20rem;
     margin-bottom: 1rem;
