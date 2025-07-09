@@ -11,7 +11,7 @@ function actualizarFoto() {
             minifoto.src = e.target.result; 
         }
         
-        reader.readAsDataURL(input.files[0]); // Lee el archivo
+        reader.readAsDataURL(input.files[0]); 
     } else {
         foto.src = "../../img/hesse.jpg"; 
         minifoto.src = "../../img/hesse.jpg"; 
