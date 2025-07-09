@@ -240,12 +240,41 @@ function mostrarModalTarjeta() {
 }
 
 function pagarConTarjeta(){
+    // Validaciones en los inputs
+    const numero = document.getElementById("numeroTarjeta").value;
+    const nombre = document.getElementById("nombreTitular").value;
+    const fecha = document.getElementById("fechaExpiracion").value;
+    const cvv = document.getElementById("cvv").value;
+
+    // Validas campos vacíos
+    if (!numero || !titular || !expiracion || !cvv) {
+        alert("⚠️ Por favor completa todos los campos antes de continuar.");
+        return;
+    }
+
+    // Validaciones importantes
+    const tarjetaRegex = /^\d{16}$/;
+    const cvvRegex = /^\d{3,4}$/;
+    const fechaRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+
+    if (!tarjetaRegex.test(numero)) {
+        alert("El número de tarjeta debe tener 16 dígitos.");
+        return;
+    }
+
+    if (!fechaRegex.test(expiracion)) {
+        alert("La fecha debe estar en formato MM/AA.");
+        return;
+    }
+
+    if (!cvvRegex.test(cvv)) {
+        alert("El código de seguridad (CVV) debe tener 3 o 4 dígitos.");
+        return;
+    }
+
     // Modal que contiene el mensaje de pago exitoso
     var modalPagoExitoso = document.getElementById("ModalPagoExitoso");
     modalPagoExitoso.style.display = "flex";
-
-    //var boton = document.getElementById("textoBoton");
-    //boton.innerText = "Ya está inscrito al curso";
 }
 
 function cerrarModalInscripcion() {
