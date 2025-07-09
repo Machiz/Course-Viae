@@ -116,8 +116,13 @@ function toggleBoton() {
         
     const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
 
+    // Solo podemos inscribirnos si el pago fue exitoso
+    const usuarioNombre = localStorage.getItem("nombreUsuario");
+    const esPago = localStorage.getItem(`pagoExitoso_${usuarioNombre}`) === "true";
+    console.log("Estado del pago para ", usuarioNombre, ":", esPago);
+
     console.log("Curso actual:", cursoActual.nombre);
-    if (boton.innerText === "¡Inscríbete ya!" && localStorage.getItem("pagoExitoso") === "true" && !cursosInscritos.some(c => c.nombre === cursoActual.nombre)) {
+    if (boton.innerText === "¡Inscríbete ya!" && esPago && !cursosInscritos.some(c => c.nombre === cursoActual.nombre)) {
         console.log("Estado del pago exitoso:", localStorage.getItem("pagoExitoso"));
         console.log("Entró al flujo correctamente");
         modalInscripcion.style.display = "flex";
@@ -177,10 +182,13 @@ function donarYa(){
 
     console.log("Estado del pago para ", usuarioNombre, ":", esPago);
     if (!esPago) {
+        donarBoton.innerText = "¡Dona Ya!";
         document.getElementById("ModalButton").style.display = "flex"; 
     } else {
         donarBoton.innerText = "Usted ya donó";
-        document.getElementById("ModalButton").style.display = "none"; 
+        alert("Ya realizaste tu donación. Gracias por tu apoyo.");
+        return; // No mostrar el modal si ya donó
+        //document.getElementById("ModalButton").style.display = "none";  
     }
     //localStorage.setItem("pagoExitoso", "false");
 }
@@ -193,6 +201,10 @@ function cerrarModal(){
     pagoExitoso = true; // Indicamos que el pago fue exitoso
     localStorage.setItem("pagoExitoso", "true");
     console.log("Pago exitoso");
+
+    const usuarioNombre = localStorage.getItem("nombreUsuario");
+    localStorage.setItem(`pagoExitoso_${usuarioNombre}`, "true");
+    console.log("✅ pagoExitoso marcado para", usuarioNombre);
 
     const cursoActual = JSON.parse(localStorage.getItem("cursoElegido"));
     const pagos = JSON.parse(localStorage.getItem("pagosPorCurso")) || [];
